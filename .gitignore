@@ -1,6 +1,7 @@
+# gitignore
+
 _site
-.bundle
-.sass-cache
-.jekyll-cache
 .jekyll-metadata
+.sass-cache
+Gemfile.lock
 vendor

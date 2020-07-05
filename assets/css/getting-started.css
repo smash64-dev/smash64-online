@@ -1,0 +1,13 @@
+---
+layout: null
+---
+
+@import url("main.css");
+
+h2 {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}

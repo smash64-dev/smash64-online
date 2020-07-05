@@ -1,0 +1,15 @@
+<ul class="list-inline text-center footer-links">
+
+{% for social in site.data.social-networks %}
+  <li class="list-inline-item">
+    <a href="{{ social.url }}" title="{{ social.title | default: social.network }}">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="{{ social.prefix | default: "fab" }} fa-{{ social.icon | default: social.network | downcase }} fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">{{ social.network }}</span>
+    </a>
+  </li>
+{% endfor %}
+
+</ul>

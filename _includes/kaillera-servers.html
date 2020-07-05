@@ -1,0 +1,3 @@
+{% for server in site.data.kaillera-servers %}{{ server.name }}
+{{ server.ip }};{{ server.players }};{{ server.online }};{{ server.version }};{{ server.location }}
+{% endfor %}
