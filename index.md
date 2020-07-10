@@ -3,29 +3,32 @@ layout: home
 title: Smash64 Online
 subtitle: Project64K - Smash Edition
 share-img: /assets/img/kirbox.png
-css: /assets/css/getting-started.css
 ---
 
 ## Download Project64KSE
+{: style="text-align: center"}
 
-{: .center}
-[Download Project64KSE](https://github.com/smash64-dev/project64k-legacy/releases/latest/download/project64k-legacy.zip){: .btn .btn-success .center}
+[<i class='fas fa-download'></i> Download Project64KSE](https://github.com/smash64-dev/project64k-legacy/releases/latest/download/project64k-legacy.zip){: .btn .btn-success .btn-lg style="margin: 10px"}
+{: style="text-align: center"}
 
 <hr class="small">
 
 ## Obtain the Smash64 ROM
+{: style="text-align: center"}
 
 You must legally obtain your own ROM. Smash64.Online does not endorse or condone piracy. Do not ask how to obtain a ROM in Discord.
 
 <hr class="small">
 
 ## Configure your ROM Directory
+{: style="text-align: center"}
 
 Open `Project64KSE.exe` and select your ROM directory (where your ROM is located).
 
 <hr class="small">
 
 ## Select your Plugins
+{: style="text-align: center"}
   
 #### Graphics
 
@@ -56,14 +59,16 @@ Used with 3rd-party controllers/adapters, like Xbox/PS3/PS4/Keyboard. There are 
 <hr class="small">
 
 ## Cheats
+{: style="text-align: center"}
 
 Make sure the <code>1. Netplay Required</code> cheat is checked when you set up Project64KSE for the first time. This is a one time process and **does not** need to be done every time you launch the emulator. Start the game first to apply the cheat. If you use cheats other than `1. Netplay Required` you may need to recheck your cheats every time you launch the game.
 
 <hr class="small">
 
 ## Start Netplay
+{: style="text-align: center"}
 
-A netplay game can either be via `Server` or `P2P`. Higher rping causes higher frame delay. Most players will play on 2 frames or less, some may tolerate 3 frames. You **must** restart the emulator if another player is joining or any player changes port. Servers may sometimes go down and active servers may be found on the master server list.
+A netplay game can either be via `Server` or `P2P`. Higher ping causes higher frame delay. Most players will play on 2 frames or less, some may tolerate 3 frames. You **must** restart the emulator if another player is joining or any player changes port. Servers may sometimes go down and active servers may be found on the master server list.
 
 #### Connecting via Server
 
@@ -81,6 +86,7 @@ A netplay game can either be via `Server` or `P2P`. Higher rping causes higher f
 <hr class="small">
 
 ## Questions
+{: style="text-align: center"}
 
 If you are still having trouble ask in `#help` in the main Smash64 discord.\\
 [Outdated Guide](https://docs.google.com/document/d/1asbuKPAhHUGWgbJtLg7RJI5Hl_yDTJBlrpEQkgkgvkg/view)

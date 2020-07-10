@@ -33,18 +33,30 @@
     </ul>
   </div>
 
+  {% if page.round-avatar != nil %}
+    {% assign round_avatar = page.round-avatar %}
+  {% else %}
+    {% assign round_avatar = site.round-avatar %}
+  {% endif %}
+
+  {% if round_avatar == true %}
+    {% assign avatar_container = "avatar-container-round" %}
+  {% else %}
+    {% assign avatar_container = "avatar-container" %}
+  {% endif %}
+
   {% if page.image and (layout.show-avatar or page.show-avatar) %}
-    <div class="avatar-container">
+    <div class="{{ avatar_container | default: "avatar-container" }}">
       <div class="avatar-img-border">
-        <a href="{{ '' | absolute_url }}">
+        <a href="{{ page.avatar-url | default: '' | absolute_url }}">
           <img alt="Navbar avatar" class="avatar-img" src="{{ page.image | relative_url }}" />
         </a>
       </div>
     </div>
   {% elsif site.avatar and (layout.show-avatar or page.show-avatar) %}
-    <div class="avatar-container">
+    <div class="{{ avatar_container | default: "avatar-container" }}">
       <div class="avatar-img-border">
-        <a href="{{ '' | absolute_url }}">
+        <a href={{ page.avatar-url | default: '' | absolute_url }}">
           <img alt="Navbar avatar" class="avatar-img" src="{{ site.avatar | relative_url }}" />
         </a>
       </div>

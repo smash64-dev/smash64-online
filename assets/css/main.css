@@ -127,6 +127,74 @@ img::-moz-selection {
   }
 }
 
+.navbar-custom .avatar-container,
+.navbar-custom .avatar-container-round {
+  position: absolute;
+  left: 50%;
+  width: 3.125rem;
+  margin-top: 1.75rem;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+}
+.navbar-custom.top-nav-short .avatar-container,
+.navbar-custom.top-nav-short .avatar-container-round {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility linear 0.5s, opacity 0.5s ease-in-out;
+  -webkit-transition: visibility linear 0.5s, opacity 0.5s ease-in-out;
+  -moz-transition: visibility linear 0.5s, opacity 0.5s ease-in-out;
+}
+
+.navbar-custom .avatar-container .avatar-img-border,
+.navbar-custom .avatar-container-round .avatar-img-border {
+  width: 100%;
+  display: inline-block;
+  margin-left: -50%;
+}
+
+.navbar-custom .avatar-container-round .avatar-img-border {
+  border-radius: 50%;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 0.3125rem rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 0.5rem rgba(0, 0, 0, .8);
+}
+
+.navbar-custom .avatar-container .avatar-img,
+.navbar-custom .avatar-container-round .avatar-img {
+  width: 100%;
+  display: block;
+}
+
+.navbar-custom .avatar-container-round .avatar-img {
+  border-radius: 50%;
+}
+
+.navbar-custom.top-nav-expanded .avatar-container,
+.navbar-custom.top-nav-expanded .avatar-container-round {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-custom .avatar-container,
+  .navbar-custom .avatar-container-round {
+    width: 6.25rem;
+  }
+
+  .navbar-custom .avatar-container .avatar-img-border,
+  .navbar-custom .avatar-container-round .avatar-img-border,
+  .navbar-custom .avatar-container .avatar-img,
+  .navbar-custom .avatar-container-round .avatar-img {
+    width: 100%;
+  }
+
+  .navbar-custom .avatar-container-round .avatar-img-border {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
+  }
+}
+
 /* --- Footer --- */
 
 footer {
