@@ -21,6 +21,7 @@ The tournament will be streamed Saturday, July 11, 2020. All proceeds (subs, don
 [<i class='fas fa-trophy'></i> Join West Coast Bracket](https://challonge.com/ssb64charitywc){: .btn .btn-warning style="margin: 10px"}
 {: style="text-align: center"}
 
+- **$200 prize pool for the top 3 in each bracket**
 - You can only join 1 tournament (East OR West)
 - Registration closes for East on Sat, July 11, 2020 @ 12PM ET
 - Registration closes for West on Sat, July 11, 2020 @ 1PM PT
