@@ -2,38 +2,40 @@
 # kaillera-servers
 
 anti3d:
-  NA:
-    - name: name
-      host: host
-      port: port
-      location: location
-      owner: owner
-      version: version
-      notes: notes
-    - name: empty
-    - name: empty2
-      host: 0.0.0.0
   AUS:
     - name: SSB64 Australia
       host: 45.63.29.150
-      owner: Indefa
       location: Sydney, Australia
-  EU:
-    - name: name
-      host: host
-      port: port
-      location: location
-      owner: owner
-      version: version
-      notes: notes
-    - name: name
-      host: host
-      port: port
-      location: location
-      owner: owner
-      version: version
-      notes: notes
-      visible: 0
+      owner: hanson933
+      version: EMX2.0.2
+  NA/East:
+    - name: eL beaN Server
+      host: 35.245.177.68
+      location: Ashburn, VA
+      owner: eL maN
+      version: EMX2.0.2
+      notes: Stops working after 04/23/21
+    - name: SSB Chicago
+      host: 162.211.66.81
+      location: Chicago, IL
+      owner: Umbra
+      version: EMX2.0.2
+  NA/West:
+    - name: LA Pizza Server
+      host: 104.237.11.154
+      location: Los Angeles, CA
+      owner: Pizza
+      version: EMX2.0.2
+    - name: Seattle Pizza Server
+      host: 23.227.163.253
+      location: Seattle, WA
+      owner: Pizza
+      version: EMX2.0.2
+    - name: Wils SanFran Server
+      host: 165.227.60.3
+      location: San Francisco, CA
+      owner: Sure4Thing
+      version: EMX2.0.2
 
 # default values, these shouldn't be changed
 defaults:
