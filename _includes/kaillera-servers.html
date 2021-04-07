@@ -11,11 +11,10 @@ https://shopify.github.io/liquid/basics/whitespace/
 {%- capture visible %}{{ server.visible | default: defaults.visible }}{% endcapture %}
 {% if visible != '0' %}{{ server.name }} ({{ region[0] }})
 {{ server.host | default: defaults.host }}:{{ server.port | default: defaults.port }};
-{{- server.location | default: defaults.location -}};
-{{- server.version | default: defaults.version -}};
-{{- server.version | default: defaults.version -}};
 {{- server.owner | default: defaults.owner -}};
-{{- server.notes | default: defaults.notes -}}
+{{- server.version | default: defaults.version -}};
+{{- server.notes | default: defaults.notes -}};
+{{- region[0] }} - {{ server.location | default: defaults.location -}}
 {%- endif -%}
 {%- endfor -%}
 {%- endfor -%}
