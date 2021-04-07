@@ -1,1 +1,46 @@
+---
 # kaillera-servers
+
+defaults:
+  host: 127.0.0.1
+  location: Unknown
+  owner: Unknown
+  notes: ' '
+  port: 27888
+  version: Unknown
+  visible: 1
+
+servers:
+  NA:
+    - name: name
+      host: host
+      port: port
+      location: location
+      owner: owner
+      version: version
+      notes: notes
+    - name: empty
+    - name: empty2
+      host: 0.0.0.0
+  AUS:
+    - name: SSB64 Australia
+      host: 45.63.29.150
+      owner: Indefa
+      location: Sydney, Australia
+      notes: notes notes notes
+  EU:
+    - name: name
+      host: host
+      port: port
+      location: location
+      owner: owner
+      version: version
+      notes: notes
+    - name: name
+      host: host
+      port: port
+      location: location
+      owner: owner
+      version: version
+      notes: notes
+      visible: 0
