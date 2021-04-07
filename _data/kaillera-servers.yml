@@ -1,16 +1,7 @@
 ---
 # kaillera-servers
 
-defaults:
-  host: 127.0.0.1
-  location: Unknown
-  owner: Unknown
-  notes: ' '
-  port: 27888
-  version: Unknown
-  visible: 1
-
-servers:
+anti3d:
   NA:
     - name: name
       host: host
@@ -27,7 +18,6 @@ servers:
       host: 45.63.29.150
       owner: Indefa
       location: Sydney, Australia
-      notes: notes notes notes
   EU:
     - name: name
       host: host
@@ -44,3 +34,14 @@ servers:
       version: version
       notes: notes
       visible: 0
+
+# default values, these shouldn't be changed
+defaults:
+  host: 127.0.0.1
+  location: Unknown
+  owner: Unknown
+  notes: ' '
+  port: 27888
+  raw: 0
+  version: Unknown
+  visible: 1

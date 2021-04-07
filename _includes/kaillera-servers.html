@@ -5,16 +5,27 @@ trying to clean up how this looks; for more info, see:
 https://shopify.github.io/liquid/basics/whitespace/
 {% endcomment %}
 
+{%- if page.server-list -%}
 {%- assign defaults = site.data.kaillera-servers.defaults -%}
-{%- for region in site.data.kaillera-servers.servers -%}
+{%- for region in site.data.kaillera-servers[page.server-list] -%}
 {% for server in region[1] %}
 {%- capture visible %}{{ server.visible | default: defaults.visible }}{% endcapture %}
-{% if visible != '0' %}{{ server.name }} ({{ region[0] }})
+{%- capture raw %}{{ server.raw | default: defaults.raw }}{% endcapture %}
+{%- capture name %}{{ server.name }} ({{ region[0] }}){% endcapture %}
+{% if visible != '0' %}{% if raw != '1' %}{{ name }}{% else %}{{ server.name }}{% endif %}
 {{ server.host | default: defaults.host }}:{{ server.port | default: defaults.port }};
 {{- server.owner | default: defaults.owner -}};
 {{- server.version | default: defaults.version -}};
 {{- server.notes | default: defaults.notes -}};
+{%- capture location -%}
 {{- region[0] }} - {{ server.location | default: defaults.location -}}
+{%- endcapture -%}
+{%- if raw != '1' -%}
+{{- location -}}
+{%- else -%}
+{{- server.location | default: defaults.location -}}
+{%- endif -%}
 {%- endif -%}
 {%- endfor -%}
 {%- endfor -%}
+{%- endif -%}
