@@ -15,7 +15,7 @@ anti3d:
       location: Roubaix, FR
       owner: Unknown
       version: ESF91.0
-      notes: Hosts CS1.6 too
+      notes: Has CS1.6 servers on same machine
     - name: Frankfurt Owllera
       ip: 185.225.210.154
       host: frankfurt.owllera.com
