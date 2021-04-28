@@ -50,6 +50,12 @@ anti3d:
       location: Roubaix, FR
       owner: Unknown
       version: ESF91.0
+      
+    - name: Remz Wonderland
+      host: 192.210.175.118
+      location: Amsterdam, NL
+      owner: Remz*
+      version: ESF91.0
 
   LATAM-N:
     - name: The Happy Kingdom TX
@@ -78,13 +84,6 @@ anti3d:
       version: ESF90.0
 
   NA-E:
-    - name: eL beaN Server
-      host: 35.245.177.68
-      location: Ashburn, VA
-      owner: eL maN
-      version: EMX2.0.2
-      notes: Stops working after 04/23/21
-
     - name: Galaxy
       host: 198.46.248.14
       location: Atlanta, GA
@@ -103,12 +102,6 @@ anti3d:
       location: Montreal, QC
       owner: Nystrata*
       version: EMX3.1.8
-
-    - name: Remz Wonderland
-      host: 23.94.4.98
-      location: Piscataway, NJ
-      owner: Remz*
-      version: ESF91.0
 
     - name: SSB Chicago
       host: 162.211.66.81
@@ -183,6 +176,14 @@ anti3d:
       location: San Francisco, CA
       owner: Sure4Thing
       version: EMX2.0.2
+
+  Notes:
+    - name: Last Updated
+      host: smash64.online
+      location: smash64.online
+      owner: N/A
+      version: N/A
+      notes: This list was last updated on April 28, 2021
 
 # default values, these shouldn't be changed
 defaults:
