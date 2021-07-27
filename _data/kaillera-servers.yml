@@ -12,15 +12,15 @@ anti3d:
 
   EU:
     - name: 2Many Server
-      host: 91.121.3.197
+      host: 37.59.50.226
       location: Roubaix, FR
       owner: Unknown
-      version: ESF91.0
+      version: ESF92.4
       notes: Has CS1.6 servers on same machine
 
     - name: Frankfurt Owllera
       ip: 185.225.210.154
-      host: frankfurt.owllera.com
+      host: fra.owllera.com
       location: Frankfurt, DE
       owner: MrBenRu
       version: Owllera
@@ -35,7 +35,7 @@ anti3d:
       host: 195.154.178.73
       location: Paris, FR
       owner: Unknown
-      version: EMX3.1.8
+      version: ESF92.4
       notes: Baguette
 
     - name: London Owllera
@@ -49,20 +49,51 @@ anti3d:
       host: 145.239.124.250
       location: Roubaix, FR
       owner: Unknown
-      version: ESF91.0
-      
+      version: ESF92.4
+
     - name: Remz Wonderland
       host: 192.210.175.118
       location: Amsterdam, NL
       owner: Remz*
       version: ESF91.0
 
+  JP:
+    - name: cross
+      host: crossn.ddo.jp
+      location: Japan
+      owner: Unknown
+      version: Unknown
+
+    - name: 鵺
+      host: nue.12cb.dev
+      location: Tokyo, Japan
+      owner: jonnjonn
+      version: Unknown
+
+    - name: tetsu
+      host: tetsu2.ddns.net
+      location: Japan
+      owner: Unknown
+      version: Unknown
+
+    - name: くらら
+      host: ry.tl
+      location: Japan
+      owner: Unknown
+      version: Unknown
+
+    - name: シャルム
+      host: shalm.pgw.jp
+      location: Japan
+      owner: Unknown
+      version: Unknown
+
   LATAM-N:
     - name: The Happy Kingdom TX
-      host: 185.227.241.81
+      host: 94.45.173.139
       location: Dallas, TX
       owner: Unknown
-      version: ESF91.0
+      version: ESF92.4
 
   LATAM-S:
     - name: El refugio de Shalaka
@@ -101,7 +132,7 @@ anti3d:
       host: nystrata.com
       location: Montreal, QC
       owner: Nystrata*
-      version: EMX3.1.8
+      version: EMX3.2
 
     - name: SSB Chicago
       host: 162.211.66.81
@@ -119,13 +150,13 @@ anti3d:
       host: 142.93.186.252
       location: New York City, NY
       owner: Sure4Thing
-      version: EMX2.0.2
+      version: ESF92.4
 
     - name: Wils Toronto Server
       host: 165.22.228.252
       location: Toronto, ON
       owner: Sure4Thing
-      version: EMX2.0.2
+      version: ESF92.4
 
   NA-S:
     - name: LA (thesouth)
@@ -141,10 +172,10 @@ anti3d:
       version: EMX2.0.2
 
     - name: The Happy Kingdom TX
-      host: 185.227.241.81
+      host: 94.45.173.139
       location: Dallas, TX
       owner: Unknown
-      version: ESF91.0
+      version: ESF92.4
 
   NA-W:
     - name: LA Pizza Server
@@ -166,16 +197,16 @@ anti3d:
       version: EMX2.0.2
 
     - name: The Happy Kingdom CA
-      host: 45.151.175.205
+      host: 185.149.22.22
       location: Los Angeles, CA
       owner: Unknown
-      version: ESF91.0
+      version: ESF92.4
 
     - name: Wils SanFran Server
       host: 165.227.60.3
       location: San Francisco, CA
       owner: Sure4Thing
-      version: EMX2.0.2
+      version: ESF92.4
 
   Notes:
     - name: Last Updated
@@ -183,7 +214,7 @@ anti3d:
       location: smash64.online
       owner: N/A
       version: N/A
-      notes: This list was last updated on April 28, 2021
+      notes: This list was last updated on July 26, 2021
 
 # default values, these shouldn't be changed
 defaults:
