@@ -51,12 +51,6 @@ anti3d:
       owner: Unknown
       version: ESF92.4
 
-    - name: Remz Wonderland
-      host: 192.210.175.118
-      location: Amsterdam, NL
-      owner: Remz*
-      version: ESF91.0
-
   JP:
     - name: cross
       host: crossn.ddo.jp
@@ -64,11 +58,12 @@ anti3d:
       owner: Unknown
       version: Unknown
 
-    - name: 鵺
+    - name: nue
       host: nue.12cb.dev
       location: Tokyo, Japan
       owner: jonnjonn
       version: Unknown
+      notes: 鵺
 
     - name: tetsu
       host: tetsu2.ddns.net
@@ -76,17 +71,19 @@ anti3d:
       owner: Unknown
       version: Unknown
 
-    - name: くらら
+    - name: kurara
       host: ry.tl
       location: Japan
       owner: Unknown
       version: Unknown
+      notes: くらら
 
-    - name: シャルム
+    - name: shalm
       host: shalm.pgw.jp
       location: Japan
       owner: Unknown
       version: Unknown
+      notes: シャルム
 
   LATAM-N:
     - name: The Happy Kingdom TX
@@ -119,13 +116,13 @@ anti3d:
       host: 198.46.248.14
       location: Atlanta, GA
       owner: Remz*
-      version: ESF91.0
+      version: ESF92.4
 
     - name: Mortal Kombat WaveNet
       host: 198.12.101.16
       location: Chicago, IL
       owner: Remz*
-      version: ESF91.0
+      version: ESF92.4
 
     - name: Nystrata
       ip: 142.4.211.81
