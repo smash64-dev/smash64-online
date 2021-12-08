@@ -118,6 +118,12 @@ anti3d:
       owner: Remz*
       version: ESF92.4
 
+    - name: I Love PA SMASH
+      host: 207.172.59.149
+      location: Allentown, PA
+      owner: Jollie
+      version: ESF0.2.1
+
     - name: Mortal Kombat WaveNet
       host: 198.12.101.16
       location: Chicago, IL
