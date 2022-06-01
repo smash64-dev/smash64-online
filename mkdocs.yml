@@ -46,7 +46,6 @@ markdown_extensions:
   - toc:
       permalink: true
 
-
 plugins:
   # excluding search until there is more content
   - awesome-pages
