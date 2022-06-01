@@ -1,0 +1,36 @@
+{#-
+    do not change these values
+-#}
+{%- set defaults = {
+    "host": "127.0.0.1",
+    "location": "Unknown",
+    "notes": " ",
+    "owner": "Unknown",
+    "port": "27888",
+    "version": "Unknown",
+    "visible": "1"
+} %}
+
+{%- macro render(server, region, defaults) %}
+{%-     set visible = server.visible | default(defaults.visible) %}
+{%-     if visible and server.name %}
+{{-         server.name }} ({{ region }})
+{{          server.host | default(defaults.host) }}:{{ server.port | default(defaults.port) }};
+{{-         server.owner | default(defaults.owner) }};
+{{-         server.version | default(defaults.version) }};
+{{-         server.notes | default(defaults.notes) }};
+{{-         region }} - {{ server.location | default(defaults.location) }}
+{%      endif %}
+{%- endmacro %}
+
+{%- for region, servers in page.meta.servers.items() %}
+{%-     for server in servers %}
+{{-         render(server, region, defaults) }}
+{%-     endfor %}
+{%- endfor %}
+
+{%- if page.meta.git_revision_date_localized_raw_date %}
+{%- set site_domain = config.site_domain | default(config.site_name) -%}
+Last Updated
+{{ site_domain }}:{{ defaults.port }};{{ page.meta.maintainer | default("Unknown") }};N/A;Server list last updated on {{ page.meta.git_revision_date_localized_raw_datetime }};Notes - {{ site_domain }}
+{%- endif %}

@@ -1,7 +1,2 @@
-# gitignore
-
-_site
-.jekyll-metadata
-.sass-cache
-Gemfile.lock
-vendor
+# .gitignore
+site/

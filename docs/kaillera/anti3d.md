@@ -1,8 +1,11 @@
 ---
-# kaillera-servers
-# * owner is not a member of the smash community
+title: Project64KSE Servers
+maintainer: CEnnis91
+template: kaillera.html
+hide:
+  - sitemap
 
-anti3d:
+servers:
   AUS:
     - name: SSB64 Australia
       host: 45.63.29.150
@@ -210,22 +213,4 @@ anti3d:
       location: San Francisco, CA
       owner: Sure4Thing
       version: ESF92.4
-
-  Notes:
-    - name: Last Updated
-      host: smash64.online
-      location: smash64.online
-      owner: N/A
-      version: N/A
-      notes: This list was last updated on July 26, 2021
-
-# default values, these shouldn't be changed
-defaults:
-  host: 127.0.0.1
-  location: Unknown
-  owner: Unknown
-  notes: ' '
-  port: 27888
-  raw: 0
-  version: Unknown
-  visible: 1
+---

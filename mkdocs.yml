@@ -1,0 +1,90 @@
+site_name: Smash64 Online
+site_url: https://smash64.online
+site_author: CEnnis91
+site_description: Project64K - Smash Edition
+site_domain: smash64.online
+
+copyright: Maintained by CEnnis91
+
+repo_name: smash64-online
+repo_url: https://github.com/smash64-dev/smash64-online
+edit_uri: edit/main/docs/
+
+extra:
+  analytics:
+    provider: google
+    property: UA-171766730-1
+  social:
+    - name: Discord
+      link: https://discord.gg/ssb64
+      icon: fontawesome/brands/discord
+    - name: Facebook Group
+      link: https://www.facebook.com/groups/Smash64Community
+      icon: fontawesome/brands/facebook
+    - name: GitHub
+      link: https://github.com/smash64-dev
+      icon: fontawesome/brands/github
+    - name: Twitch
+      link: https://www.twitch.tv/ssb64
+      icon: fontawesome/brands/twitch
+    - name: YouTube
+      link: https://www.youtube.com/channel/UCSjJPpw8N-lQQ1auTg4G1yw
+      icon: fontawesome/brands/youtube
+
+extra_css:
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/theme.css
+
+extra_javascript: []
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - meta
+  - toc:
+      permalink: true
+
+
+plugins:
+  # excluding search until there is more content
+  - awesome-pages
+  - git-revision-date-localized:
+      exclude:
+        - index.md
+  - minify:
+      # minify_html currently breaks kaillera generation
+      minify_html: false
+      minify_css: true
+      minify_js: true
+
+theme:
+  name: material
+  locale: en
+  custom_dir: overrides
+
+  static_templates:
+    - 404.html
+    - sitemap.xml
+
+  favicon: assets/images/logo.svg
+  icon:
+    repo: fontawesome/brands/github
+  logo: assets/images/logo.svg
+
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
