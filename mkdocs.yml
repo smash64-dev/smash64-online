@@ -3,7 +3,6 @@ site_url: https://smash64.online
 site_author: CEnnis91
 site_description: Project64K - Smash Edition
 
-
 copyright: Maintained by CEnnis91
 
 repo_name: smash64-online
@@ -53,6 +52,8 @@ plugins:
   - git-revision-date-localized:
       exclude:
         - index.md
+  - macros:
+      module_name: macros
   - minify:
       # minify_html currently breaks kaillera generation
       minify_html: false
@@ -63,6 +64,11 @@ theme:
   name: material
   locale: en
   custom_dir: overrides
+
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
 
   static_templates:
     - 404.html

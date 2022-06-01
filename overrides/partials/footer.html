@@ -4,11 +4,11 @@
 -#}
 
 {% if page and page.meta and page.meta.hide %}
-    {% set hide_previous_page = True if "prev" in page.meta.hide else False %}
-    {% set hide_next_page = True if "next" in page.meta.hide else False %}
+{%   set hide_previous_page = True if "prev" in page.meta.hide else False %}
+{%   set hide_next_page = True if "next" in page.meta.hide else False %}
 {% else %}
-    {% set hide_previous_page = False %}
-    {% set hide_next_page = False %}
+{%   set hide_previous_page = False %}
+{%   set hide_next_page = False %}
 {% endif %}
 
 <footer class="md-footer">

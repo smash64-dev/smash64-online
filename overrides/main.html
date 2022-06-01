@@ -1,36 +1,20 @@
-{% extends "base.html" %}
+{%- extends "base.html" %}
 
-{% block extrahead %}
-{%- if page and page.meta and page.meta.title %}
-    <meta property="og:title" content="{{ page.meta.title }}">
-    <meta property="twitter:title" content="{{ page.meta.title }}">
-{%- elif page and page.title and not page.is_homepage %}
-    <meta property="og:title" content="{{ page.title }} - {{ config.site_name }}">
-    <meta property="twitter:title" content="{{ page.title }} - {{ config.site_name }}">
-{%- else %}
-    <meta property="og:title" content="{{ config.site_name }}">
-    <meta property="twitter:title" content="{{ config.site_name }}">
-{%- endif %}
+{%- block extrahead %}
+{%- include 'blocks/extrahead.html' %}
+{%- endblock %}
 
-{%- if page and page.meta and page.meta.description %}
-    <meta property="og:description" content="{{ page.meta.description }}" />
-    <meta property="twitter:description" content="{{ page.meta.description }}" />
-{%- elif config.site_description %}
-    <meta property="og:description" content="{{ config.site_description }}" />
-    <meta property="twitter:description" content="{{ config.site_description }}" />
-{%- endif %}
+{%- block tabs %}
+{%- include 'blocks/tabs.html' %}
+{%- endblock %}
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ page.canonical_url }}">
-    <meta property="og:image" content="{{ config.site_url }}assets/images/kirbox.png">
-    <meta property="twitter:image" content="{{ config.site_url }}assets/images/kirbox.png">
-{% endblock %}
-
-{% block scripts %}
+{%- block content %}
+{%- include 'blocks/content_pre.html' %}
 {{ super() }}
-{#-
-    kaillera clients cannot access server lists over HTTPS, so we can't use
-    Enforce HTTPS on GitHub Pages; try to keep the user on HTTPS if possible
--#}
-<script>(function(url,hostname,param,value){if(url.protocol!=='https:'&&url.hostname===hostname&&url.searchParams.get(param)!=value){url.protocol='https:';url.searchParams.set(param,value);location.replace(url)}})(new URL(location),'{{ config.extra.site_domain }}','s',1)</script>
+{%- include 'blocks/content_post.html' %}
+{%- endblock %}
+
+{%- block scripts %}
+{{ super() }}
+{%- include 'blocks/scripts.html' %}
 {% endblock %}

@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for file in pages -%}
     {%- if file and file.page and file.page.meta and file.page.meta.hide -%}
-        {% set hide_sitemap = True if "sitemap" in file.page.meta.hide else False %}
+        {%- set hide_sitemap = True if "sitemap" in file.page.meta.hide else False %}
     {%- else -%}
-        {% set hide_sitemap = False %}
+        {%- set hide_sitemap = False %}
     {%- endif -%}
 
     {% if not file.page.is_link and not hide_sitemap %}

@@ -2,6 +2,7 @@
 hide:
   - next
   - prev
+  - tabs
 ---
 
 # Getting Started

@@ -1,0 +1,11 @@
+{%- if page and page.meta and page.meta.hide %}
+{%-     set hide_navigation_tabs = True if "tabs" in page.meta.hide else False %}
+{%- else %}
+{%-     set hide_navigation_tabs = False %}
+{%- endif %}
+
+{%- if not "navigation.tabs.sticky" in features %}
+{%-     if "navigation.tabs" in features and not hide_navigation_tabs %}
+{%-         include "partials/tabs.html" %}
+{%-     endif %}
+{%- endif %}
