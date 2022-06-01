@@ -32,5 +32,5 @@
     kaillera clients cannot access server lists over HTTPS, so we can't use
     Enforce HTTPS on GitHub Pages; try to keep the user on HTTPS if possible
 -#}
-<script>(function(url,hostname,param,value){if(url.protocol!=='https:'&&url.hostname==='{{ config.site_domain }}'&&url.searchParams.get(param)!=value){url.protocol='https:';url.searchParams.set(param,value);location.replace(url)}})(new URL(location),'{{ config.site_domain }}','s',1)</script>
+<script>(function(url,hostname,param,value){if(url.protocol!=='https:'&&url.hostname===hostname&&url.searchParams.get(param)!=value){url.protocol='https:';url.searchParams.set(param,value);location.replace(url)}})(new URL(location),'{{ config.extra.site_domain }}','s',1)</script>
 {% endblock %}

@@ -30,7 +30,7 @@
 {%- endfor %}
 
 {%- if page.meta.git_revision_date_localized_raw_date %}
-{%- set site_domain = config.site_domain | default(config.site_name) -%}
+{%- set site_domain = config.extra.site_domain | default(config.site_name) -%}
 Last Updated
 {{ site_domain }}:{{ defaults.port }};{{ page.meta.maintainer | default("Unknown") }};N/A;Server list last updated on {{ page.meta.git_revision_date_localized_raw_datetime }};Notes - {{ site_domain }}
 {%- endif %}
