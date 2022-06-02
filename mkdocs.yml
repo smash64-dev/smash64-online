@@ -43,6 +43,7 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - meta
+  - pymdownx.details
   - toc:
       permalink: true
 
