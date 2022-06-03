@@ -71,7 +71,12 @@ plugins:
       # minify_html currently breaks kaillera generation
       minify_html: false
       minify_css: true
+      css_files:
+        - assets/stylesheets/extra.css
+        - assets/stylesheets/theme.css
       minify_js: true
+      js_files:
+        - assets/javascripts/extra.js
 
 theme:
   name: material
