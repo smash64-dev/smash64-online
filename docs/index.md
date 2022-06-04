@@ -2,11 +2,22 @@
 hide:
   - next
   - prev
+  - search
   - tabs
 ---
 
-# Getting Started
+<script>
+  // force a page reload, even if navigation.instant is on
+  // fixes visual issues caused by hiding various elements
+  if (document.querySelectorAll('#__config').length > 0) {
+    const features = JSON.parse(document.querySelectorAll('#__config')[0].innerHTML).features;
+    if (features.includes('navigation.instant')) {
+      window.location.reload(true);
+    }
+  }
+</script>
 
+# Getting Started
 
 ## Download Emulator
 

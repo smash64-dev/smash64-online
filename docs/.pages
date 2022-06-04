@@ -1,4 +1,5 @@
 nav:
+  # this will be removed after the rest of the site has content
   - Smash64 Online:
     - index.md
     - Discords:
@@ -6,4 +7,10 @@ nav:
       - Europe: https://discord.gg/YvbVHD7
       - Australia: https://discord.gg/ssb64australia
       - Latin America: https://discord.gg/rdVGwUv
-  - ...
+  - getting-started
+  - controllers
+  - emulators
+  - plugins
+  - netplay
+  - extras
+  - about

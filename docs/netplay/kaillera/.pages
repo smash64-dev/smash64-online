@@ -1,0 +1,6 @@
+title: Kaillera
+nav:
+  - index.md
+  - Server: server.md
+  - P2P: p2p.md
+  - Recording: recording.md

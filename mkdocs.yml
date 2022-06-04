@@ -33,12 +33,14 @@ extra:
 
 extra_css:
   - assets/stylesheets/extra.css
+  - assets/stylesheets/svg.css
   - assets/stylesheets/theme.css
 
 extra_javascript:
   - assets/javascripts/extra.js
 
 markdown_extensions:
+  - abbr
   - admonition
   - attr_list
   - footnotes
@@ -60,7 +62,7 @@ markdown_extensions:
       permalink: true
 
 plugins:
-  # excluding search until there is more content
+  - search
   - awesome-pages
   - git-revision-date-localized:
       exclude:
@@ -77,6 +79,14 @@ plugins:
       minify_js: true
       js_files:
         - assets/javascripts/extra.js
+  - redirects:
+      redirect_maps:
+        getting-started: 'getting-started/download.md'
+        controllers: 'controllers/original.md'
+        emulators: 'emulators/project64kse/index.md'
+        plugins: 'plugins/graphics.md'
+        netplay: 'netplay/kaillera/index.md'
+        extras: 'extras/patching.md'
 
 theme:
   name: material
@@ -84,6 +94,7 @@ theme:
   custom_dir: overrides
 
   features:
+    - navigation.indexes
     - navigation.instant
     - navigation.tabs
     - navigation.top

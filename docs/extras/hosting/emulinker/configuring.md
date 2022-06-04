@@ -13,6 +13,7 @@
 {{ incomplete("section") }}
 
 ``` bash
+
 emulinker-server/
 └── conf/
     │   # access control, ip bans, etc
@@ -121,7 +122,7 @@ Properties that end with a number (ie. .1) can add more messages (ie. .2)
 
 #### User Privileges
 
-```
+``` title="Filter Syntax"
 user,<NORMAL|ELEVATED|MODERATOR|ADMIN|SUPERADMIN>,<ip filter>,[join message]
 ```
 
@@ -161,7 +162,7 @@ user,<NORMAL|ELEVATED|MODERATOR|ADMIN|SUPERADMIN>,<ip filter>,[join message]
 
 #### IP Address Access
 
-```
+``` title="Filter Syntax"
 ipaddress,<ALLOW|DENY>,<ip filter>
 ```
 
@@ -177,7 +178,7 @@ ipaddress,<ALLOW|DENY>,<ip filter>
 
 #### Game Filters
 
-```
+``` title="Filter Syntax"
 game,<ALLOW|DENY>,<game name filter>
 ```
 
@@ -205,7 +206,7 @@ game,<ALLOW|DENY>,<game name filter>
 
 #### Emulator Filters
 
-```
+``` title="Filter Syntax"
 emulator,<ALLOW|DENY>,<emulator name filter>
 ```
 

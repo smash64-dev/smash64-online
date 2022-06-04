@@ -1,4 +1,4 @@
-# Getting Started
+# Hosting an Emulinker Server
 
 {{ advanced("") }}
 {{ incomplete("") }}

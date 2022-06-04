@@ -34,3 +34,52 @@ code.badge-invert {
 code.badge-invert:empty {
     display: none;
 }
+
+/* based on https://squidfunk.github.io/mkdocs-material/reference/admonitions/#customization */
+.md-typeset :is(.admonition.file, .file, details) :is(.admonition, details),
+.md-typeset :is(.admonition.folder, .folder, details) :is(.admonition, details) {
+    border-color: var(--md-primary-fg-color);
+    border-left-width: 0;
+}
+
+[dir=ltr] .md-typeset :is(details.file, details.folder) {
+    border-left-width: 0;
+}
+
+[dir=rtl] .md-typeset :is(details.file, details.folder) {
+    border-right-width: 0;
+}
+
+[dir=ltr] .md-typeset :is(.file, .folder) :is(.admonition-title, summary) {
+    background-color: var(--md-accent-fg-color--transparent);
+    margin-left: -0.6rem !important;
+}
+
+[dir=rtl] .md-typeset :is(.file, .folder) :is(.admonition-title, summary) {
+    background-color: var(--md-accent-fg-color--transparent);
+    margin-right: -0.6rem !important;
+}
+
+.md-typeset :is(.file.hide, .folder.hide) .admonition-title,
+.md-typeset :is(.file.hide, .folder.hide) summary {
+    opacity: 0.4;
+}
+
+.md-typeset .folder .admonition-title::before,
+.md-typeset .folder summary::before {
+    background-color: var(--md-primary-fg-color);
+    -webkit-mask-image: var(--md-admonition-icon--folder);
+    mask-image: var(--md-admonition-icon--folder);
+}
+
+.md-typeset .file .admonition-title::before,
+.md-typeset .file summary::before {
+    background-color: var(--md-primary-fg-color);
+    -webkit-mask-image: var(--md-admonition-icon--file);
+    mask-image: var(--md-admonition-icon--file);
+}
+
+.md-typeset :is(.file.hide, .folder.hide) .admonition-title::before,
+.md-typeset :is(.file.hide, .folder.hide) summary::before {
+    opacity: 0.4;
+}

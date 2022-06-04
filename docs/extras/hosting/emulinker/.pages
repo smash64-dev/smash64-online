@@ -1,3 +1,6 @@
+title: Server Hosting
 nav:
+  - index.md
   - Installing: installing.md
   - Configuring: configuring.md
+  - Running: running.md

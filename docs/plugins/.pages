@@ -1,0 +1,6 @@
+title: Plugins
+nav:
+  - Graphics: graphics.md
+  - RSP: rsp.md
+  - Audio: audio.md
+  - Controller: controller.md
