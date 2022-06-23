@@ -1,0 +1,45 @@
+{#-
+    do not change these values
+-#}
+{%- set defaults = {
+    "onShow": "void 0;",
+    "onClose": "void 0;",
+    "openTrigger": "data-micromodal-trigger",
+    "closeTrigger": "data-micromodal-close",
+    "openClass": "is-open",
+    "disableScroll": "false",
+    "disableFocus": "false",
+    "awaitOpenAnimation": "false",
+    "awaitCloseAnimation": "false",
+    "debugMode": "false",
+} %}
+
+{%- macro render(page_config, site_config, defaults) %}
+{{-     'try { MicroModal.init({' }}
+{%-     for key, base in defaults.items() %}
+{%-         set value = page_config[key] | default(site_config[key]) | default(base) %}
+{%-         if key in ['openTrigger', 'closeTrigger', 'openClass'] %}
+{{-             key }}: '{{ value | string }}'
+{%-         elif key in ['onShow', 'onClose'] %}
+{{-             key }}: (modal, event) => { {{ value | string }} }
+{%-         else %}
+{{-             key }}: {{ value | string }}
+{%-         endif %}
+{{-         '' if key == 'debugMode' else ', ' }}
+{%-     endfor %}
+{{-     '}); } catch(e) { }' }}
+{%- endmacro %}
+
+{%- if config.extra and config.extra.micromodal %}
+{%-     set site_config = config.extra.micromodal | default({}) %}
+{%- else %}
+{%-     set site_config = {} %}
+{%- endif %}
+
+{%- if page and page.meta and page.meta.micromodal %}
+{%-     set page_config = page.meta.micromodal | default({}) %}
+{%- else %}
+{%-     set page_config = {} %}
+{%- endif %}
+
+<script>{{- render(page_config, site_config, defaults) }}</script>

@@ -14,7 +14,15 @@
 {%- include 'blocks/content_post.html' %}
 {%- endblock %}
 
+{%- block footer %}
+{{ super() }}
+{#- loading scripts from this section helps when navigation.instant is used -#}
+{%- include 'blocks/micromodal.html' %}
+{%- include 'blocks/scripts.html' %}
+{%- endblock %}
+
 {%- block scripts %}
 {{ super() }}
-{%- include 'blocks/scripts.html' %}
+<script type="module" src="{{ 'assets/javascripts/micromodal.min.js' | url }}"></script>
+{%- include 'blocks/micromodal.html' %}
 {% endblock %}

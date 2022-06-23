@@ -1,3 +1,13 @@
+body.scrollLock {
+    overflow-y: hidden;
+    position: fixed;
+}
+
+input[type="file"] {
+    width: 100%;
+    display: none;
+}
+
 /* taken from https://mdbootstrap.com/ */
 code.badge {
     background-color: var(--md-primary-fg-color);
@@ -42,11 +52,13 @@ code.badge-invert:empty {
     border-left-width: 0;
 }
 
-[dir=ltr] .md-typeset :is(details.file, details.folder) {
+[dir=ltr] .md-typeset :is(.admonition.file, details.file),
+[dir=ltr] .md-typeset :is(.admonition.folder, details.folder) {
     border-left-width: 0;
 }
 
-[dir=rtl] .md-typeset :is(details.file, details.folder) {
+[dir=rtl] .md-typeset :is(.admonition.file, details.file),
+[dir=rtl] .md-typeset :is(.admonition.folder, details.folder) {
     border-right-width: 0;
 }
 
@@ -82,4 +94,8 @@ code.badge-invert:empty {
 .md-typeset :is(.file.hide, .folder.hide) .admonition-title::before,
 .md-typeset :is(.file.hide, .folder.hide) summary::before {
     opacity: 0.4;
+}
+
+.md-typeset .md-button--secondary {
+    border-width: 0px;
 }

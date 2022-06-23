@@ -11,7 +11,7 @@ class Admonition:
         Start = " inline"
         End = " inline end"
 
-    def __init__(self, env: dict, message: str, style: str = "note",
+    def __init__(self, env: dict, message: str = '', style: str = "note",
                  title: str = None, collapsible: bool = False,
                  collapsed: bool = False, inline: Inline = Inline.Null):
         self.env = env

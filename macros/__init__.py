@@ -1,9 +1,18 @@
 #!/usr/bin/env python3
 
 from .admonition import Admonition
+from .button import Button
+from .micromodal import MicroModal
 
 
 def define_env(env):
+    #
+    # admonitions macros
+    #
+    @env.macro
+    def admonition(**kwargs):
+        return Admonition(env=env, **kwargs)
+
     @env.macro
     def advanced(thing: str = 'page'):
         return Admonition(
@@ -40,3 +49,44 @@ def define_env(env):
                      'account, you can submit a pull request for it '
                      f"[here]({env.page.edit_url})."),
         ).render()
+
+    #
+    # button macros
+    #
+    @env.macro
+    def button(text: str = '', **kwargs):
+        return Button(env=env, text=text, **kwargs)
+
+    #
+    # modal macros
+    #
+    @env.macro
+    def modal(title: str, **kwargs):
+        return MicroModal(env=env, title=title, **kwargs)
+
+    @env.macro
+    def modalId(title: str):
+        return MicroModal(env=env, title=title).id
+
+    @env.macro
+    def modalOk(title: str, body: str, **kwargs):
+        if 'confirm' not in kwargs:
+            kwargs['confirm'] = Button(env, text='Ok')
+
+        trigger = MicroModal.config(env, 'closeTrigger', MicroModal.CLOSE)
+        kwargs['confirm'].attributes.append(trigger)
+        kwargs['confirm'].primary = True
+        return MicroModal(env=env, title=title, body=body, **kwargs).render()
+
+    @env.macro
+    def modalOkCancel(title: str, body: str, **kwargs):
+        if 'confirm' not in kwargs:
+            kwargs['confirm'] = Button(env, text='Ok')
+        if 'dismiss' not in kwargs:
+            kwargs['dismiss'] = Button(env, text='Cancel')
+
+        trigger = MicroModal.config(env, 'closeTrigger', MicroModal.CLOSE)
+        kwargs['confirm'].primary = True
+        kwargs['dismiss'].attributes.append(trigger)
+        kwargs['dismiss'].primary = False
+        return MicroModal(env=env, title=title, body=body, **kwargs).render()

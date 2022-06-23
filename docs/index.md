@@ -4,19 +4,8 @@ hide:
   - prev
   - search
   - tabs
+reload: true
 ---
-
-<script>
-  // force a page reload, even if navigation.instant is on
-  // fixes visual issues caused by hiding various elements
-  if (document.querySelectorAll('#__config').length > 0) {
-    const features = JSON.parse(document.querySelectorAll('#__config')[0].innerHTML).features;
-    if (features.includes('navigation.instant')) {
-      window.location.reload(true);
-    }
-  }
-</script>
-
 # Getting Started
 
 ## Download Emulator
@@ -42,36 +31,36 @@ Open `Project64KSE.exe` and select your ROM directory (where your ROM is located
 
 ### Graphics
 
-#### GLideN64 Public Release 4.0 `Recommended`{ .badge data-md-color-primary="green" } `OpenGL`{ .badge data-md-color-primary="cyan" } { #markdown data-toc-label='GLideN64 4.0' }
+#### GLideN64 Public Release 4.0 `Recommended`{ .badge data-md-color-primary="green" } `OpenGL`{ .badge data-md-color-primary="cyan" } { #glide4 data-toc-label='GLideN64 4.0' }
 
 The most accurate and best looking plugin, but usually crashes the emulator when ending emulation.
 
-#### GLideN64 Public Release 2.0 `OpenGL`{ .badge data-md-color-primary="cyan" } { #markdown data-toc-label='GLideN64 2.0' }
+#### GLideN64 Public Release 2.0 `OpenGL`{ .badge data-md-color-primary="cyan" } { #glide2 data-toc-label='GLideN64 2.0' }
 
 Correctly renders *most* things in-game and does not crash the emulator when ending emulation.
 
-#### Jabo’s Direct3D8 1.6 `DirectX`{ .badge data-md-color-primary="cyan" } { #markdown data-toc-label='Jabo’s Direct3D8 1.6' }
+#### Jabo’s Direct3D8 1.6 `DirectX`{ .badge data-md-color-primary="cyan" } { #jabos3d8 data-toc-label='Jabo’s Direct3D8 1.6' }
 Older plugin that uses less resources than GLideN64, but has visual glitches (does not show invincibility). Only use if you can’t run GLideN64 or OpenGL.
 
 
 ### Audio
 
-#### Azimer's Audio v0.30 (Old Driver) `Recommended`{ .badge data-md-color-primary="green" } { #markdown data-toc-label="Azimer's v0.30" }
+#### Azimer's Audio v0.30 (Old Driver) `Recommended`{ .badge data-md-color-primary="green" } { #azimers data-toc-label="Azimer's v0.30" }
 
 Standard audio plugin. Other audio plugins may cause desyncs. It is recommended to reduce `Buffer Size` so game audio is less delayed. This is **not saved** and must be done every emulator restart.
 
-#### No Sound { #markdown data-toc-label="No Sound" }
+#### No Sound { #nosound data-toc-label="No Sound" }
 
 Simple audio plugin that disables sound entirely. Does not seem to cause desyncs.
 
 
 ### Controller
 
-#### raphnetraw 1 player NET version `Recommended`{ .badge data-md-color-primary="green" } `Original`{ .badge data-md-color-primary="cyan" } `Hori`{ .badge data-md-color-primary="cyan" } { #markdown data-toc-label="raphnetraw 1 player NET" }
+#### raphnetraw 1 player NET version `Recommended`{ .badge data-md-color-primary="green" } `Original`{ .badge data-md-color-primary="cyan" } `Hori`{ .badge data-md-color-primary="cyan" } { #raphnet1net data-toc-label="raphnetraw 1 player NET" }
 
 Best plug and play adapter for original and hori controllers. Both single and dual port versions work. No configuration necessary. For offline multiplayer use `raphnetraw for Project64 version`.
 
-#### N-Rage `Xbox`{ .badge data-md-color-primary="cyan" } `Playstation`{ .badge data-md-color-primary="cyan" } `Keyboard`{ .badge data-md-color-primary="cyan" } { #markdown data-toc-label="N-Rage" }
+#### N-Rage `Xbox`{ .badge data-md-color-primary="cyan" } `Playstation`{ .badge data-md-color-primary="cyan" } `Keyboard`{ .badge data-md-color-primary="cyan" } { #nrage data-toc-label="N-Rage" }
 
 Used with 3rd-party controllers/adapters, like Xbox/PS3/PS4/Keyboard. There are 3 versions available, and up to preference. You must map your own buttons, and **enable RAW data**.
 
