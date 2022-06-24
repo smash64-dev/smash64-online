@@ -1,10 +1,10 @@
 ---
+section: legacy
 hide:
   - next
   - prev
   - search
   - tabs
-reload: true
 ---
 # Getting Started
 

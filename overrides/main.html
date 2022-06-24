@@ -12,6 +12,7 @@
 {%- include 'blocks/content_pre.html' %}
 {{ super() }}
 {%- include 'blocks/content_post.html' %}
+<div id="__content" style="display: none;" section="{{ page.meta.section | default("modern") }}"></div>
 {%- endblock %}
 
 {%- block footer %}

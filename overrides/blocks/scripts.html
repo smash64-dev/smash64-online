@@ -1,9 +1,4 @@
 {#- can't enforce HTTPS because kaillera clients cannot access server lists over HTTPS -#}
 <script>(function (url, hostname, param, value) { if (url.protocol !== 'https:' && url.hostname === hostname && url.searchParams.get(param) != value) { url.protocol = 'https:'; url.searchParams.set(param, value); location.replace(url) } })(new URL(location), '{{ config.extra.site_domain }}', 's', 1)</script>
-
-{%- if page and page.meta and page.meta.reload %}
-{%- if page.meta.reload == True %}
-{#- force a page reload, even if navigation.instant is on -#}
-<script>if (document.querySelectorAll('#__config').length > 0) { const features = JSON.parse(document.querySelectorAll('#__config')[0].innerHTML).features; if (features.includes('navigation.instant')) { window.location.reload(true); } }</script>
-{%- endif -%}
-{%- endif -%}
+{#- refresh the page if we use navigation.instant and move between sections -#}
+<script>(function (config, content, key) { if (document.querySelectorAll(config).length > 0) { const features = JSON.parse(document.querySelectorAll(config)[0].innerHTML).features; if (! features.includes('navigation.instant')) { return; } if (document.querySelectorAll(content).length > 0) { section = document.querySelectorAll(content)[0].attributes[key].value; if (section != localStorage.section) { localStorage.section = section; window.location.reload(true); } localStorage.section = section; } } })('#__config', '#__content', 'section');</script>
