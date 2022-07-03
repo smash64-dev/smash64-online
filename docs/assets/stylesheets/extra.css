@@ -45,6 +45,52 @@ code.badge-invert:empty {
     display: none;
 }
 
+.md-dropdown {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .1rem;
+    border: 0 solid;
+    box-shadow: var(--md-shadow-z1);
+    color: var(--md-default-fg-color);
+    display: inline-block;
+    padding: .6rem;
+    width: 100%;
+
+    background-color: var(--md-code-bg-color);
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--md-default-fg-color) 50%),
+        linear-gradient(135deg, var(--md-default-fg-color) 50%, transparent 50%),
+        linear-gradient(to right, var(--md-default-fg-color--lighter), var(--md-default-fg-color--lighter));
+    background-position:
+        calc(100% - 20px) 50%,
+        calc(100% - 15px) 50%,
+        calc(100% - 3em) 50%;
+    background-repeat: no-repeat;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+}
+
+.md-dropdown:focus {
+    background-color: var(--md-code-bg-color);
+    background-image:
+        linear-gradient(45deg, var(--md-default-fg-color) 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, var(--md-default-fg-color) 50%),
+        linear-gradient(to right, var(--md-default-fg-color--lighter), var(--md-default-fg-color--lighter));
+    background-position:
+        calc(100% - 15px) 50%,
+        calc(100% - 20px) 50%,
+        calc(100% - 3em) 50%;
+    background-repeat: no-repeat;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    outline: 0;
+}
+
 /* based on https://squidfunk.github.io/mkdocs-material/reference/admonitions/#customization */
 .md-typeset :is(.admonition.file, .file, details) :is(.admonition, details),
 .md-typeset :is(.admonition.folder, .folder, details) :is(.admonition, details) {
@@ -98,4 +144,53 @@ code.badge-invert:empty {
 
 .md-typeset .md-button--secondary {
     border-width: 0px;
+}
+
+.fa-spin {
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear
+}
+
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg)
+    }
+
+    100% {
+        -moz-transform: rotate(359deg)
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg)
+    }
+}
+
+@-o-keyframes spin {
+    0% {
+        -o-transform: rotate(0deg)
+    }
+
+    100% {
+        -o-transform: rotate(359deg)
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
 }

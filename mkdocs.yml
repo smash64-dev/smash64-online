@@ -1,3 +1,5 @@
+INHERIT: data/data.yml
+
 site_name: Smash64 Online
 site_url: https://smash64.online
 site_author: CEnnis91

@@ -9,13 +9,14 @@ class MicroModal:
     OPEN = 'data-micromodal-trigger'
 
     def __init__(self, env: dict, title: str = '', body: str = '',
-                 scrollable: bool = False, size: str = 'md',
+                 scrollable: bool = False, size: str = 'md', color: str = '',
                  confirm: Button = None, dismiss: Button = None,
                  buttons: list[Button] = []):
         self.env = env
         self.title = title
         self.body = body
         self.size = f"modal-dialog-{size}"
+        self.color = color
 
         self.buttons = buttons + [
             dismiss if dismiss is not None else '',
@@ -33,6 +34,13 @@ class MicroModal:
         open = self.config(env, 'openTrigger', MicroModal.OPEN)
         self.open = f'{open}=""'
 
+    def attributes(self):
+        attributes = ['aria-hidden="true"']
+        if self.color:
+            attributes.append(f'data-md-color-accent="{self.color}"')
+            attributes.append(f'data-md-color-primary="{self.color}"')
+        return ' '.join(attributes)
+
     @classmethod
     def config(self, env, key, default):
         # NOTE: page values are not available here.
@@ -48,7 +56,7 @@ class MicroModal:
     def render(self) -> str:
         md1 = self.markdown(True)
         return (
-            f'<div class="modal" id="{self.id}" aria-hidden="true" {md1}>\n'
+            f'<div class="modal" id="{self.id}" {self.attributes()} {md1}>\n'
             f'<div class="modal-backdrop" tabindex="-1" {self.close} {md1}>\n'
             f'<div class="{self.dialog_class}" aria-modal="true" '
             f'aria-labelledby="{self.id}-title" role="dialog" {md1}>\n'

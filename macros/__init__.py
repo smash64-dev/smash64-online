@@ -27,6 +27,18 @@ def define_env(env):
         ).render()
 
     @env.macro
+    def beta(thing: str = 'page'):
+        return Admonition(
+            env=env,
+            style='info',
+            title='Beta',
+            message=(f"The following {thing} is still in beta. It *should* "
+                     'work for the most part, but it is not the final '
+                     'version. If it does not work, no support will be '
+                     'provided.'),
+        ).render()
+
+    @env.macro
     def incomplete(thing: str = 'page'):
         return Admonition(
             env=env,

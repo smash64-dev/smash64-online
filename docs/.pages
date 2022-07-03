@@ -2,6 +2,7 @@ nav:
   # this will be removed after the rest of the site has content
   - Smash64 Online:
     - index.md
+    - Server Status: server-status.md
     - Discords:
       - North America: https://discord.gg/ssb64
       - Europe: https://discord.gg/YvbVHD7

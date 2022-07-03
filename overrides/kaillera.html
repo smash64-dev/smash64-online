@@ -1,29 +1,32 @@
-{#-
-    do not change these values
--#}
+{%- if config.extra.servers and config.extra.servers.defaults %}
+{%- set defaults = config.extra.servers.defaults %}
+{%- else %}
 {%- set defaults = {
     "host": "127.0.0.1",
     "location": "Unknown",
+    "member": False,
     "notes": " ",
     "owner": "Unknown",
     "port": "27888",
     "version": "Unknown",
-    "visible": "1"
+    "visible": True
 } %}
+{%- endif %}
 
 {%- macro render(server, region, defaults) %}
 {%-     set visible = server.visible | default(defaults.visible) %}
+{%-     set member = server.member | default(defaults.member) %}
 {%-     if visible and server.name %}
 {{-         server.name }} ({{ region }})
 {{          server.host | default(defaults.host) }}:{{ server.port | default(defaults.port) }};
-{{-         server.owner | default(defaults.owner) }};
+{{-         server.owner | default(defaults.owner) }}{{ '' if member else '*' }};
 {{-         server.version | default(defaults.version) }};
 {{-         server.notes | default(defaults.notes) }};
 {{-         region }} - {{ server.location | default(defaults.location) }}
 {%      endif %}
 {%- endmacro %}
 
-{%- for region, servers in page.meta.servers.items() %}
+{%- for region, servers in config.extra.servers.list.items() %}
 {%-     for server in servers %}
 {{-         render(server, region, defaults) }}
 {%-     endfor %}
