@@ -8,7 +8,8 @@ class MicroModal:
     CLOSE = 'data-micromodal-close'
     OPEN = 'data-micromodal-trigger'
 
-    def __init__(self, env: dict, title: str = '', body: str = '',
+    def __init__(self, env: dict,
+                 id: str = '', title: str = '', body: str = '',
                  scrollable: bool = False, size: str = 'md', color: str = '',
                  confirm: Button = None, dismiss: Button = None,
                  buttons: list[Button] = []):
@@ -25,9 +26,7 @@ class MicroModal:
 
         can_scroll = self.scrollable(scrollable)
         self.dialog_class = f"modal-dialog {self.size} {can_scroll}"
-
-        safe_title = re.sub('[^0-9a-zA-Z]+', '-', self.title)
-        self.id = f"modal-{safe_title.lower()}"
+        self.id = self.__safe_id(id) if id else self.__safe_id(title)
 
         close = self.config(env, 'closeTrigger', MicroModal.CLOSE)
         self.close = f'{close}=""'
@@ -98,3 +97,6 @@ class MicroModal:
 
     def scrollable(self, scrollable):
         return 'modal-dialog-scrollable' if scrollable else ''
+
+    def __safe_id(self, id):
+        return f"modal-{re.sub('[^0-9a-zA-Z]+', '-', id).lower()}"
