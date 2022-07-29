@@ -84,6 +84,7 @@ plugins:
       exclude:
         - index.md
   - macros:
+      on_error_fail: true
       module_name: macros
   - minify:
       # minify_html currently breaks kaillera generation

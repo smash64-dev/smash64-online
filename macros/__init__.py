@@ -71,6 +71,13 @@ def define_env(env):
         return Button(env=env, text=text, **kwargs)
 
     #
+    # error macros
+    #
+    @env.macro
+    def exception(message: str):
+        raise Exception(message)
+
+    #
     # modal macros
     #
     @env.macro
