@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/marcrobledo/RomPatcher.js.git
+	branch = master
+	commit = df48e4679c198fa2c87a82151cfc290db797fdf4
+	parent = 1d4d06058d62eaf2a7f65afc242a5d87ccb44cd8
+	method = merge
+	cmdver = 0.4.3
