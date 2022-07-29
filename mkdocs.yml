@@ -18,6 +18,13 @@ extra:
   micromodal:
     awaitCloseAnimation: 'true'
     disableScroll: 'true'
+  proxy:
+    proto: https
+    host: cors-proxy.smash64-dev.workers.dev
+    path: '/?'
+    # not secure, this gets added to the page source code
+    auth_header: !ENV [AUTH_HEADER, '']
+    auth_token: !ENV [AUTH_TOKEN, '']
   site_domain: smash64.online
   social:
     - name: Discord

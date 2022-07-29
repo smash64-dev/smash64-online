@@ -6,7 +6,7 @@
 var CAN_USE_WEB_WORKERS = true;
 var romFile, patchFile, patch, headerSize = 0;
 var webWorkerApply, webWorkerCrc;
-var CUSTOM_PATCHER, Elements, modalId, patchButton;
+var CUSTOM_PATCHER, CUSTOM_PROXY, Elements, modalId, patchButton;
 
 
 // helper functions
@@ -37,13 +37,21 @@ function sha1sum(marcFile) {
 
 // patch functions
 function fetchPatch(customPatchIndex, compressedFileIndex) {
-  var proxy = 'https://cors-proxy.smash64-dev.workers.dev/?';
   var customPatch = CUSTOM_PATCHER[customPatchIndex];
-  var uri = `${proxy}${decodeURI(customPatch.file.trim())}`;
+  var uri = decodeURI(customPatch.file.trim());
+  var headers = {};
+
+  if (CUSTOM_PROXY) {
+    uri = `${CUSTOM_PROXY['proto']}://${CUSTOM_PROXY['host']}${CUSTOM_PROXY['path']}${uri}`;
+
+    if (CUSTOM_PROXY['auth_header'] && CUSTOM_PROXY['auth_token']) {
+      headers[CUSTOM_PROXY['auth_header']] = CUSTOM_PROXY['auth_token'];
+    }
+  }
 
   setMessage('status', 'Downloading Patch...', 'info');
-  if (typeof window.fetch === 'function') {
-    fetch(uri)
+  if (typeof window.fetch !== 'function') {
+    fetch(uri, { headers: headers })
       .then(result => result.arrayBuffer())
       .then(arrayBuffer => {
         patchFile = CUSTOM_PATCHER[customPatchIndex].fetchedFile = new MarcFile(arrayBuffer);
@@ -64,6 +72,9 @@ function fetchPatch(customPatchIndex, compressedFileIndex) {
   } else {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', uri, true);
+    if (CUSTOM_PROXY['auth_header'] && CUSTOM_PROXY['auth_token']) {
+      xhr.setRequestHeader(CUSTOM_PROXY['auth_header'], CUSTOM_PROXY['auth_token']);
+    }
     xhr.responseType = 'arraybuffer';
 
     xhr.onload = function (event) {
@@ -553,10 +564,16 @@ function isCustomPatcherEnabled() {
     && CUSTOM_PATCHER.length;
 }
 
-function loadCustomPatcher(patcherData, patchId) {
-  return [
-    JSON.parse(document.querySelectorAll(patcherData)[0].innerHTML)[patchId]
-  ];
+function loadPageData(id, index) {
+  try {
+    if (index) {
+      return JSON.parse(document.querySelectorAll(id)[0].innerHTML)[index];
+    } else {
+      return JSON.parse(document.querySelectorAll(id)[0].innerHTML);
+    }
+  } catch (e) {
+    return;
+  }
 }
 
 function loadWorkers(basePath) {
@@ -612,8 +629,15 @@ function loadWorkers(basePath) {
 }
 
 function loadPatcher(patchInfo) {
-  CUSTOM_PATCHER = loadCustomPatcher('#__patcher', patchInfo.getAttribute('data-patch-id'));
+  CUSTOM_PATCHER = [ loadPageData('#__patcher', patchInfo.getAttribute('data-patch-id')) ];
+  CUSTOM_PROXY = loadPageData('#__proxy');
   document.querySelector('.md-dialog').style.zIndex = 101;
+
+  // fatal
+  if (!CUSTOM_PATCHER || !CUSTOM_PROXY) {
+    alert('Unable to load custom patcher');
+    return;
+  }
 
   // handle external elements
   modalId = patchInfo.getAttribute('data-modal');
