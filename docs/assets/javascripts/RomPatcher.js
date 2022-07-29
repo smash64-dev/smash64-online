@@ -176,9 +176,12 @@ function updateChecksums(file, startOffset, force) {
   // check the expected file size
   if (file === romFile && file.fileSize != expectedSize && !force) {
     [Elements.Info, Elements.Message].forEach((group) => setElementGroup(group, '', [], false));
-    var onclick = `updateChecksums(romFile, ${startOffset} ,true);`;
-    var badSize = `Wrong file size. <span class=\"modal-special-action\" onclick=\"${onclick}\">Force check file</span>`;
-    setMessage(Elements.Info.Header.Format.id, badSize, 'invalid');
+    var forceCheckAction = setSpecialAction(
+      `Wrong file size. Force check file`,
+      `Click to force check the ROM file`,
+      `updateChecksums(romFile, ${startOffset} ,true);`
+    );
+    setMessage(Elements.Info.Header.Format.id, forceCheckAction, 'invalid');
     Elements.Info.Header.Format.setAttribute('data-value', 'invalid');
     setMessage('status');
     return;
@@ -194,9 +197,12 @@ function updateChecksums(file, startOffset, force) {
       setMessage(Elements.Message.Header.Format.id, '', 'invalid');
       Elements.Info.Header.Format.setAttribute('data-value', 'invalid');
     } else {
-      var onclick = `convertRom(romFile, '${expectedFormat}')`;
-      var convertTo = `<span class=\"modal-special-action\" onclick=\"${onclick}\">Convert to ${expectedFormat}</span>`;
-      setMessage(Elements.Message.Header.Format.id, convertTo, 'warning');
+      var convertAction = setSpecialAction(
+        `Convert to ${expectedFormat}`,
+        `Click to convert and save to ${expectedFormat}`,
+        `convertRom(romFile, '${expectedFormat}');`
+      );
+      setMessage(Elements.Message.Header.Format.id, convertAction, 'warning');
       Elements.Info.Header.Format.setAttribute('data-value', 'convert');
     }
   } else {
@@ -413,13 +419,18 @@ function setMessageCopyable(tab, copyable) {
 
   if (copyable) {
     item.classList.add(copyClass);
-    item.setAttribute('title', 'Copy to Clipboard');
+    item.setAttribute('title', 'Copy to clipboard');
     item.parentElement.setAttribute('data-clipboard-target', `#${tab}`);
   } else {
     item.classList.remove(copyClass);
     item.removeAttribute('title');
     item.parentElement.removeAttribute('data-clipboard-target');
   }
+}
+
+function setSpecialAction(text, alt_text, onClick) {
+  var specialClass = 'modal-special-action';
+  return `<span class=\"${specialClass}\" title=\"${alt_text}\" onclick=\"${onClick}\">${text}</span>`;
 }
 
 function setTabApplyEnabled(status) {
@@ -598,7 +609,6 @@ function loadWorkers(basePath) {
   } catch (e) {
     CAN_USE_WEB_WORKERS = false;
   }
-  //CAN_USE_WEB_WORKERS = false;
 }
 
 function loadPatcher(patchInfo) {

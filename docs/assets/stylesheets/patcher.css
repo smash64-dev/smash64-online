@@ -82,6 +82,7 @@ div#modal-patcher span.error::before {
 	mask: var(--md-patch-icon--valid);
 	width: 0.9em;
     -webkit-mask-image: var(--md-patch-icon--invalid);
+    mask-image: var(--md-patch-icon--invalid);
 }
 
 div#modal-patcher span.invalid::before {
@@ -94,6 +95,7 @@ div#modal-patcher span.invalid::before {
 	mask: var(--md-patch-icon--invalid);
 	width: 0.9em;
     -webkit-mask-image: var(--md-patch-icon--invalid);
+    mask-image: var(--md-patch-icon--invalid);
 }
 
 div#modal-patcher span.valid::before {
@@ -106,6 +108,7 @@ div#modal-patcher span.valid::before {
 	mask: var(--md-patch-icon--valid);
 	width: 0.9em;
     -webkit-mask-image: var(--md-patch-icon--valid);
+    mask-image: var(--md-patch-icon--valid);
 }
 
 div#modal-patcher span.warning::before {
@@ -118,6 +121,7 @@ div#modal-patcher span.warning::before {
 	mask: var(--md-patch-icon--warning);
 	width: 0.9em;
     -webkit-mask-image: var(--md-patch-icon--warning);
+    mask-image: var(--md-patch-icon--warning);
 }
 
 /* modal buttons */
@@ -129,7 +133,6 @@ div#modal-patcher a#button-status {
     pointer-events: none;
     text-align: right;
 }
-
 
 div#modal-patcher span#force-check {
     cursor: pointer;

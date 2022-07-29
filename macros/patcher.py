@@ -67,10 +67,10 @@ class Patcher:
         )
 
     def patchButton(self):
-        spinner = ':fontawesome-solid-spinner:{ .fa-spin style="display: none;" }'
+        spin = ':fontawesome-solid-spinner:{ .fa-spin style="display: none;" }'
         return Button(
             self.env,
-            text=f'Apply {spinner}',
+            text=f'Apply {spin}',
             href='#',
             primary=True,
             attributes=['#button-apply']
