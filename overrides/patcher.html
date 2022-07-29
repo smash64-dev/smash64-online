@@ -1,0 +1,22 @@
+{%- extends "main.html" %}
+
+{%- block scripts %}
+{{ super() }}
+<script id="__patcher" type="application/json">{{ page.meta.patches | tojson | safe }}</script>
+<script type="text/javascript" src="{{ 'assets/javascripts/locale.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/FileSaver.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/RomPatcher.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/MarcFile.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/MarcFileN64.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/crc.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/formats/zip.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/formats/ips.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/formats/ups.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/formats/aps.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/formats/bps.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/formats/rup.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/formats/ppf.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/formats/pmsr.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/formats/vcdiff.js' | url }}"></script>
+<script type="text/javascript" src="{{ 'assets/javascripts/zip.js/zip.js' | url }}"></script>
+{% endblock %}

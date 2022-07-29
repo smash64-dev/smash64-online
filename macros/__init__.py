@@ -3,6 +3,7 @@
 from .admonition import Admonition
 from .button import Button
 from .micromodal import MicroModal
+from .patcher import Patcher
 
 
 def define_env(env):
@@ -102,3 +103,10 @@ def define_env(env):
         kwargs['dismiss'].attributes.append(trigger)
         kwargs['dismiss'].primary = False
         return MicroModal(env=env, title=title, body=body, **kwargs).render()
+
+    #
+    # patcher macros
+    #
+    @env.macro
+    def patcher(**kwargs):
+        return Patcher(env=env, **kwargs)

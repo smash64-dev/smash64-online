@@ -3,11 +3,6 @@ body.scrollLock {
     position: fixed;
 }
 
-input[type="file"] {
-    width: 100%;
-    display: none;
-}
-
 /* taken from https://mdbootstrap.com/ */
 code.badge {
     background-color: var(--md-primary-fg-color);
@@ -91,6 +86,20 @@ code.badge-invert:empty {
     outline: 0;
 }
 
+.md-filepicker {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--md-code-bg-color);
+    border-radius: .1rem;
+    border: 0 solid;
+    box-shadow: var(--md-shadow-z1);
+    color: var(--md-default-fg-color);
+    display: inline-block;
+    padding: .6rem;
+    width: 100%;
+}
+
 /* based on https://squidfunk.github.io/mkdocs-material/reference/admonitions/#customization */
 .md-typeset :is(.admonition.file, .file, details) :is(.admonition, details),
 .md-typeset :is(.admonition.folder, .folder, details) :is(.admonition, details) {
@@ -144,6 +153,12 @@ code.badge-invert:empty {
 
 .md-typeset .md-button--secondary {
     border-width: 0px;
+}
+
+a.md-disabled {
+    cursor: none;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .fa-spin {

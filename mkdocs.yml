@@ -37,10 +37,11 @@ extra:
       icon: fontawesome/brands/youtube
 
 extra_css:
+  - assets/stylesheets/theme.css
+  - assets/stylesheets/svg.css
   - assets/stylesheets/extra.css
   - assets/stylesheets/modal.css
-  - assets/stylesheets/svg.css
-  - assets/stylesheets/theme.css
+  - assets/stylesheets/patcher.css
 
 extra_javascript:
   - assets/javascripts/extra.js
@@ -84,6 +85,7 @@ plugins:
       css_files:
         - assets/stylesheets/extra.css
         - assets/stylesheets/modal.css
+        - assets/stylesheets/patcher.css
         - assets/stylesheets/theme.css
       minify_js: true
       js_files:
@@ -104,7 +106,7 @@ theme:
 
   features:
     - navigation.indexes
-    - navigation.instant
+    #- navigation.instant # too much of a hassle atm
     - navigation.tabs
     - navigation.top
 

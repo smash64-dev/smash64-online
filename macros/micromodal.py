@@ -78,7 +78,8 @@ class MicroModal:
         buttons = [button.render() for button in self.buttons if button]
         return (
             f'<div class="modal-footer" {self.markdown(True)}>\n'
-            f'{" ".join(buttons)}'
+            f'{" ".join(buttons)}\n'
+            "{: .modal-footer-buttons }"
             f'</div>\n'
         )
 

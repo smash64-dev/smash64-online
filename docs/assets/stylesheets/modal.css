@@ -126,6 +126,16 @@
     border-color: #666;
 }
 
+.modal-footer-buttons {
+    display: inherit;
+}
+
+.modal-footer-buttons a {
+    align-self: center;
+    display: flex !important;
+    flex-shrink: 0;
+}
+
 .modal .headerlink {
     display: none;
 }
