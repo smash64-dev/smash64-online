@@ -9,5 +9,3 @@ hide:
 # Temporary Beta Pages
 
 {{ beta("section") }}
-
-- [Smash Remix Patching](remix.md)

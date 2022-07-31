@@ -326,7 +326,7 @@ function convertRom(originalRom, toFormat) {
 }
 
 function preparePatchedRom(originalRom, patchedRom, headerSize) {
-  patchedRom.fileName = `${patchFile.outputName}.${patchedRom.romFormat()}`;
+  patchedRom.fileName = `${patchFile.outputName}.${patchedRom.romFormat()}`.replace(/ /g, '_');
   patchedRom.fileType = originalRom.fileType;
   patchedRom.save();
 

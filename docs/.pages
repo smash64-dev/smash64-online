@@ -2,6 +2,7 @@ nav:
   # this will be removed after the rest of the site has content
   - Smash64 Online:
     - index.md
+    - Smash Remix: remix.md
     - Server Status: server-status.md
     - Discords:
       - North America: https://discord.gg/ssb64

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /$
 Disallow: /
+Disallow: /beta/
 Disallow: /kaillera/

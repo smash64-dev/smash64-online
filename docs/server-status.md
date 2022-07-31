@@ -85,6 +85,12 @@ If it's not working for you, try the following:
     var list = document.getElementById('server-list');
     var selection = list.options[list.selectedIndex];
 
+    if (list.selectedIndex == 0) {
+      alert('Select a server first');
+      button.style.display = 'none';
+      return;
+    }
+
     fetch('{{ page.meta.api.server_check }}', {
       method: 'POST',
       body: JSON.stringify({

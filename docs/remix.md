@@ -9,184 +9,184 @@ hide:
 latest: v1.1.1
 patches:
   v1.1.1:
-    name: Smash Remix 1.1.1 Patch
+    name: Smash Remix 1.1.1
     file: https://github.com/JSsixtyfour/smashremix/releases/download/1.1.1/smashremix1.1.1.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/1.1.1
     size: 16777216
     patches:
-      - name: 'Smash Remix 1.1.1 Patch'
+      - name: 'Smash Remix 1.1.1'
         file: smashremix1.1.1/patches/smashremix1.1.1.xdelta
         crc: 0xeb97929e
   v1.1.0:
-    name: Smash Remix 1.1.0 Patch
+    name: Smash Remix 1.1.0
     file: https://github.com/JSsixtyfour/smashremix/releases/download/1.1.0/smashremix1.1.0.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/1.1.0
     size: 16777216
     patches:
-      - name: 'Smash Remix 1.1.0 Patch'
+      - name: 'SmashRemix 1.1.0'
         file: smashremix1.1.0/patches/smashremix1.1.0.xdelta
         crc: 0xeb97929e
   v1.0.1:
-    name: Smash Remix 1.0.1 Patch
+    name: Smash Remix 1.0.1
     file: https://github.com/JSsixtyfour/smashremix/releases/download/1.0.1/smashremix1.0.1.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/1.0.1
     size: 16777216
     patches:
-      - name: 'Smash Remix 1.0.1 Patch'
+      - name: 'Smash Remix 1.0.1'
         file: smashremix1.0.1/patches/smashremix1.0.1.xdelta
         crc: 0xeb97929e
   v1.0.0:
-    name: Smash Remix 1.0.0 Patch
+    name: Smash Remix 1.0.0
     file: https://github.com/JSsixtyfour/smashremix/releases/download/1.0.0/smashremix1.0.0.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/1.0.0
     size: 16777216
     patches:
-      - name: 'Smash Remix 1.0.0 Patch'
+      - name: 'Smash Remix 1.0.0'
         file: smashremix1.0.0/patches/smashremix1.0.0.xdelta
         crc: 0xeb97929e
   v0.9.7:
-    name: Smash Remix 0.9.7 Patch
+    name: Smash Remix 0.9.7
     file: https://github.com/JSsixtyfour/smashremix/releases/download/0.9.7/smashremix0.9.7.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/0.9.7
     size: 16777216
     patches:
-      - name: 'Smash Remix 0.9.7 Patch'
+      - name: 'Smash Remix 0.9.7'
         file: smashremix0.9.7/patches/smashremix0.9.7.xdelta
         crc: 0xeb97929e
   v0.9.5b:
-    name: Smash Remix 0.9.5b Patch
+    name: Smash Remix 0.9.5b
     file: https://github.com/JSsixtyfour/smashremix/releases/download/0.9.5b/smashremix0.9.5b.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/0.9.5b
     size: 16777216
     patches:
-      - name: 'Smash Remix 0.9.5b Patch'
+      - name: 'Smash Remix 0.9.5b'
         file: smashremix0.9.5b/patches/smashremix0.9.5b.xdelta
         crc: 0xeb97929e
   v0.9.5:
-    name: Smash Remix 0.9.5 Patch
+    name: Smash Remix 0.9.5
     file: https://github.com/JSsixtyfour/smashremix/releases/download/0.9.5/smashremix0.9.5.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/0.9.5
     size: 16777216
     patches:
-      - name: 'Smash Remix 0.9.5 Patch'
+      - name: 'Smash Remix 0.9.5'
         file: smashremix0.9.5/patches/smashremix0.9.5.xdelta
         crc: 0xeb97929e
   v0.9.4:
-    name: Bowser Patch
+    name: Smash Remix 0.9.4
     file: https://github.com/JSsixtyfour/smashremix/releases/download/0.9.4/smashremix0.9.4.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/0.9.4
     size: 16777216
     patches:
-      - name: 'Bowser Patch'
+      - name: 'Smash Remix 0.9.4'
         file: smashremix0.9.4/patches/smashremix0.9.4.xdelta
         crc: 0xeb97929e
   v0.9.3c:
-    name: Lucas Interim Patch II
+    name: Smash Remix 0.9.3c
     file: https://github.com/JSsixtyfour/smashremix/releases/download/0.9.3c/smashremix0.9.3c.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/0.9.3c
     size: 16777216
     patches:
-      - name: 'Lucas Interim Patch II'
+      - name: 'Smash Remix 0.9.3c'
         file: smashremix0.9.3c/patches/smashremix0.9.3c.xdelta
         crc: 0xeb97929e
   v0.9.3b:
-    name: Lucas Interim Patch
+    name: Smash Remix 0.9.3b
     file: https://github.com/JSsixtyfour/smashremix/releases/download/0.9.3b/smashremix0.9.3b.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/0.9.3b
     size: 16777216
     patches:
-      - name: 'Lucas Interim Patch'
+      - name: 'Smash Remix 0.9.3b'
         file: smashremix0.9.3b/patches/smashremix0.9.3b.xdelta
         crc: 0xeb97929e
   v0.9.3:
-    name: 'Smash Remix: Anniversary Patch'
+    name: Smash Remix 0.9.3
     file: https://github.com/JSsixtyfour/smashremix/releases/download/0.9.3/smashremix0.9.3.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/0.9.3
     size: 16777216
     patches:
-      - name: 'Smash Remix: Anniversary Patch'
+      - name: 'Smash Remix 0.9.3'
         file: smashremix0.9.3/patches/smashremix0.9.3.xdelta
         crc: 0xeb97929e
   v0.9.2:
-    name: 'Smash Remix: Wario Patch'
+    name: Smash Remix 0.9.2
     file: https://github.com/JSsixtyfour/smashremix/releases/download/0.9.2/smashremix0.9.2.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/0.9.2
     size: 16777216
     patches:
-      - name: 'Smash Remix: Wario Patch'
+      - name: 'Smash Remix 0.9.2'
         file: smashremix0.9.2/patches/smashremix0.9.2.xdelta
         crc: 0xeb97929e
   v0.9.1:
-    name: 'Smash Remix: Dark Samus Patch'
+    name: Smash Remix 0.9.1
     file: https://github.com/JSsixtyfour/smashremix/releases/download/0.9.1/smashremix0.9.1.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/0.9.1
     size: 16777216
     patches:
-      - name: 'Smash Remix: Dark Samus Patch'
+      - name: 'Smash Remix 0.9.1'
         file: smashremix0.9.1/patches/smashremix0.9.1.xdelta
         crc: 0xeb97929e
   v0.9:
-    name: 'Smash Remix: Character Select Patch'
+    name: Smash Remix 0.9
     file: https://github.com/JSsixtyfour/smashremix/releases/download/0.9/smashremix0.9.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/0.9
     size: 16777216
     patches:
-      - name: 'Smash Remix: Character Select Patch'
+      - name: 'Smash Remix 0.9'
         file: smashremix0.9/patches/smashremix0.9.xdelta
         crc: 0xeb97929e
   v0.8.2:
-    name: 'Smash Remix: Doctor Mario and More Stages Edition Patch'
+    name: Smash Remix 0.8.2
     file: https://github.com/JSsixtyfour/smashremix/releases/download/smashremix0.8.2/smashremix0.8.2.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/smashremix0.8.2
     size: 16777216
     patches:
-      - name: 'Smash Remix: Doctor Mario and More Stages Edition Patch'
+      - name: 'Smash Remix 0.8.2'
         file: smashremix0.8.2/patches/smashremix0.8.2.xdelta
         crc: 0xeb97929e
   v0.8.1:
-    name: 'Smash Remix: Falco Release'
+    name: Smash Remix 0.8.1
     file: https://github.com/JSsixtyfour/smashremix/releases/download/smashremix0.8.1/smashremix0.8.1.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/smashremix0.8.1
     size: 16777216
     patches:
-      - name: 'Smash Remix: Falco Release'
+      - name: 'Smash Remix 0.8.1'
         file: smashremix0.8.1/patches/smashremix0.8.1.xdelta
         crc: 0xeb97929e
   v0.8:
-    name: "Smash Remix: Ganon's Tower Patch"
+    name: Smash Remix 0.8
     file: https://github.com/JSsixtyfour/smashremix/releases/download/smashremix0.8/smashremix0.8.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/smashremix0.8
     size: 16777216
     patches:
-      - name: "Smash Remix: Ganon's Tower Patch"
+      - name: 'Smash Remix 0.8'
         file: smashremix0.8/patches/smashremix0.8.xdelta
         crc: 0xeb97929e
   v0.7:
-    name: 'Smash Remix: Young Link Patch'
+    name: Smash Remix 0.7
     file: https://github.com/JSsixtyfour/smashremix/releases/download/smashremix0.7/smashremix0.7.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/smashremix0.7
     size: 16777216
     patches:
-      - name: 'Smash Remix: Young Link Patch'
+      - name: 'Smash Remix 0.7'
         file: smashremix0.7/patches/smashremix0.7.xdelta
         crc: 0xeb97929e
   v0.6:
-    name: 'Smash Remix: Ganondorf Tournament Edition'
+    name: Smash Remix 0.6
     file: https://github.com/JSsixtyfour/smashremix/releases/download/smashremix0.6/smashremix0.6.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/smashremix0.6
     size: 16777216
     patches:
-      - name: 'Smash Remix: Ganondorf Tournament Edition'
+      - name: 'Smash Remix 0.6'
         file: smashremix0.6/patches/smashremix0.6.xdelta
         crc: 0xeb97929e
   v0.5:
-    name: Initial Release
-    file: x
+    name: Smash Remix 0.6
+    file: https://github.com/JSsixtyfour/smashremix/archive/refs/tags/0.5.zip
     site: https://github.com/JSsixtyfour/smashremix/releases/tag/0.5
     size: 16777216
     patches:
       - name: 'Initial Release'
-        file: x/patches/x.xdelta
+        file: smashremix-0.5/smashremix0.5.xdelta
         crc: 0xeb97929e
 ---
 
@@ -201,7 +201,7 @@ patches:
 ## Latest Version ({{ latest_patch }})
 
 [Patch ROM :fontawesome-solid-spinner:{ .fa-spin style="display: none;" }](#){ .md-button .md-button--primary data-patch-id="{{ page.meta.latest }}" data-modal="{{ modalId(patcher().id) }}" onclick="loadPatcher(this)" #patcher-modal }
-[Visit Site]({{ page.meta.patches[latest_patch].site }}){ .md-button }
+[Patch Notes :fontawesome-solid-arrow-up-right-from-square:]({{ page.meta.patches[latest_patch].site }}){ .md-button target='_blank' }
 [Credits](#){ .md-button data-micromodal-trigger="{{ modalId('credits') }}" #credits }
 
 ## Previous Versions
@@ -210,29 +210,33 @@ patches:
 {% if id != page.meta.latest %}
 #### {{ id }} { #{{ id }} }
 - [Patch {{ id }} :fontawesome-solid-spinner:{ .fa-spin style="display: none;" }](#{{ id }}){ data-patch-id="{{ id }}" data-modal="{{ modalId(patcher().id) }}" onclick="loadPatcher(this)" #patcher-modal }
-- [Visit Site]({{ data.site }})
+- [Patch Notes :fontawesome-solid-arrow-up-right-from-square:]({{ data.site }}){ target='_blank' }
 {%- endif %}
 {%- endfor %}
 
 * * *
 
+!!! info "Disclaimer"
+    This website does not condone piracy. This patcher requires that you use your own acquired Smash 64 ROM. The ROM patching is performed on your machine.
+
 !!! info "ROM Patching Credits"
     ROM patching is based on [RomPatcher.js](https://www.marcrobledo.com/RomPatcher.js/) by Marc Robledo.
 
-
 {#- putting this down here allows us hide the whitespace created from the empty toc labels #}
 {{ modalOk(id='credits', title='Credits', scrollable=true, body="
-### Remix Team: { #RemixTeam data-toc-label='' }
+### Remix Team: { #hidden data-toc-label='' }
 - Project Leader: The_Smashfather
 - Designer and Gameplay Developer: Fray
 - Developer: MarioReincarnate
 - Developer: Cyjorg
+- Developer: halofactory
 - Lead Artist: Sope!
 - Animation and Model Import Specialist: Subdrag
 - Moveset Designer: Honey
+- Lead Tester: goombapatrol
 - Installation Specialist: CEnnis91
 
-### Modelers: { #Modelers data-toc-label='' }
+### Modelers: { #hidden data-toc-label='' }
 - Retro64
 - Sope!
 - Likiji123
@@ -243,8 +247,9 @@ patches:
 - Adrian Garcia
 - M-1
 - TheQuickSlash
+- halofactory
 
-### Artists: { #Artists data-toc-label='' }
+### Artists: { #hidden data-toc-label='' }
 - Sope!
 - Retro64
 - Connor Rentz
@@ -253,8 +258,10 @@ patches:
 - Likiji123
 - Pik
 - Gael Romo
+- TheQuickSlash
+- halofactory
 
-### Animators: { #Animators data-toc-label='' }
+### Animators: { #hidden data-toc-label='' }
 - Sope!
 - Fray
 - Coolguy
@@ -268,8 +275,9 @@ patches:
 - Zeozen
 - M-1
 - Meekal
+- halofactory
 
-### Musicians: { #Musicians data-toc-label='' }
+### Musicians: { #hidden data-toc-label='' }
 - TT
 - MyNewSoundtrack
 - PablosCorner
@@ -283,8 +291,9 @@ patches:
 - Pun
 - Fray
 - TheQuickSlash
+- goon
 
-### Stage Designers: { #StageDesigners data-toc-label='' }
+### Stage Designers: { #hidden data-toc-label='' }
 - BridGurrr
 - Jay6T4
 - Plaehni
@@ -299,23 +308,23 @@ patches:
 - TheQuickSlash
 - ownsoldier
 
-### Voice Artists: { #VoiceArtists data-toc-label='' }
+### Voice Artists: { #hidden data-toc-label='' }
 - Zarkpudd
 - Puma Pet
 
-### Modders: { #Modders data-toc-label='' }
+### Modders: { #hidden data-toc-label='' }
 - Qapples
 - Smb123w64gb
 - FaxMeApplejuice
 - goombapatrol
 
-### Video Design Team: { #VideoDesignTeam data-toc-label='' }
+### Video Design Team: { #hidden data-toc-label='' }
 - Darkhorse
 - dshaynie
 - Fray
 - Sope!
 
-### Consultants: { #Consultants data-toc-label='' }
+### Consultants: { #hidden data-toc-label='' }
 - Madao
 - DannySsB
 - tehz
@@ -325,7 +334,7 @@ patches:
 - Kaki
 - Katakiri
 
-### Playtesters: { #Playtesters data-toc-label='' }
+### Playtesters: { #hidden data-toc-label='' }
 - Abnormal Adept
 - Darkhorse
 - hanson933
@@ -385,14 +394,19 @@ patches:
 - Kix
 - Lowww
 - beta
-- halofactory
 - LOC
 - Maciaga
 - pecosix
 - PKStickThing
 - SyluxX1V
+- Weedwack
+- KeroKeroppi
+- 1upShyguy
+- epona
+- Stew
+- thetaiter
 
-### Original Sequencing Musical Credits: { #OriginalSequencingMusicalCredits data-toc-label='' }
+### Original Sequencing Musical Credits: { #hidden data-toc-label='' }
 - Golen
 - King Meteor
 - Sirius
@@ -435,4 +449,5 @@ patches:
 - Gigasoft
 - William Borges
 - Blue Warrior
+- isabellechiming
 ") }}

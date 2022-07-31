@@ -3,6 +3,10 @@ body.scrollLock {
     position: fixed;
 }
 
+a.md-nav__link[href*="#hidden"] {
+    display: none;
+}
+
 /* taken from https://mdbootstrap.com/ */
 code.badge {
     background-color: var(--md-primary-fg-color);
