@@ -414,6 +414,7 @@ patches:
 - epona
 - Stew
 - thetaiter
+- LesbianChemicalPlant
 
 ### Original Sequencing Musical Credits: { #hidden data-toc-label='' }
 - Golen
