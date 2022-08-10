@@ -3,3 +3,4 @@ Allow: /$
 Disallow: /
 Disallow: /beta/
 Disallow: /kaillera/
+Disallow: /temp/
