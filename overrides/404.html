@@ -1,9 +1,15 @@
-{% set hidden = "hidden" %}
-{% extends "main.html" %}
+{%- extends "base.html" %}
+
+{%- block extrahead %}
+{%- include 'blocks/extrahead.html' %}
+{%- endblock %}
+
+{%- block tabs %}
+{%- endblock %}
 
 {% block content %}
 <div style="text-align: center;">
     <h1>404 - Not Found</h1>
-    <img src="{{ config.site_url }}/assets/images/dk-taunt.gif">
+    <img src="{{ 'assets/images/dk-taunt.gif' | url }}">
 </div>
 {% endblock %}

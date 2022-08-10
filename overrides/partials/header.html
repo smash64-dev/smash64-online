@@ -9,6 +9,11 @@
 {%   set hide_search = False %}
 {% endif %}
 
+{# remove search on a 404 page #}
+{% if page == None %}
+{%   set hide_search = True %}
+{% endif %}
+
 {% set class = "md-header" %}
 {% if "navigation.tabs.sticky" in features %}
   {% set class = class ~ " md-header--lifted" %}

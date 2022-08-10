@@ -2,6 +2,9 @@ nav:
   # this will be removed after the rest of the site has content
   - Smash64 Online:
     - index.md
+    - Smash Con 2022:
+      - Combo Contest: temp/combo-contest
+      - Tournament: temp/ssc-2022
     - Smash Remix: remix.md
     - Server Status: server-status.md
     - Discords:
