@@ -3,6 +3,23 @@ body.scrollLock {
     position: fixed;
 }
 
+/* branding colors */
+.brand-facebook {
+    color: #4267B2;
+}
+
+.brand-twitch {
+    color: #9146FF;
+}
+
+.brand-twitter {
+    color: #1DA1F2;
+}
+
+.brand-youtube {
+    color: #FF0000;
+}
+
 a.md-nav__link[href*="#hidden"] {
     display: none;
 }
