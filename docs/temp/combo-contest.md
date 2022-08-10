@@ -5,13 +5,13 @@ hide:
   - prev
   - search
   - tabs
-twitch: vgbootcamp
+twitch: nmplol
 
 ---
 # Combo Contest
 
 <iframe
-    src="https://player.twitch.tv/{{ page.meta.twitch }}&parent={{ config.extra.site_domain }}"
+    src="https://player.twitch.tv/?{{ page.meta.twitch }}&parent={{ config.extra.site_domain }}"
     height="600"
     width="800"
     allowfullscreen>
