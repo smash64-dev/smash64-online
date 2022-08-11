@@ -20,7 +20,21 @@ contestants:
   CNE SSBAfro:
     twitch: https://www.twitch.tv/assiandeus1
     twitter: https://twitter.com/ssbafro
-late_messages: []
+late_messages:
+  - '<img src="https://cdn.discordapp.com/emojis/293566203446820875.webp?size=24&quality=lossless"> <img src="https://cdn.discordapp.com/emojis/293566203446820875.webp?size=24&quality=lossless"> <img src="https://cdn.discordapp.com/emojis/293566203446820875.webp?size=24&quality=lossless">'
+  - 'Maybe try asking in <a href="https://discord.gg/ssb64">#help</a>?'
+  - 64hell.com
+  - At this point, it's part of the tradition.
+  - CEnnis91 is holding the combo contest hostage.
+  - Don't lie, you know this is whispy's fault.
+  - Hold on, there's some kind of toilet paper incident delaying everything...
+  - Man these messages are going to look pretty stupid if this actually starts on time.
+  - The combo contest started late? Now the <b>entire</b> tournament is delayed!
+  - This wouldn't have happened if we went to 3 stocks.
+  - You didn't actually expect this to start on time, did you?
+  - You've waited 3 years for this, what's another 3 hours?
+refresh_messages_seconds: 30
+show_seconds_at: 15
 start: August 11, 2022 19:00:00 GMT-0400
 started: 'false'
 twitch: vgbootcamp
@@ -31,7 +45,12 @@ twitch: vgbootcamp
 ## Countdown { #hidden data-toc-label='' }
 
 The contest is scheduled to start <b><span id='timer'></span></b>.
-<br><i><span id='timer-message'>&nbsp;</span></i>
+
+<div id="messages" markdown="1" style="display: none;">
+<i><span id='timer-message'>&nbsp;</span></i>
+
+[It started](javascript:contestStarted()){ .md-button .md-button--primary }
+</div>
 </div>
 
 ## Live Stream
@@ -62,16 +81,23 @@ The contest is scheduled to start <b><span id='timer'></span></b>.
 <script id="__late_messages" type="application/json">{{ page.meta.late_messages | tojson | safe }}</script>
 
 <script>
-  function updateTimer(start, started) {
+  function contestStarted() {
+    var countdown = document.querySelector('#countdown');
+    countdown.style.display = 'none';
+    started = true;
+  }
+
+  function updateTimer(start) {
     var countdown = document.querySelector('#countdown');
     var timer = document.querySelector('#timer');
     var message = document.querySelector('#timer-message');
-    var messages = JSON.parse(document.querySelectorAll('#__late_messages')[0].innerHTML);
+    var messages = document.querySelector('#messages');
+    var late_messages = JSON.parse(document.querySelectorAll('#__late_messages')[0].innerHTML);
 
     var units = ['d', 'h', 'm'];
     var diff = -(moment().diff(start));
 
-    if (Math.abs(diff) < (15 * 60 * 1000)) {
+    if (Math.abs(diff) < ({{ page.meta.show_seconds_at }} * 60 * 1000)) {
       units.push('s');
     }
 
@@ -88,12 +114,19 @@ The contest is scheduled to start <b><span id='timer'></span></b>.
     if (diff < 0) {
       timer.innerHTML = `${until} ago`;
 
-      if (-(moment().diff(last_message) > 15000) && message.length > 0) {
-        message.innerHTML = messages[Math.floor(Math.random() * messages.length)];
+      if (!started && -(moment().diff(last_message) > ({{ page.meta.refresh_messages_seconds }} * 1000)) && late_messages.length > 0) {
+        index = Math.floor(Math.random() * late_messages.length);
+        while(index == last_index) { index = Math.floor(Math.random() * late_messages.length); }
+
+        message.innerHTML = late_messages[index];
+        last_index = index;
         last_message = new Date();
       };
+
+      messages.style.display = 'inherit';
     } else {
       timer.innerHTML = `in ${until}`;
+      messages.style.display = 'none';
     }
 
     if (!started) {
@@ -103,8 +136,12 @@ The contest is scheduled to start <b><span id='timer'></span></b>.
     }
   }
 
+  // globals
+  var last_index = -1;
   var last_message = 0;
+  var started = {{ page.meta.started }};
+
   var countdown = setInterval(function() {
-    updateTimer(new Date('{{ page.meta.start }}'), {{ page.meta.started }});
+    updateTimer(new Date('{{ page.meta.start }}'));
   }, 1000);
 </script>
