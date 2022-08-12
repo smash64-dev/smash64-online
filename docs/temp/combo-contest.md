@@ -36,7 +36,7 @@ late_messages:
 refresh_messages_seconds: 30
 show_seconds_at: 15
 start: August 11, 2022 19:00:00 GMT-0400
-started: 'false'
+started: 'true'
 twitch: vgbootcamp
 ---
 # Super Smash Con 2022 - Combo Contest
