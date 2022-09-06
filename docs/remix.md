@@ -6,8 +6,17 @@ hide:
   - prev
   - search
   - tabs
-latest: v1.2.1
+latest: v1.2.2
 patches:
+  v1.2.2:
+    name: Smash Remix 1.2.2
+    file: https://github.com/JSsixtyfour/smashremix/releases/download/1.2.2/smashremix1.2.2.zip
+    site: https://github.com/JSsixtyfour/smashremix/releases/tag/1.2.2
+    size: 16777216
+    patches:
+      - name: 'Smash Remix 1.2.2'
+        file: smashremix1.2.2/patches/smashremix1.2.2.xdelta
+        crc: 0xeb97929e
   v1.2.1:
     name: Smash Remix 1.2.1
     file: https://github.com/JSsixtyfour/smashremix/releases/download/1.2.1/smashremix1.2.1.zip
