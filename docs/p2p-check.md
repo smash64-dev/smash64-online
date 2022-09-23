@@ -83,6 +83,7 @@ are currently hosting a game.
 
 {{ modalOk(page.meta.modals.success, color="green", body="
 The machine at `0.0.0.0:27886`{ #p2p_address } game responded from Northern Virginia.
+Remember to only share your IP with people you trust.
 
 If your opponent can't connect, try the following:
 
