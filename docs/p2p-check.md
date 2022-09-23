@@ -61,7 +61,7 @@ modals:
 [More Info](#){ .md-button data-micromodal-trigger="{{ modalId(page.meta.modals.more_info) }}" #more-info }
 
 {{ modalOk(page.meta.modals.failure, color="red", body="
-The machine at `0.0.0.0:27886`{ #p2p_address } game did not respond from Northern Virginia.
+The machine at `0.0.0.0:27886`{ #p2p_address } did not respond from Northern Virginia.
 
 Make sure you confirm the following:
 
@@ -82,7 +82,7 @@ are currently hosting a game.
 ") }}
 
 {{ modalOk(page.meta.modals.success, color="green", body="
-The machine at `0.0.0.0:27886`{ #p2p_address } game responded from Northern Virginia.
+The machine at `0.0.0.0:27886`{ #p2p_address } responded from Northern Virginia.
 Remember to only share your IP with people you trust.
 
 If your opponent can't connect, try the following:
