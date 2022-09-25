@@ -86,7 +86,7 @@ If it's not working for you, try the following:
     var selection = list.options[list.selectedIndex];
 
     if (list.selectedIndex == 0) {
-      alert('Select a server first');
+      alert$.next('Select a server first.');
       button.style.display = 'none';
       return;
     }
