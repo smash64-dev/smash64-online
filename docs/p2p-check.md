@@ -68,7 +68,7 @@ modals:
   <div class="md-input-field" markdown="1">
     <span class="prefix">IPv4 Address</span>
     <input type="text" id="p2p-ipv4">
-    <span class="suffix" id="refresh-ip-button" style="display: none;">[:fontawesome-solid-arrows-rotate:](javascript:getIPv4())</span>
+    <span class="suffix" id="refresh-ip-button" style="display: none;">[:fontawesome-solid-arrows-rotate:](javascript:getIPv4(true))</span>
     <span class="suffix" id="get-ip-button" style="display: none;">[Get IP]({{ page.meta.api.external_get_ip }}){ target='_blank' }</span>
   </div>
 <p></p>
@@ -146,14 +146,16 @@ If your opponent can't connect, try the following:
     }
   }
 
-  function getIPv4() {
+  function getIPv4(force) {
     const ipv4 = document.getElementById('p2p-ipv4');
     let cached_ip = sessionStorage.getItem('p2p-ipv4');
 
-    if (isIPv4(cached_ip)) {
+    if (!force && isIPv4(cached_ip)) {
       showIpButtons('refresh');
       ipv4.value = cached_ip;
     } else {
+      ipv4.value = '';
+
       fetch('{{ page.meta.api.get_ip }}', {
         method: 'GET',
       })
@@ -216,5 +218,5 @@ If your opponent can't connect, try the following:
     modal.querySelector('.md-button--primary').blur();
   }
 
-  getIPv4();
+  getIPv4(false);
 </script>
