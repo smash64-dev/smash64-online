@@ -7,6 +7,7 @@ hide:
   - tabs
 
 api:
+  external_get_ip: https://whatismyipaddress.com
   get_ip: https://api.smash64.online/kaillera/get-ip
   p2p_check: https://api.smash64.online/kaillera/p2p-check
 modals:
@@ -62,16 +63,21 @@ modals:
 !!! attention "Autopunch P2P"
     This feature **does not** currently support Autopunch P2P, only port forwarding (manual or UPnP).
 
-<div class="md-input-field">
-  <span class="prefix">IPv4 Address</span>
-  <input type="text" id="p2p-ipv4">
-  <span class="suffix" id="get-ip-button" style="display: none;"><a href="https://whatismyipaddress.com/" target="_blank">Get IP</a></span>
-</div>
+<p markdown="1">
+<div markdown="1">
+  <div class="md-input-field" markdown="1">
+    <span class="prefix">IPv4 Address</span>
+    <input type="text" id="p2p-ipv4">
+    <span class="suffix" id="refresh-ip-button" style="display: none;">[:fontawesome-solid-arrows-rotate:](javascript:getIPv4())</span>
+    <span class="suffix" id="get-ip-button" style="display: none;">[Get IP]({{ page.meta.api.external_get_ip }}){ target='_blank' }</span>
+  </div>
 <p></p>
-<div class="md-input-field">
-  <span class="prefix">Port Number</span>
-  <input type="number" id="p2p-port" min="1025" max="65535" value="27886" placeholder="27886">
+  <div class="md-input-field">
+    <span class="prefix">Port Number</span>
+    <input type="number" id="p2p-port" min="1025" max="65535" value="27886" placeholder="27886">
+  </div>
 </div>
+</p>
 
 [Check P2P :fontawesome-solid-spinner:{ .fa-spin style="display: none;" }](javascript:checkP2P();){ .md-button .md-button--primary #check-p2p }
 [More Info](#){ .md-button data-micromodal-trigger="{{ modalId(page.meta.modals.more_info) }}" #more-info }
@@ -142,11 +148,10 @@ If your opponent can't connect, try the following:
 
   function getIPv4() {
     const ipv4 = document.getElementById('p2p-ipv4');
-    const button = document.getElementById('get-ip-button');
     let cached_ip = sessionStorage.getItem('p2p-ipv4');
 
     if (isIPv4(cached_ip)) {
-      button.style.display = 'none';
+      showIpButtons('refresh');
       ipv4.value = cached_ip;
     } else {
       fetch('{{ page.meta.api.get_ip }}', {
@@ -155,11 +160,11 @@ If your opponent can't connect, try the following:
       .then(response => response.text())
       .then(data => {
         if (isIPv4(data)) {
-          button.style.display = 'none';
+          showIpButtons('refresh');
           ipv4.value = data;
           sessionStorage.setItem('p2p-ipv4', data);
         } else {
-          button.style.display = 'inherit';
+          showIpButtons('get');
         }
       })
       .catch(error => console.log(error));
@@ -172,6 +177,19 @@ If your opponent can't connect, try the following:
 
   function isValidPort(data) {
     return Number(data) > 1024 && Number(data) < 65535;
+  }
+
+  function showIpButtons(which) {
+    const get_button = document.getElementById('get-ip-button');
+    const refresh_button = document.getElementById('refresh-ip-button');
+
+    if (which == 'refresh') {
+      get_button.style.display = 'none';
+      refresh_button.style.display = 'inherit';
+    } else {
+      get_button.style.display = 'inherit';
+      refresh_button.style.display = 'none';
+    }
   }
 
   function showResults(port, results) {
