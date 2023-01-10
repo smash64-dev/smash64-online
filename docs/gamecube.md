@@ -9,17 +9,22 @@ hide:
 
 ##Gamecube Controller Setup with Official WiiU Adapter
 
-Optional video walkthrough: <https://www.youtube.com/watch?v=4ntXPY4SqNQ>
+These instructions are for configuring a Gamecube controller using a Nintendo adapter. If you have a raphnet gc to usb adapter, you can skip to [Configure Controller Plugin](#3-configure-controller-plugin).
 
-- Download and install WiiU Adapter Driver: <http://m4sv.com/page/wii-u-gcn-usb-driver>
+[:fontawesome-brands-youtube: Optional Video Walkthrough](https://www.youtube.com/watch?v=4ntXPY4SqNQ){ .md-button data-md-color-primary="red" data-md-color-accent="red" }
+
+### 1. Install Drivers
+- Download and install [WiiU Adapter Driver](http://m4sv.com/page/wii-u-gcn-usb-driver)
 - Select **WUP-028** form the drop down in Zadig
 - **DO NOT INSTALL vJoy from here, it's old**
-- Instead download and install the latest vJoy: <https://sourceforge.net/projects/vjoystick/>
----
+- Instead download and install the [latest vJoy](https://sourceforge.net/projects/vjoystick/)
+
+### 2. Run drivers
 - Close Project64
 - Run Gamecube USB Adapter Driver and click `Start`
 - This must *always* be running when you use Project64, it will be in your taskbar
----
+
+### 3. Configure controller plugin
 - Open Project64, go to Settings
 - Select `N-Rage's Direct-Input8 V2 1.83` as your Controller Plugin
 - Go to Options -> Configure Controller Plugin > Devices > Select `vJoy Device 1`
