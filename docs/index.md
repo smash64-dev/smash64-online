@@ -33,13 +33,13 @@ Plugins are selected in `Options -> Settings -> Plugins`. You can configure each
 
 ### Graphics
 
-#### GLideN64 Public Release 4.0 `OpenGL`{ .badge data-md-color-primary="cyan" } { #glide4 data-toc-label='GLideN64 4.0' }
-
-The most accurate and best looking plugin, but usually crashes the emulator when ending emulation.
-
 #### GLideN64 Public Release 2.0 `Recommended`{ .badge data-md-color-primary="green" } `OpenGL`{ .badge data-md-color-primary="cyan" } { #glide2 data-toc-label='GLideN64 2.0' }
 
 Correctly renders *most* things in-game and does not crash the emulator when ending emulation.
+
+#### GLideN64 Public Release 4.0 `OpenGL`{ .badge data-md-color-primary="cyan" } { #glide4 data-toc-label='GLideN64 4.0' }
+
+The most accurate and best looking plugin, but usually crashes the emulator when ending emulation.
 
 #### Jabo’s Direct3D8 1.6 `DirectX`{ .badge data-md-color-primary="cyan" } { #jabos3d8 data-toc-label='Jabo’s Direct3D8 1.6' }
 Older plugin that uses less resources than GLideN64, but has visual glitches (does not show invincibility). Only use if you can’t run GLideN64 or OpenGL.
@@ -90,7 +90,7 @@ Simple audio plugin that disables sound entirely. Does not seem to cause desyncs
 ---
 
 ## Start Netplay
-!!! Danger inline end "Ethernet Highly Recommended"
+!!! Danger "Ethernet Highly Recommended"
 
      Use a wired Ethernet connection when playing netplay. WiFi connections are inherently unreliable and will frustrate you and your opponents.
 
@@ -117,11 +117,11 @@ Launch Netplay with `File -> Start Netplay`. Use the `Change Mode` dropdown to s
 
 ## Frequently Asked Questions
 
-#### My game runs fine, but the audio is delayed.
+#### My game runs fine, but the audio is delayed. { #audiolag data-toc-label='Audio Delay' }
 
 Follow the instructions in the [Azimer's](#azimers) section above. Yes, it's annoying to set the Buffer Size every time, unfortunately this is hard to fix.
 
-#### My game feels laggy. Is there any way to reduce input delay?
+#### My game feels laggy. Is there any way to reduce input delay? { #gamelag data-toc-label='Game Lag' }
 
 The first step is to launch the game from the main menu and check whether you're experiencing the input delay during local (non-netplay) games, or only when playing online.
 
@@ -129,11 +129,11 @@ If you're experiencing delay locally, try playing in full screen mode, as new ve
 
 If you only experience delay when playing online, there are a variety of options for improving your network connection. Make sure to play on ethernet, not wifi. If possible, play using P2P rather than server, or look for a server close to you using the server list. When hosting P2P, you can try entering a higher delay in the `Enter custom frame delay` box. For example, if the connection is jittery on 1 frame, try forcing a 2 frame delay. The same effect can be replicated on server by spoofing a higher ping. If you experience frequently lag, you may want to investigate your network for [bufferbloat](https://www.bufferbloat.net/projects/). 
 
-#### I'm trying to configure a USB controller, but when I press a button, nothing happens.
+#### I'm trying to configure a USB controller, but when I press a button, nothing happens. { #nocontroller data-toc-label="Can't Configure Controller" }
 
 This is an issue with N-Rage on newer version of Windows. See the [XBox Setup Instructions](/xbox/) for more information.
 
-### Troublshooting Help
+### Troubleshooting Help
 
 If you are still having problems with netplay, ask in `#help` in the [Smash 64 Discord](https://discord.gg/ssb64). 
 
