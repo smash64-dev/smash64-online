@@ -9,11 +9,14 @@ hide:
 
 ## Input Plugin
 
-The recommended controller plugin for XBox and other USB controllers is N-Rage V2 1.83, which is included with the emulator. Make sure to select it as your input plugin by going to `Options -> Settings -> Plugins.` These instructions **won't work** if you're using a different input plugin.
+The recommended controller plugin for XBox and other USB controllers is `N-Rage V2 1.83`, which is included with the emulator. Make sure to select it as your input plugin by going to `Options -> Settings -> Plugins.` These instructions **won't work** if you're using a different input plugin, such as `N-Rage Input Plugin V2 2.3c`.
 ## Configuring Inputs
 
 #### Windows 7 & 8
 Under Windows 7 and 8, XBox controllers can be configured normally through N-Rage. Simply open `Options -> Configure Controller Plugin`, select your controller, and press the buttons that you want to bind to each input.
+
+!!! warning
+    These operating systems have been declared [end of life](https://www.microsoft.com/en-us/windows/end-of-support) by Microsoft, and for security reasons you should consider updating.
 
 #### Windows 10+
 
