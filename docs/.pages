@@ -6,8 +6,8 @@ nav:
     - Server Status: server-status.md
     - P2P Checker: p2p-check.md
     - Controller Setup Guides:
-      - Xbox: xbox.md
       - Gamecube: gamecube.md
+      - Xbox: xbox.md
     - Discords:
       - North America: https://discord.gg/ssb64
       - Europe: https://discord.gg/YvbVHD7
