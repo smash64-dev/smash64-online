@@ -5,8 +5,8 @@ nav:
     - Smash Remix: remix.md
     - Server Status: server-status.md
     - P2P Checker: p2p-check.md
-    - Controller Setup Guides:
-      - Gamecube: gamecube.md
+    - Controller Setup:
+      - GameCube: gamecube.md
       - Xbox: xbox.md
     - Discords:
       - North America: https://discord.gg/ssb64
