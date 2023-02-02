@@ -6,8 +6,17 @@ hide:
   - prev
   - search
   - tabs
-latest: v1.2.2
+latest: v1.3.0
 patches:
+  v1.3.0:
+    name: Smash Remix 1.3.0
+    file: https://github.com/JSsixtyfour/smashremix/releases/download/1.3.0/smashremix1.3.0.zip
+    site: https://github.com/JSsixtyfour/smashremix/releases/tag/1.3.0
+    size: 16777216
+    patches:
+      - name: 'Smash Remix 1.3.0'
+        file: smashremix1.3.0/patches/smashremix1.3.0.xdelta
+        crc: 0xeb97929e
   v1.2.2:
     name: Smash Remix 1.2.2
     file: https://github.com/JSsixtyfour/smashremix/releases/download/1.2.2/smashremix1.2.2.zip
@@ -258,6 +267,7 @@ patches:
 - Developer: Cyjorg
 - Developer: halofactory
 - Lead Artist: Sope!
+- Lead Musician: Pringles
 - Animation and Model Import Specialist: Subdrag
 - Moveset Designer: Honey
 - Lead Tester: goombapatrol
@@ -274,7 +284,6 @@ patches:
 - Adrian Garcia
 - M-1
 - TheQuickSlash
-- halofactory
 
 ### Artists: { #hidden data-toc-label='' }
 - Sope!
@@ -286,7 +295,6 @@ patches:
 - Pik
 - Gael Romo
 - TheQuickSlash
-- halofactory
 
 ### Animators: { #hidden data-toc-label='' }
 - Sope!
@@ -303,6 +311,7 @@ patches:
 - M-1
 - Meekal
 - halofactory
+- TheQuickSlash
 
 ### Musicians: { #hidden data-toc-label='' }
 - TT
@@ -318,7 +327,10 @@ patches:
 - Pun
 - Fray
 - TheQuickSlash
-- goon
+- Pringles
+- TheMrIron2
+- UnforseenUplink
+- supa
 
 ### Stage Designers: { #hidden data-toc-label='' }
 - BridGurrr
@@ -334,6 +346,7 @@ patches:
 - Retro64
 - TheQuickSlash
 - ownsoldier
+- halofactory
 
 ### Voice Artists: { #hidden data-toc-label='' }
 - Zarkpudd
@@ -350,6 +363,8 @@ patches:
 - dshaynie
 - Fray
 - Sope!
+- TheQuickSlash
+- Retro64
 
 ### Consultants: { #hidden data-toc-label='' }
 - Madao
@@ -360,6 +375,7 @@ patches:
 - CrashOveride
 - Kaki
 - Katakiri
+- Aqua Midi
 
 ### Playtesters: { #hidden data-toc-label='' }
 - Abnormal Adept
@@ -421,6 +437,7 @@ patches:
 - Kix
 - Lowww
 - beta
+- halofactory
 - LOC
 - Maciaga
 - pecosix
@@ -433,6 +450,26 @@ patches:
 - Stew
 - thetaiter
 - LesbianChemicalPlant
+- Bedoop
+- CMM1215
+- Djzach
+- Exile
+- FrankBlack22
+- Freean
+- Gibrani
+- Huntsman
+- Indefa
+- MultiVolt
+- Policombo
+- Raihem
+- Roman
+- ShyGuyGH
+- The Ranger
+- Tylan 64
+- חלקלקToad
+- MissingNo.
+- Wiseacre
+- Pringles
 
 ### Original Sequencing Musical Credits: { #hidden data-toc-label='' }
 - Golen
@@ -478,4 +515,5 @@ patches:
 - William Borges
 - Blue Warrior
 - isabellechiming
+- Vènatus
 ") }}
