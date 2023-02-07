@@ -1,6 +1,6 @@
 nav:
   # this will be removed after the rest of the site has content
-  - Smash64 Online<br>:
+  - Smash64 Online:
     - index.md
     - ROM Patches:
       - Smash Remix: remix.md
