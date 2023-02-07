@@ -148,7 +148,7 @@ If you only experience delay when playing online, there are a variety of options
 
 This is an issue with N-Rage on newer version of Windows. See the [Xbox Setup Instructions](/xbox/) for more information.
 
-#### My question isn't here. { #discordhelp data-toc-label="Can't find question" }
+#### My question isn't here. { #discordhelp data-toc-label="Can't Find Question" }
 
 If you are still having problems with netplay, ask in `#help` in the [Smash 64 Discord](https://discord.gg/ssb64).
 
