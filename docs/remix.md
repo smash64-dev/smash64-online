@@ -7,6 +7,8 @@ hide:
   - search
   - tabs
 latest: v1.3.0
+patcher_errors:
+  mismatch: Mismatch. Use the vanilla ROM.
 patches:
   v1.3.0:
     name: Smash Remix 1.3.0

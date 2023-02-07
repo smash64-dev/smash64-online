@@ -105,6 +105,7 @@ function fetchPatch(customPatchIndex, compressedFileIndex) {
 
 function parseCustomPatch(customPatch) {
   setMessage('status');
+  mismatch = (typeof PATCHER_ERRORS.mismatch === "undefined") ? "ROM does not match" : PATCHER_ERRORS.mismatch
 
   // set the output name based on patch data
   patchFile = customPatch.fetchedFile;
@@ -116,13 +117,19 @@ function parseCustomPatch(customPatch) {
   if (typeof patch.validateSource === 'undefined') {
     if (typeof customPatch.crc === 'number') {
       patch.validateSource = function (romFile, headerSize) {
-        return customPatch.crc === crc32(romFile, headerSize);
+        return {
+          result: customPatch.crc === crc32(romFile, headerSize),
+          message: mismatch
+        };
       }
     } else if (typeof customPatch.crc === 'object') {
       patch.validateSource = function (romFile, headerSize) {
         for (var i = 0; i < customPatch.crc.length; i++) {
           if (customPatch.crc[i] === crc32(romFile, headerSize)) {
-            return true;
+            return {
+              result: true,
+              message: ''
+            };
           }
         }
 
@@ -133,7 +140,10 @@ function parseCustomPatch(customPatch) {
     // single patch file
     if (typeof customPatch.patches === 'object') {
       patch.validateSource = function (romFile, headerSize) {
-        return customPatch.patches[0].crc === crc32(romFile, headerSize);
+        return {
+          result: customPatch.patches[0].crc === crc32(romFile, headerSize),
+          message: mismatch
+        };
       }
     }
 
@@ -266,7 +276,9 @@ function updateChecksums(file, startOffset, force) {
 
 function validateSource() {
   if (patch && romFile && romFile._u8array && romFile._u8array.length > 0 && typeof patch.validateSource !== 'undefined') {
-    if (patch.validateSource(romFile, false)) {
+    validate = patch.validateSource(romFile, false);
+
+    if (validate.result) {
       for (const [obj, element] of Object.entries(Elements.Info.Checksum)) {
         element.innerHTML = element.getAttribute('data-value');
         setMessageCopyable(element.id, true);
@@ -285,7 +297,7 @@ function validateSource() {
 
       if (Elements.Info.Checksum.CRC32.innerHTML.length !== 0) {
         setMessage(Elements.Message.Checksum.CRC32.id, '', 'invalid')
-        setMessage('status', 'ROM does not match', 'error');
+        setMessage('status', validate.message, 'error');
         setTabApplyEnabled(false);
       }
     }
@@ -638,6 +650,7 @@ function loadWorkers(basePath) {
 function loadPatcher(patchInfo) {
   CUSTOM_PATCHER = [ loadPageData('#__patcher', patchInfo.getAttribute('data-patch-id')) ];
   CUSTOM_PROXY = loadPageData('#__proxy');
+  PATCHER_ERRORS = loadPageData('#__patcher_errors') ?? {};
   document.querySelector('.md-dialog').style.zIndex = 101;
 
   // fatal

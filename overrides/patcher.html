@@ -4,6 +4,7 @@
 {{ super() }}
 <script id="__patcher" type="application/json">{{ page.meta.patches | tojson | safe }}</script>
 <script id="__proxy" type="application/json">{{ config.extra.proxy | tojson | safe }}</script>
+<script id="__patcher_errors" type="application/json">{{ page.meta.patcher_errors | default("{}") | tojson | safe }}</script>
 <script type="text/javascript" src="{{ 'assets/javascripts/locale.js' | url }}"></script>
 <script type="text/javascript" src="{{ 'assets/javascripts/FileSaver.js' | url }}"></script>
 <script type="text/javascript" src="{{ 'assets/javascripts/RomPatcher.js' | url }}"></script>
