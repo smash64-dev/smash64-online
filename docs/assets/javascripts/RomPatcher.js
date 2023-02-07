@@ -130,6 +130,13 @@ function parseCustomPatch(customPatch) {
       }
     }
 
+    // single patch file
+    if (typeof customPatch.patches === 'object') {
+      patch.validateSource = function (romFile, headerSize) {
+        return customPatch.patches[0].crc === crc32(romFile, headerSize);
+      }
+    }
+
     validateSource();
   }
 }

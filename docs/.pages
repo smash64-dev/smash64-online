@@ -1,10 +1,13 @@
 nav:
   # this will be removed after the rest of the site has content
-  - Smash64 Online:
+  - Smash64 Online<br>:
     - index.md
-    - Smash Remix: remix.md
-    - Server Status: server-status.md
-    - P2P Checker: p2p-check.md
+    - ROM Patches:
+      - Smash Remix: remix.md
+      - 19XX: 19XX.md
+    - Kaillera Tools:
+      - Server Status: server-status.md
+      - P2P Checker: p2p-check.md
     - Controller Setup:
       - GameCube: gamecube.md
       - Xbox: xbox.md
