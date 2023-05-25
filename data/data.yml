@@ -112,7 +112,7 @@ extra:
 
       LATAM-S:
         - name: El refugio de Shalaka
-          host: elrefugideshalaka.ddns.net
+          host: elrefugiodeshalaka.ddns.net
           location: Santiago, CL
           owner: Shalaka
           member: true
