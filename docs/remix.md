@@ -6,10 +6,19 @@ hide:
   - prev
   - search
   - tabs
-latest: v1.3.1
+latest: v1.4.0
 patcher_errors:
   mismatch: Mismatch. Use the vanilla ROM.
 patches:
+  v1.4.0:
+    name: Smash Remix 1.4.0
+    file: https://github.com/JSsixtyfour/smashremix/releases/download/1.4.0/smashremix1.4.0.zip
+    site: https://github.com/JSsixtyfour/smashremix/releases/tag/1.4.0
+    size: 16777216
+    patches:
+      - name: 'Smash Remix 1.4.0'
+        file: smashremix1.4.0/patches/smashremix_1.4.0.xdelta
+        crc: 0xeb97929e
   v1.3.1:
     name: Smash Remix 1.3.1
     file: https://github.com/JSsixtyfour/smashremix/releases/download/1.3.1/smashremix1.3.1.zip
@@ -323,6 +332,7 @@ patches:
 - Meekal
 - halofactory
 - TheQuickSlash
+- Pringles
 
 ### Musicians: { #hidden data-toc-label='' }
 - TT
@@ -358,10 +368,14 @@ patches:
 - TheQuickSlash
 - ownsoldier
 - halofactory
+- Pringles
+- HeronNobody
 
 ### Voice Artists: { #hidden data-toc-label='' }
 - Zarkpudd
 - Puma Pet
+- Pringles
+- TheMrIron2
 
 ### Modders: { #hidden data-toc-label='' }
 - Qapples
@@ -376,6 +390,7 @@ patches:
 - Sope!
 - TheQuickSlash
 - Retro64
+- Pringles
 
 ### Consultants: { #hidden data-toc-label='' }
 - Madao
@@ -386,7 +401,9 @@ patches:
 - CrashOveride
 - Kaki
 - Katakiri
-- Aqua Midi
+- Aqua MIDI
+- Uncle Punch
+- Cjag
 
 ### Playtesters: { #hidden data-toc-label='' }
 - Abnormal Adept
@@ -413,7 +430,7 @@ patches:
 - thelordoflight
 - JODO
 - farcry15
-- mimimax
+- Mimimax
 - Pluto
 - kyleglor
 - Revan
@@ -434,7 +451,7 @@ patches:
 - SuperSqank
 - supa
 - JeyKeyAr
-- RazzSmash
+- Razz
 - PADB
 - madrush
 - krakhead
@@ -461,7 +478,7 @@ patches:
 - Stew
 - thetaiter
 - LesbianChemicalPlant
-- Bedoop
+- Bedoop!
 - CMM1215
 - Djzach
 - Exile
@@ -481,6 +498,10 @@ patches:
 - MissingNo.
 - Wiseacre
 - Pringles
+- EG
+- Gooby
+- Nax
+- Papamark
 
 ### Original Sequencing Musical Credits: { #hidden data-toc-label='' }
 - Golen
@@ -526,5 +547,7 @@ patches:
 - William Borges
 - Blue Warrior
 - isabellechiming
-- Vènatus
+- Venatus
+- JILost
+- dY Shock
 ") }}
