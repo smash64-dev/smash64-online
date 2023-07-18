@@ -17,7 +17,7 @@ patches:
     size: 16777216
     patches:
       - name: 'Smash Remix 1.4.1'
-        file: smashremix1.4.1/patches/smashremix_1.4.1.xdelta
+        file: smashremix1.4.1/patches/smashremix1.4.1.xdelta
         crc: 0xeb97929e
   v1.4.0:
     name: Smash Remix 1.4.0
