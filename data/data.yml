@@ -162,7 +162,7 @@ extra:
           version: EMX3.2
 
         - name: SSB Chicago
-          host: 162.211.66.81
+          host: 199.167.28.36
           location: Chicago, IL
           owner: Umbra
           member: true
