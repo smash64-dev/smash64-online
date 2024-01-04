@@ -6,10 +6,19 @@ hide:
   - prev
   - search
   - tabs
-latest: v1.4.1
+latest: v1.5.0
 patcher_errors:
   mismatch: Mismatch. Use the vanilla ROM.
 patches:
+  v1.5.0:
+    name: Smash Remix 1.5.0
+    file: https://github.com/JSsixtyfour/smashremix/releases/download/1.5.0/smashremix1.5.0.zip
+    site: https://github.com/JSsixtyfour/smashremix/releases/tag/1.5.0
+    size: 16777216
+    patches:
+      - name: 'Smash Remix 1.5.0'
+        file: smashremix1.5.0/patches/smashremix1.5.0.xdelta
+        crc: 0xeb97929e
   v1.4.1:
     name: Smash Remix 1.4.1
     file: https://github.com/JSsixtyfour/smashremix/releases/download/1.4.1/smashremix1.4.1.zip
@@ -300,6 +309,7 @@ patches:
 - Animation and Model Import Specialist: Subdrag
 - Moveset Designer: Honey
 - Lead Tester: goombapatrol
+- Lead Tester: CMM1215
 - Installation Specialist: CEnnis91
 
 ### Modelers: { #hidden data-toc-label='' }
@@ -313,6 +323,9 @@ patches:
 - Adrian Garcia
 - M-1
 - TheQuickSlash
+- Jay6T4
+- HeronNobody
+- halofactory
 
 ### Artists: { #hidden data-toc-label='' }
 - Sope!
@@ -324,6 +337,8 @@ patches:
 - Pik
 - Gael Romo
 - TheQuickSlash
+- Pringles
+- 1upShyguy
 
 ### Animators: { #hidden data-toc-label='' }
 - Sope!
@@ -361,6 +376,8 @@ patches:
 - TheMrIron2
 - UnforseenUplink
 - supa
+- halofactory
+- 1upShyGuy
 
 ### Stage Designers: { #hidden data-toc-label='' }
 - BridGurrr
@@ -391,6 +408,7 @@ patches:
 - Smb123w64gb
 - FaxMeApplejuice
 - goombapatrol
+- VetriTheRetri
 
 ### Video Design Team: { #hidden data-toc-label='' }
 - Darkhorse
@@ -400,6 +418,7 @@ patches:
 - TheQuickSlash
 - Retro64
 - Pringles
+- HeronNobody
 
 ### Consultants: { #hidden data-toc-label='' }
 - Madao
@@ -413,6 +432,8 @@ patches:
 - Aqua MIDI
 - Uncle Punch
 - Cjag
+- SilverJake
+- Ploaj
 
 ### Playtesters: { #hidden data-toc-label='' }
 - Abnormal Adept
@@ -511,6 +532,10 @@ patches:
 - Gooby
 - Nax
 - Papamark
+- swooce
+- microwaved hotdogs
+- G-Rabbit
+- luigit0ilet
 
 ### Original Sequencing Musical Credits: { #hidden data-toc-label='' }
 - Golen
@@ -559,4 +584,6 @@ patches:
 - Venatus
 - JILost
 - dY Shock
+- thatoneinternetuser
+- Sebastian Kingsley
 ") }}
