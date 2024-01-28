@@ -264,14 +264,17 @@ patches:
         crc: 0xeb97929e
 ---
 
-# Smash Remix
-
 {{ patcher().render() }}
 {%- if 'latest' not in page.meta %}
 {{ exception('you must define the latest version in ' + page.url) }}
 {%- endif %}
 {%- set latest_patch = page.meta.latest %}
 
+# Smash Remix Patcher
+![Remix logo](/assets/images/remix.png){ width=40% }<br />
+Smash Remix is a massive content mod for Super Smash Bros. 64, adding over a dozen new characters, along with new stages, songs, gamemodes, and training features.
+
+To download the latest version of the Remix, use the Patch ROM button below. You'll need to select your own copy of the Super Smash Bros. ROM to patch.
 ## Latest Version ({{ latest_patch }})
 
 [Patch ROM :fontawesome-solid-spinner:{ .fa-spin style="display: none;" }](#){ .md-button .md-button--primary data-patch-id="{{ page.meta.latest }}" data-modal="{{ modalId(patcher().id) }}" onclick="loadPatcher(this)" #patcher-modal }
