@@ -142,7 +142,7 @@ The higher your ping to the server or your opponent, the more frames of delay yo
 
 ## Frequently Asked Questions
 
-#### When I try to play online, player 1 works fine, but player 2 can't move.
+#### When I try to play online, player 1 works fine, but player 2 can't move. { #p2cantmove data-toc-label='P2 Raw Issues' }
 
 This is usually an issue with raw data or controller config. First, launch the game in singleplayer and make sure your controls work locally. Next, verify that players using the NRage input plugin have RawData **enabled**.
 
@@ -153,7 +153,7 @@ This is usually an issue with raw data or controller config. First, launch the g
 
 Finally, make sure both players restart their emulators whenever they change opponents.
 
-#### When I launch the emulator, I get a warning saying `raphnetraw: Adapter not detected`.
+#### When I launch the emulator, I get a warning saying `raphnetraw: Adapter not detected`. { #noadapter data-toc-label='Raphnet not detected' }
 
 ![raphnet error message](/assets/images/raphnet_error.png)
 
@@ -161,7 +161,7 @@ This error occurs when you have the Raphnetraw input plugin selected, but you do
 
 If you do have a Raphnet adapter, check the cable connection on both sides, and make sure the adapter management tool is not running.
 
-#### When I launch the emulator I get a dll error, like `Current GFX dll could not be used` or `Could Not load RSP plugin`
+#### When I launch the emulator I get a dll error, like `Current GFX dll could not be used` or `Could Not load RSP plugin` { #dllnotfound data-toc-label='Dll not found' }
 
 These errors occurs when the emulator fails to load its plugins, and can have multiple potential causes. Try opening `Options -> Settings -> Directories`, and making sure the Plugin Directory points to the *Plugin* folder where you installed the emulator. After settings the plugins directory, open `Options -> Settings -> Plugins` and reselect all plugins, then restart the emulator. See [step 4](#4-select-your-plugins) if you're not sure which plugins to use.
 
