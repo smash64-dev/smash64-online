@@ -21,7 +21,7 @@ To play Smash 64 online, follow the steps below. You'll be using an N64 emulator
 
 ## 1. Download the Emulator
 
-Download Project64KSE below and extract it to a folder. Other emulators and versions are not compatible, so make sure to get it from this link.
+Download Project64KSE below and extract it. Other emulators and versions are not compatible, so make sure to get it from this link.
 
 [Download](https://github.com/smash64-dev/project64k-legacy/releases/latest/download/project64k-legacy.zip){ .md-button .md-button--primary data-md-color-primary="green" data-md-color-accent="green" }
 [GitHub](https://github.com/smash64-dev/project64k-legacy){ .md-button data-md-color-primary="green" data-md-color-accent="green" }
@@ -31,7 +31,8 @@ Download Project64KSE below and extract it to a folder. Other emulators and vers
 
 You must **legally** obtain your own ROM. This site does not endorse or condone piracy. **Do not** ask how to obtain a ROM in Discord.
 
-If you're looking to play Smash Remix or 19XX, first obtain the normal ROM, then use our online [Remix](/remix/) or [19XX](/19XX/) patchers to generate the modded ROM.
+!!! Note ""
+    If you're looking to play Smash Remix or 19XX, first obtain the normal ROM, then use our online [Remix](/remix/) or [19XX](/19XX/) patchers to generate the modded ROM.
 
 ## 3. Configure your ROM Directory { #3-set-rom-directory data-toc-label='3. Configure ROM Directory' }
 
