@@ -60,7 +60,7 @@ Peer-to-peer (P2P) connections generally allow for lower frames of delay with le
 
 For hosting P2P, you'll need to forward **UDP traffic** on **port 27886**.
 
-In general, you'll need to navigate to your router's web address (usually <https://192.168.1.1>), log in using the admin credentials (often printed on the router), find the port forwarding section, and add a new rule to forward UDP port 27886 traffic to your computer. 
+In general, you'll need to navigate to your router's web address, log in using the admin credentials (often printed on the router), find the port forwarding section, and add a new rule to forward UDP port 27886 traffic to your computer.
 
 Because every router is different, these steps are very general. For more specific instructions, check your router's documentation, or search for port forwarding instructions with your router's model number.
 
