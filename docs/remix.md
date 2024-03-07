@@ -299,7 +299,7 @@ To get the latest version of Remix, use the Patch ROM button above. You'll need 
     ROM patching is based on [RomPatcher.js](https://www.marcrobledo.com/RomPatcher.js/) by Marc Robledo.
 
 {#- putting this down here allows us hide the whitespace created from the empty toc labels #}
-{{ modalOk(id='credits', title='Credits', scrollable=true, body="
+{{ modalOk(id_='credits', title='Credits', scrollable=true, body="
 ### Remix Team: { #hidden data-toc-label='' }
 - Project Leader: The_Smashfather
 - Designer and Gameplay Developer: Fray
@@ -543,7 +543,7 @@ To get the latest version of Remix, use the Patch ROM button above. You'll need 
 - Golen
 - King Meteor
 - Sirius
-- Joo \*Johnnyz\* Buaes
+- Joo \\*Johnnyz\\* Buaes
 - Sonic SBL
 - ChocolateJake
 - jrlepage

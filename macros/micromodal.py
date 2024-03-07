@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 
-from button import Button
 import re
+from button import Button
 
 
+# pylint: disable=invalid-name
 class MicroModal:
     CLOSE = 'data-micromodal-close'
     OPEN = 'data-micromodal-trigger'
 
     def __init__(self, env: dict,
-                 id: str = '', title: str = '', body: str = '',
+                 id_: str = '', title: str = '', body: str = '',
                  scrollable: bool = False, size: str = 'md', color: str = '',
                  confirm: Button = None, dismiss: Button = None,
                  buttons: list[Button] = []):
@@ -26,12 +27,12 @@ class MicroModal:
 
         can_scroll = self.scrollable(scrollable)
         self.dialog_class = f"modal-dialog {self.size} {can_scroll}"
-        self.id = self.__safe_id(id) if id else self.__safe_id(title)
+        self.id = self.__safe_id(id_) if id_ else self.__safe_id(title)
 
         close = self.config(env, 'closeTrigger', MicroModal.CLOSE)
         self.close = f'{close}=""'
-        open = self.config(env, 'openTrigger', MicroModal.OPEN)
-        self.open = f'{open}=""'
+        open_ = self.config(env, 'openTrigger', MicroModal.OPEN)
+        self.open = f'{open_}=""'
 
     def attributes(self):
         attributes = ['aria-hidden="true"']
@@ -41,11 +42,11 @@ class MicroModal:
         return ' '.join(attributes)
 
     @classmethod
-    def config(self, env, key, default):
+    def config(cls, env, key, default):
         # NOTE: page values are not available here.
         try:
             return env.conf['extra']['micromodal'][key]
-        except Exception as e:
+        except Exception as _:  # pylint: disable=broad-exception-caught
             return default
 
     def markdown(self, allow):
@@ -99,5 +100,6 @@ class MicroModal:
     def scrollable(self, scrollable):
         return 'modal-dialog-scrollable' if scrollable else ''
 
-    def __safe_id(self, id):
-        return f"modal-{re.sub('[^0-9a-zA-Z]+', '-', id).lower()}"
+    def __safe_id(self, id_):
+        return f"modal-{re.sub('[^0-9a-zA-Z]+', '-', id_).lower()}"
+# pylint: enable=invalid-name

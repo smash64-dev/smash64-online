@@ -63,8 +63,8 @@ markdown_extensions:
   - meta
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.extra
   - pymdownx.highlight:
       anchor_linenums: true
@@ -79,7 +79,8 @@ markdown_extensions:
       toc_depth: 3
 
 plugins:
-  - search
+  # TODO: Re-enable when legacy/modern is fully removed
+  #- search
   - awesome-pages
   - git-revision-date-localized:
       exclude:
@@ -101,12 +102,12 @@ plugins:
         - assets/javascripts/extra.js
   - redirects:
       redirect_maps:
-        getting-started: 'getting-started/download.md'
-        controllers: 'controllers/original.md'
-        emulators: 'emulators/project64kse/index.md'
-        plugins: 'plugins/graphics.md'
-        netplay: 'netplay/kaillera/index.md'
-        extras: 'extras/patching.md'
+        getting-started.md: 'getting-started/download.md'
+        controllers.md: 'controllers/original.md'
+        emulators.md: 'emulators/project64kse/index.md'
+        plugins.md: 'plugins/graphics.md'
+        netplay.md: 'netplay/kaillera/index.md'
+        extras.md: 'extras/patching.md'
 
 theme:
   name: material
@@ -114,6 +115,8 @@ theme:
   custom_dir: overrides
 
   features:
+    # TODO: Re-enable when legacy/modern is fully removed
+    #- navigation.footer
     - navigation.indexes
     #- navigation.instant # too much of a hassle atm
     - navigation.tabs

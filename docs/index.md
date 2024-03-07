@@ -38,7 +38,7 @@ You must **legally** obtain your own ROM. This site does not endorse or condone 
 
 Open `Project64KSE.exe` and select your ROM directory (where your ROM is located).
 
-![rom directory selection](/assets/images/rom_directory.png)
+![rom directory selection](assets/images/rom_directory.png)
 
 
 ## 4. Select your Plugins
@@ -68,7 +68,7 @@ Older plugin that uses less resources than GLideN64, but has visual glitches, su
 
 Standard audio plugin.
 
-![audio plugin configuration](/assets/images/azimers.png){ .azimer-buffer-size align=right }
+![audio plugin configuration](assets/images/azimers.png){ .azimer-buffer-size align=right }
 
 It is recommended to reduce `Buffer Size` to the 2nd tick (see image) so game audio is less delayed. This is **not saved** and must be done every time the game is launched.
 
@@ -87,7 +87,7 @@ Simple audio plugin that disables sound entirely.
 
 === "GameCube"
 
-    If you have a GameCube to USB adapter, follow the instructions on the [GameCube Controller Configuration](/gamecube) page.
+    If you have a GameCube to USB adapter, follow the instructions on the [GameCube Controller Configuration](gamecube.md) page.
 
     If you have a GameCube to N64 adapter for console play, you can connect it to an N64 to USB adapter for maximum accuracy and follow the N64 Compatible Controllers instructions above.
 
@@ -105,7 +105,7 @@ Simple audio plugin that disables sound entirely.
 
     If you're using Windows 7, select N-Rage as your controller plugin, then choose Configure Controller Plugin and set your bindings as you like. **Ensure RawData is checked** under controller pak settings
 
-    If you're using Windows 8 or newer, you may need to download a premade N-Rage config file. See the [Xbox Controller Configuration](/xbox) page for details.
+    If you're using Windows 8 or newer, you may need to download a premade N-Rage config file. See the [Xbox Controller Configuration](xbox.md) page for details.
 
 ## 6. Start Netplay
 
@@ -182,7 +182,7 @@ If you only experience delay when playing online, there are a variety of options
 
 #### I'm trying to configure a USB controller, but when I press a button, nothing happens. { #nocontroller data-toc-label="Can't Configure Controller" }
 
-This is an issue with N-Rage on newer version of Windows. See the [Xbox Setup Instructions](/xbox/) for more information.
+This is an issue with N-Rage on newer version of Windows. See the [Xbox Setup Instructions](xbox.md) for more information.
 
 #### My question isn't here. { #discordhelp data-toc-label="Can't Find Question" }
 

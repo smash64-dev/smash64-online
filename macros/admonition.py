@@ -7,13 +7,14 @@ import re
 class Admonition:
     """https://squidfunk.github.io/mkdocs-material/reference/admonitions/"""
     class Inline(Enum):
-        Null = ""
-        Start = " inline"
-        End = " inline end"
+        NULL = ""
+        START = " inline"
+        END = " inline end"
 
+    # pylint: disable=too-many-arguments
     def __init__(self, env: dict, message: str = '', style: str = "note",
                  title: str = None, collapsible: bool = False,
-                 collapsed: bool = False, inline: Inline = Inline.Null):
+                 collapsed: bool = False, inline: Inline = Inline.NULL):
         self.env = env
         self.message = message
         self.style = style.lower()
@@ -22,6 +23,7 @@ class Admonition:
         self.collapsed = collapsed
         self.inline = inline
         self.can_collapse()
+    # pylint: enable=too-many-arguments
 
     def can_collapse(self):
         # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#collapsible-blocks
