@@ -1,4 +1,4 @@
-name: Publish site to GitHub Pages
+name: Deploy site to GitHub Pages
 
 on:
   push:
@@ -10,9 +10,16 @@ jobs:
     name: Publish via mkdocs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup python
+        uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install -r requirements.txt
-      - run: mkdocs gh-deploy --force
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Deploy mkdocs
+        run: mkdocs gh-deploy --force

@@ -6,6 +6,7 @@ from .micromodal import MicroModal
 from .patcher import Patcher
 
 
+# pylint: disable=invalid-name
 def define_env(env):
     #
     # admonitions macros
@@ -75,7 +76,7 @@ def define_env(env):
     #
     @env.macro
     def exception(message: str):
-        raise Exception(message)
+        raise Exception(message)    # pylint: disable=broad-exception-raised
 
     #
     # modal macros
@@ -117,3 +118,4 @@ def define_env(env):
     @env.macro
     def patcher(**kwargs):
         return Patcher(env=env, **kwargs)
+# pylint: enable=invalid-name

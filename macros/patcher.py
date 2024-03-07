@@ -4,10 +4,11 @@ from button import Button
 from micromodal import MicroModal
 
 
+# pylint: disable=invalid-name
 class Patcher:
-    def __init__(self, env: dict, id: str = 'patcher'):
+    def __init__(self, env: dict, id_: str = 'patcher'):
         self.env = env
-        self.id = id
+        self.id = id_
         self.app_class = f"{self.id}-app"
         self.info_class = 'rom-info'
         self.meta_class = 'rom-info-meta'
@@ -56,7 +57,7 @@ class Patcher:
     def modal(self, body: str = ''):
         return MicroModal(
             self.env,
-            id=self.id,
+            id_=self.id,
             title='Patch ROM',
             confirm=self.patchButton(),
             dismiss=self.cancelButton(),
@@ -76,12 +77,12 @@ class Patcher:
             attributes=['#button-apply']
         )
 
-    def romInfo(self, id: str, name: str):
+    def romInfo(self, id_: str, name: str):
         return (
             f'|{name}|'
-            f'<span class="{self.info_class}" data-clipboard-target="#{id}">'
-            f'<span id="{id}" title="Copy to Clipboard"></span>'
-            f'<span id="message-{id}"></span>'
+            f'<span class="{self.info_class}" data-clipboard-target="#{id_}">'
+            f'<span id="{id_}" title="Copy to Clipboard"></span>'
+            f'<span id="message-{id_}"></span>'
             f'</span>|\n'
         )
 
@@ -99,3 +100,4 @@ class Patcher:
 
     def render(self) -> str:
         return self.modal(self.body()).render()
+# pylint: enable=invalid-name
