@@ -54,16 +54,6 @@ modals:
   }
 </style>
 
-## Port Forwarding
-
-Peer-to-peer (P2P) connections generally allow for lower frames of delay with less lag than playing on server. However, P2P requires one player to host, and the host must have port forwarding enabled. Port forwarding is essentially telling your router that all traffic to your network with a certain identifier (the port) should be sent to your computer. 
-
-For hosting P2P, you'll need to forward **UDP traffic** on **port 27886**.
-
-In general, you'll need to navigate to your router's web address, log in using the admin credentials (often printed on the router), find the port forwarding section, and add a new rule to forward UDP port 27886 traffic to your computer.
-
-Because every router is different, these steps are very general. For more specific instructions, check your router's documentation, or search for port forwarding instructions with your router's model number.
-
 ## P2P Checker
 
 This tool helps to validate that your port forwarding is configured correctly. To use it, launch Project64KSE and host a p2p game, then make sure your IP address and port are correct below and hit Check P2P.
@@ -123,6 +113,17 @@ If your opponent can't connect, try the following:
 - Restart both emulators and try again
 - Join the [Discord](https://discord.gg/ssb64) for more help
 ", buttons=[button("Copy Address", href='#', attributes=["data-clipboard-target='#" + modalId(page.meta.modals.success) + " #p2p_address'"])] ) }}
+
+## Port Forwarding Basics
+
+Peer-to-peer (P2P) connections generally allow for lower frames of delay with less lag than playing on server. However, P2P requires one player to host, and the host must have port forwarding enabled. Port forwarding is essentially telling your router that all traffic to your network with a certain identifier (the port) should be sent to your computer. 
+
+For hosting P2P, you'll need to forward **UDP traffic** on **port 27886**.
+
+In general, you'll need to navigate to your router's web address, log in using the admin credentials (often printed on the router), find the port forwarding section, and add a new rule to forward UDP port 27886 traffic to your computer.
+
+Because every router is different, these steps are very general. For more specific instructions, check your router's documentation, or search for port forwarding instructions with your router's model number.
+
 
 <script>
   function checkP2P() {
