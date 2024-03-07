@@ -17,9 +17,9 @@ The recommended controller plugin for Xbox and other USB controllers is `N-Rage 
 
 Newer Windows versions have broken the configuration dialog for N-Rage, preventing us from setting bindings. To use an Xbox controller on one of these versions, you'll need to download a pre-set N-Rage configuration here:
 
-* [Z_Triggers.cpf](/assets/files/Z_Triggers.cpf)
-* [Z_Bumpers.cpf](/assets/files/Z_Bumpers.cpf)
-* [Z_Bumpers_X_and_B_Swap.cpf](/assets/files/Z_Bumpers_X_and_B_Swap.cpf)
+* [Z_Triggers.cpf](assets/files/Z_Triggers.cpf)
+* [Z_Bumpers.cpf](assets/files/Z_Bumpers.cpf)
+* [Z_Bumpers_X_and_B_Swap.cpf](assets/files/Z_Bumpers_X_and_B_Swap.cpf)
 
 As the names suggest, `Z_Triggers` has N64 Z bound to the Xbox's triggers, `Z_Bumpers` has it bound to the bumpers, and `Z_Bumpers_X_and_B_Swap` has the X and B face buttons swapped.
 
