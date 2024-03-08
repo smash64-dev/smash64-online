@@ -16,8 +16,7 @@ modals:
   success: P2P is Responding
 ---
 
-# Kaillera P2P Checker
-
+# P2P Hosting Resources 
 <style>
   .md-input-field {
     align-items: center;
@@ -55,14 +54,14 @@ modals:
   }
 </style>
 
-{{ beta("feature") }}
+## P2P Checker
 
-!!! attention "Not for Lag"
-    The feature cannot help you troubleshoot lag when playing online, only connection issues.
+This tool helps to validate that your port forwarding is configured correctly. To use it, launch Project64KSE and host a p2p game, then make sure your IP address and port are correct below and hit Check P2P.
 
-!!! attention "Autopunch P2P"
-    This feature **does not** currently support Autopunch P2P, only port forwarding (manual or UPnP).
+Note that this feature **does not** currently support Autopunch P2P, only port forwarding (manual or UPnP).
 
+!!! Info "Beta"
+    This feature is still in beta. It *should* work for the most part, but may not be 100% accurate.
 <p markdown="1">
 <div markdown="1">
   <div class="md-input-field" markdown="1">
@@ -114,6 +113,17 @@ If your opponent can't connect, try the following:
 - Restart both emulators and try again
 - Join the [Discord](https://discord.gg/ssb64) for more help
 ", buttons=[button("Copy Address", href='#', attributes=["data-clipboard-target='#" + modalId(page.meta.modals.success) + " #p2p_address'"])] ) }}
+
+## Port Forwarding Basics
+
+Peer-to-peer (P2P) connections generally allow for lower frames of delay with less lag than playing on server. However, P2P requires one player to host, and the host must have port forwarding enabled. Port forwarding is essentially telling your router that all traffic to your network with a certain identifier (the port) should be sent to your computer. 
+
+For hosting P2P, you'll need to forward **UDP traffic** on **port 27886**.
+
+In general, you'll need to navigate to your router's web address, log in using the admin credentials (often printed on the router), find the port forwarding section, and add a new rule to forward UDP port 27886 traffic to your computer.
+
+Because every router is different, these steps are very general. For more specific instructions, check your router's documentation, or search for port forwarding instructions with your router's model number.
+
 
 <script>
   function checkP2P() {

@@ -1,4 +1,5 @@
 ---
+title: Smash 64 Netplay Guide
 section: legacy
 hide:
   - next
@@ -14,31 +15,31 @@ hide:
   }
 </style>
 
-# Getting Started
+# Smash 64 Netplay Guide
 
-## Download Emulator
+To play Smash 64 online, follow the steps below. You'll be using an N64 emulator called Project64KSE, which comes with the Kaillera netplay system built-in. To use an N64 controller, you'll need a [Raphnet V3 USB adapter](https://www.raphnet-tech.com/products/n64_usb_adapter_gen3/index.php); you can also use any USB controller or a keyboard.
 
-The Smash64 Online community primarily uses Project64KSE.
+## 1. Download the Emulator
+
+Download Project64KSE below and extract it. Other emulators and versions are not compatible, so make sure to get it from this link.
 
 [Download](https://github.com/smash64-dev/project64k-legacy/releases/latest/download/project64k-legacy.zip){ .md-button .md-button--primary data-md-color-primary="green" data-md-color-accent="green" }
 [GitHub](https://github.com/smash64-dev/project64k-legacy){ .md-button data-md-color-primary="green" data-md-color-accent="green" }
 
-
-## Obtain the Smash64 ROM
+## 2. Obtain the Smash Bros. ROM
 
 You must **legally** obtain your own ROM. This site does not endorse or condone piracy. **Do not** ask how to obtain a ROM in Discord.
 
----
+!!! Note "ROM Patching"
+    If you're looking to play Smash Remix or 19XX, first obtain the normal ROM, then use our online [Remix](remix.md) or [19XX](19XX.md) patcher to modify your ROM.
 
-
-## Configure your ROM Directory
+## 3. Configure your ROM Directory { #3-set-rom-directory data-toc-label='3. Configure ROM Directory' }
 
 Open `Project64KSE.exe` and select your ROM directory (where your ROM is located).
 
 ![rom directory selection](assets/images/rom_directory.png)
 
-
-## Select your Plugins
+## 4. Select your Plugins
 
 Plugins are selected in `Options -> Settings -> Plugins`. You can configure each plugin through `Options -> Configure Plugin`.
 
@@ -51,16 +52,18 @@ Correctly renders *most* things in-game and does not crash the emulator when end
 #### GLideN64 Public Release 4.0 `OpenGL`{ .badge data-md-color-primary="cyan" } { #glide4 data-toc-label='GLideN64 4.0' }
 
 The most accurate and best looking plugin, but usually crashes the emulator when ending emulation.
+![resolution](assets/images/glide4settings.png){ align=right }
+
+When configuring the plugin, set `Full screen resolution` to your monitor's native resolution, and aspect ratio to 4:3.
 
 #### Jabo’s Direct3D8 1.6 `DirectX`{ .badge data-md-color-primary="cyan" } { #jabos3d8 data-toc-label='Jabo’s Direct3D8 1.6' }
-Older plugin that uses less resources than GLideN64, but has visual glitches (does not show invincibility). Only use if you can’t run GLideN64 or OpenGL.
-
+Older plugin that uses less resources than GLideN64, but has visual glitches, such as not showing invincibility. Only use if you can’t run GLideN64 or OpenGL.
 
 ### Audio
 
 #### Azimer's Audio v0.30 (Old Driver) `Recommended`{ .badge data-md-color-primary="green" } { #azimers data-toc-label="Azimer's v0.30" }
 
-Standard audio plugin. Other audio plugins may cause desyncs.
+Standard audio plugin.
 
 ![audio plugin configuration](assets/images/azimers.png){ .azimer-buffer-size align=right }
 
@@ -68,10 +71,9 @@ It is recommended to reduce `Buffer Size` to the 2nd tick (see image) so game au
 
 #### No Sound { #nosound data-toc-label="No Sound" }
 
-Simple audio plugin that disables sound entirely. Does not seem to cause desyncs.
+Simple audio plugin that disables sound entirely.
 
-
-## Configure your Controller
+### Controller
 
 === "N64 / Hori (N64 compatible controllers)"
 
@@ -101,14 +103,15 @@ Simple audio plugin that disables sound entirely. Does not seem to cause desyncs
 
     If you're using Windows 8 or newer, you may need to download a premade N-Rage config file. See the [Xbox Controller Configuration](xbox.md) page for details.
 
----
-
-## Start Netplay
+## 5. Start Netplay
 
 !!! danger "Ethernet Highly Recommended"
     Use a wired Ethernet connection when playing netplay. WiFi connections are inherently unreliable and will frustrate you and your opponents.
 
-Launch Netplay with `File -> Start Netplay`. Use the `Change Mode` dropdown to select between `Server` or `P2P` (Peer to Peer). Peer to peer connections are more stable, but require one player to port forward in order to host. Higher ping causes higher frame delay. Most players play on 3 frames or less. You **must** restart the emulator if another player is joining or any player changes port. Servers may sometimes go down and active servers may be found on the master server list.
+![Change mode dropdown](assets/images/change_mode.png){ align="right" }
+Launch Netplay with `File -> Start Netplay`. Use the `Change Mode` dropdown to select between `Server` or `P2P` (Peer to Peer). Peer to peer connections are more stable, but require one player to port forward in order to host. See the [P2P Setup](p2p-check.md) page for help setting up port forwarding.
+
+The regional Discords linked in the sidebar are a great way to find opponents for P2P matches.
 
 === "Connecting via Server"
 
@@ -128,13 +131,46 @@ Launch Netplay with `File -> Start Netplay`. Use the `Change Mode` dropdown to s
     5. Both players tick `Ready` to start the game
 
     Only 2 players can play P2P.
+---
 
+The higher your ping to the server or your opponent, the more frames of delay you'll have. Most players play on 3 frames or less. After playing online, you **must** restart the emulator before playing a different player or if a new player joins the lobby. Servers may sometimes go down and active servers may be found on the master server list.
 
 ## Frequently Asked Questions
 
-#### My game runs fine, but the audio is delayed. { #audiolag data-toc-label='Audio Delay' }
+#### When I try to play online, player 1 works fine, but player 2 can't move. { #p2cantmove data-toc-label='P2 Raw Issues' }
+
+This is usually an issue with raw data or controller config. First, launch the game in singleplayer and make sure your controls work locally. Next, verify that players using the NRage input plugin have RawData **enabled**.
+
+![raw data enabled](assets/images/rawdata.png)
+
+!!! Warning "Warning - External Plugins"
+    The input plugins included in Project64KSE were chosen for their compatibility. If you're trying to use an input plugin you got elsewhere, it's likely not compatible with raw data and the cause of the issue!
+
+Finally, make sure both players restart their emulators whenever they change opponents.
+
+#### When I launch the emulator, I get a warning saying `raphnetraw: Adapter not detected`. { #noadapter data-toc-label='Raphnet not detected' }
+
+![raphnet error message](assets/images/raphnet_error.png)
+
+This error occurs when you have the Raphnetraw input plugin selected, but you don't have a Raphnet adapter plugged in. If you don't own a Raphnet v3 USB adapter, press `OK`, then go to `Options -> Settings -> Plugins`, and follow the instructions in [Step 5](#5-configure-your-controller) to choose a different plugin for your keyboard or controller.
+
+If you do have a Raphnet adapter, check the cable connection on both sides, and make sure the adapter management tool is not running.
+
+#### When I launch the emulator I get a dll error, like `Current GFX dll could not be used` or `Could Not load RSP plugin` { #dllnotfound data-toc-label='Dll not found' }
+
+These errors occurs when the emulator fails to load its plugins, and can have multiple potential causes. Try opening `Options -> Settings -> Directories`, and making sure the Plugin Directory points to the *Plugin* folder where you installed the emulator. After settings the plugins directory, open `Options -> Settings -> Plugins` and reselect all plugins, then restart the emulator. See [step 4](#4-select-your-plugins) if you're not sure which plugins to use.
+
+If the emulator still fails to load the RSP plugin, then something on your system may be preventing it from loading; check to see if any anti-virus program is blocking access, and make sure the emulator is in a directory owned by your user.
+
+#### My game runs fine, but the audio is delayed or stuttering. { #audiolag data-toc-label='Audio Delay' }
 
 Follow the instructions in the [Azimer's](#azimers) section above. Yes, it's annoying to set the Buffer Size every time, unfortunately this is hard to fix.
+
+#### I followed the Azimer's instructions but my audio is still bad. { #audioquality data-toc-label='Audio Quality' }
+
+Audio quality issues, such as stuttering or popping, is a known issue with the Azimer plugin. At the moment it's the best option we have. Because KSE is based on the Project64 1.4 core, it is completely incompatible with many modern audio plugins.
+
+There *may* be a better audio plugin that is compatible, but it may have its own unique issues and would **require** both performance and desync testing before it can be added. If you're willing to spend the time finding, testing, or writing a better audio plugin, you can discuss it in the [Smash 64 Discord](https://discord.gg/ssb64).
 
 #### My game feels laggy. Is there any way to reduce input delay? { #gamelag data-toc-label='Game Lag' }
 

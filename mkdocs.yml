@@ -76,6 +76,7 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+      toc_depth: 3
 
 plugins:
   # TODO: Re-enable when legacy/modern is fully removed
@@ -119,7 +120,7 @@ theme:
     - navigation.indexes
     #- navigation.instant # too much of a hassle atm
     - navigation.tabs
-    - navigation.top
+    - navigation.expand
 
   static_templates:
     - 404.html

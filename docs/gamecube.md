@@ -1,4 +1,5 @@
 ---
+title: Gamecube Controller Setup
 section: legacy
 hide:
   - next
@@ -7,9 +8,9 @@ hide:
   - tabs
 ---
 
-## GameCube Controller Setup with Official Wii U Adapter
+# GameCube Controller Setup
 
-These instructions are for configuring a GameCube controller using a Nintendo adapter. If you have a raphnet gc to usb adapter, you can skip to [Configure Controller Plugin](#3-configure-controller-plugin).
+These instructions are for configuring a GameCube controller using a Nintendo or Mayflash USB adapter. If you have a Raphnet gc to usb adapter, you can skip to [Configure Controller Plugin](#3-configure-controller-plugin).
 
 [:fontawesome-brands-youtube: Optional Video Walkthrough](https://www.youtube.com/watch?v=4ntXPY4SqNQ){ .md-button data-md-color-primary="red" data-md-color-accent="red" }
 
@@ -19,16 +20,16 @@ These instructions are for configuring a GameCube controller using a Nintendo ad
 - **DO NOT INSTALL vJoy from here, it's old**
 - Instead download and install the [latest vJoy](https://sourceforge.net/projects/vjoystick/)
 
-### 2. Run drivers
+### 2. Run Drivers
 - Close Project64
 - Run GameCube USB Adapter Driver and click `Start`
 - This must *always* be running when you use Project64, it will be in your taskbar
 
-### 3. Configure controller plugin
+### 3. Configure Controller Plugin
 - Open Project64, go to Settings
 - Select `N-Rage's Direct-Input8 V2 1.83` as your Controller Plugin
 - Go to Options -> Configure Controller Plugin > Devices > Select `vJoy Device 1`
-- Now you can setup your inputs
+- Now you can setup your inputs.
 - You may need to restart your computer if this doesn't work
 
 #### Recommended Settings
@@ -43,7 +44,7 @@ These instructions are for configuring a GameCube controller using a Nintendo ad
 - N-Rage's C Right: X
 
 #### Tips for Analog Triggers
-This may take a few tries to get right.
+For triggers, you'll need to bind the digital press using the steps below. This may take a few tries to get right.
 
 1. You need to press the trigger most of the way down (before it clicks)
 2. Click the button your want to map in N-Rage
