@@ -7,7 +7,7 @@ nav:
       - 19XX: 19XX.md
     - Kaillera Tools:
       - Server Status: server-status.md
-      - P2P Setup Help: p2p-check.md
+      - P2P Setup: p2p-check.md
     - Controller Setup:
       - GameCube: gamecube.md
       - Xbox: xbox.md
