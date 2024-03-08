@@ -278,7 +278,7 @@ patches:
 
 Smash Remix is a massive content mod for Super Smash Bros. 64, adding over a dozen new characters, along with new stages, songs, gamemodes, and training features.
 
-To download the latest version of the Remix, use the Patch ROM button above. You'll need to select your own copy of the Super Smash Bros. ROM to patch.
+To get the latest version of Remix, use the Patch ROM button above. You'll need to select your own copy of the Super Smash Bros. ROM to patch.
 
 ## Previous Versions
 

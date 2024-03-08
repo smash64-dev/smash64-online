@@ -32,7 +32,7 @@ Download Project64KSE below and extract it. Other emulators and versions are not
 You must **legally** obtain your own ROM. This site does not endorse or condone piracy. **Do not** ask how to obtain a ROM in Discord.
 
 !!! Note ""
-    If you're looking to play Smash Remix or 19XX, first obtain the normal ROM, then use our online [Remix](remix.md) or [19XX](19XX.md) patchers to generate the modded ROM.
+    If you're looking to play Smash Remix or 19XX, first obtain the normal ROM, then use our online [Remix](remix.md) or [19XX](19XX.md) patchers to modify it.
 
 ## 3. Configure your ROM Directory { #3-set-rom-directory data-toc-label='3. Configure ROM Directory' }
 
