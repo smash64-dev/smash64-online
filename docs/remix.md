@@ -6,10 +6,19 @@ hide:
   - prev
   - search
   - tabs
-latest: v1.5.1
+latest: v1.5.2
 patcher_errors:
   mismatch: Mismatch. Use the vanilla ROM.
 patches:
+  v1.5.2:
+    name: Smash Remix 1.5.2
+    file: https://github.com/JSsixtyfour/smashremix/releases/download/1.5.2/smashremix1.5.2.zip
+    site: https://github.com/JSsixtyfour/smashremix/releases/tag/1.5.2
+    size: 16777216
+    patches:
+      - name: 'Smash Remix 1.5.2'
+        file: smashremix1.5.2/patches/smashremix1.5.2.xdelta
+        crc: 0xeb97929e
   v1.5.1:
     name: Smash Remix 1.5.1
     file: https://github.com/JSsixtyfour/smashremix/releases/download/1.5.1/smashremix1.5.1.zip
