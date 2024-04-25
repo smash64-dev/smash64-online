@@ -280,6 +280,73 @@ patches:
       - name: 'Initial Release'
         file: smashremix-0.5/smashremix0.5.xdelta
         crc: 0xeb97929e
+  extras:
+    name: 'Cut Content'
+    file: http://n64vault.wikidot.com/local--files/ssb-tools:smash-remix-cut-content/Smash_Remix_Cut_Content.zip
+    site: http://n64vault.wikidot.com/ssb-tools:smash-remix-cut-content
+    size: 16777216
+    patches:
+      - name: 'Big Boos Haunt Beta'
+        file: 'Smash Remix Cut Content/bigbooshauntbeta.xdelta'
+        crc: 0xeb97929e
+      - name: 'Bomberman Battle'
+        file: 'Smash Remix Cut Content/bomberman_battle.xdelta'
+        crc: 0xeb97929e
+      - name: 'Beta Conker'
+        file: 'Smash Remix Cut Content/conkerbeta.xdelta'
+        crc: 0xeb97929e
+      - name: 'Dark Samus Experimental'
+        file: 'Smash Remix Cut Content/darksamusexperiments.xdelta'
+        crc: 0xeb97929e
+      - name: 'DK Jr.'
+        file: 'Smash Remix Cut Content/dr_jr.xdelta'
+        crc: 0xeb97929e
+      - name: 'DK Jr. Stage Music'
+        file: 'Smash Remix Cut Content/DK_JR_Stage.bin'
+        crc: 0xeb97929e
+      - name: 'LTC Stage'
+        file: 'Smash Remix Cut Content/LTC.xdelta'
+        crc: 0xeb97929e
+      - name: 'Mario Bros. Stage'
+        file: 'Smash Remix Cut Content/mariobros.xdelta'
+        crc: 0xeb97929e
+      - name: 'Meowth'
+        file: 'Smash Remix Cut Content/meowth.xdelta'
+        crc: 0xeb97929e
+      - name: 'Moonside'
+        file: 'Smash Remix Cut Content/moonside.xdelta'
+        crc: 0xeb97929e
+      - name: 'Moray Towers'
+        file: 'Smash Remix Cut Content/moraytowers.xdelta'
+        crc: 0xeb97929e
+      - name: 'Pichu'
+        file: 'Smash Remix Cut Content/pichu.xdelta'
+        crc: 0xeb97929e
+      - name: 'Raichu'
+        file: 'Smash Remix Cut Content/raichu.xdelta'
+        crc: 0xeb97929e
+      - name: 'Remix Race to the Finish Beta'
+        file: 'Smash Remix Cut Content/rttf2_beta.xdelta'
+        crc: 0xeb97929e
+      - name: 'Spirit Temple'
+        file: 'Smash Remix Cut Content/spirit_temple.xdelta'
+        crc: 0xeb97929e
+      - name: 'Super Smash Bird'
+        file: 'Smash Remix Cut Content/supersmashbird.xdelta'
+        crc: 0xeb97929e
+      - name: 'Tazmilly'
+        file: 'Smash Remix Cut Content/tazmilly.xdelta'
+        crc: 0xeb97929e
+      - name: 'Uncanny Mansion'
+        file: 'Smash Remix Cut Content/uncanny_mansion.xdelta'
+        crc: 0xeb97929e
+      - name: 'Waluigi'
+        file: 'Smash Remix Cut Content/waluigi.xdelta'
+        crc: 0xeb97929e
+      - name: 'Wario Castle'
+        file: 'Smash Remix Cut Content/wario_castle.xdelta'
+        crc: 0xeb97929e
+
 ---
 
 {{ patcher().render() }}
@@ -289,6 +356,7 @@ patches:
 {%- set latest_patch = page.meta.latest %}
 
 # Smash Remix Patcher
+
 ![Remix logo](https://www.ssbwiki.com/images/archive/2/2b/20240112225404%21SmashRemixLogo.png){ width=40% }<br />
 [Patch ROM ({{ latest_patch }}) :fontawesome-solid-spinner:{ .fa-spin style="display: none;" }](#){ .md-button .md-button--primary data-patch-id="{{ page.meta.latest }}" data-modal="{{ modalId(patcher().id) }}" onclick="loadPatcher(this)" #patcher-modal }
 [Patch Notes :fontawesome-solid-arrow-up-right-from-square:]({{ page.meta.patches[latest_patch].site }}){ .md-button target='_blank' }
@@ -298,10 +366,17 @@ Smash Remix is a massive content mod for Super Smash Bros. 64, adding over a doz
 
 To get the latest version of Remix, use the Patch ROM button above. You'll need to select your own copy of the Super Smash Bros. ROM to patch.
 
+## Cut Content (Extras)
+
+The Smash Remix Team has made available a variety of cut content for fans to experience for themselves. For full descriptions, visit the More Info page. Select which patch you want by clicking the `Patch File` drop down.
+
+[Patch ROM (Extras) :fontawesome-solid-spinner:{ .fa-spin style="display: none;" }](#){ .md-button .md-button--primary data-patch-id="extras" data-modal="{{ modalId(patcher().id) }}" onclick="loadPatcher(this)" #patcher-modal }
+[More Info :fontawesome-solid-arrow-up-right-from-square:]({{ page.meta.patches.extras.site }}){ .md-button target='_blank' }
+
 ## Previous Versions
 
 {%- for id, data in page.meta.patches.items() %}
-{% if id != page.meta.latest %}
+{% if (id != page.meta.latest) and (id.startswith('v')) %}
 #### {{ id }} { #{{ id }} }
 - [Patch {{ id }} :fontawesome-solid-spinner:{ .fa-spin style="display: none;" }](#{{ id }}){ data-patch-id="{{ id }}" data-modal="{{ modalId(patcher().id) }}" onclick="loadPatcher(this)" #patcher-modal }
 - [Patch Notes :fontawesome-solid-arrow-up-right-from-square:]({{ data.site }}){ target='_blank' }
