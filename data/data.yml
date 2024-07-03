@@ -162,11 +162,11 @@ extra:
           version: EMX3.2
 
         - name: SSB Chicago
-          host: 199.167.28.36
+          host: dale-chi.online
           location: Chicago, IL
-          owner: Umbra
+          owner: sunkin
           member: true
-          version: EMX2.0.2
+          version: EmuLinker-K
 
         - name: The Happy Kingdom NY
           host: 167.88.48.12
