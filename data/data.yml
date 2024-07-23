@@ -147,7 +147,7 @@ extra:
           version: ESF92.9
 
         - name: kaillera-us.emuparadise.org
-          host: 108.160.147.80
+          host: 199.101.98.242
           location: Ashburn, VA
           owner: Emuparadise
           member: false
