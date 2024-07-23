@@ -146,7 +146,7 @@ extra:
           member: false
           version: ESF92.9
 
-        - name: kaillera-us.emuparadise.org
+        - name: Emuparadise USA
           host: kaillera-us.emuparadise.org
           location: Ashburn, VA
           owner: Emuparadise
