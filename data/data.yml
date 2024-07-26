@@ -133,9 +133,23 @@ extra:
 
       NA-E:
         - name: Galaxy
-          host: 198.46.248.14
-          location: Atlanta, GA
+          host: 104.234.10.201
+          location: New York City, NY
           owner: Remz
+          member: false
+          version: ESF92.9
+          
+        - name: Mortal Kombat War Room
+          host: 108.160.147.80
+          location: Atlanta, GA
+          owner: Unknown
+          member: false
+          version: ESF92.9
+
+        - name: Emuparadise USA
+          host: kaillera-us.emuparadise.org
+          location: Ashburn, VA
+          owner: Emuparadise
           member: false
           version: ESF92.4
 
@@ -164,7 +178,7 @@ extra:
         - name: SSB Chicago
           host: dale-chi.online
           location: Chicago, IL
-          owner: sunkin
+          owner: Justase
           member: true
           version: EmuLinker-K
 
@@ -208,6 +222,12 @@ extra:
           location: Dallas, TX
           owner: Unknown
           version: ESF92.4
+
+        - name: Miami Secret
+          host: 185.144.159.190
+          location: Miami, FL
+          owner: Justase
+          version: EmuLinker-K
 
       NA-W:
         - name: LA Pizza Server
