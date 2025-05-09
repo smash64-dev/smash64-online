@@ -130,6 +130,13 @@ extra:
           location: Sao Paulo, BR
           owner: Unknown
           version: ESF90.0
+          
+        - name: Fortaleza
+          host: 5.252.24.227
+          location: Fortaleza, BR
+          owner: Justase
+          member: true
+          version: EmuLinker-K
 
       NA-E:
         - name: Galaxy
