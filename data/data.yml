@@ -146,13 +146,6 @@ extra:
           member: false
           version: ESF92.9
           
-        - name: Mortal Kombat War Room
-          host: 108.160.147.80
-          location: Atlanta, GA
-          owner: Unknown
-          member: false
-          version: ESF92.9
-
         - name: Emuparadise USA
           host: kaillera-us.emuparadise.org
           location: Ashburn, VA
@@ -292,6 +285,13 @@ extra:
           owner: Justase
           member: true
           version: EmuLinker-K
+
+        - name: Mortal Kombat War Room Denver
+          host: 108.160.147.80
+          location: Denver, CO
+          owner: Unknown
+          member: false
+          version: ESF93.2
 
     regions:
       AUS: Australia
