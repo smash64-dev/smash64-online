@@ -1,0 +1,35 @@
+name: Prebuild DevContainer
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+
+jobs:
+  prebuild:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Prebuild Environment
+        id: setup
+        uses: cennis91/setup-prebuild-env@main
+        with:
+          password: ${{ secrets.GITHUB_TOKEN }}
+          platforms: linux/amd64
+          registry: ${{ env.REGISTRY || 'ghcr.io' }}
+          username: ${{ env.USERNAME || 'cennis91' }}
+
+      - name: Prebuild and Publish Image
+        uses: devcontainers/ci@v0.3
+        with:
+          imageName: ${{ env.REGISTRY || 'ghcr.io' }}/${{ github.repository }}/devcontainer
+          configFile: .devcontainer/source/devcontainer.json
+          push: ${{ env.PUSH || 'always' }}
+          platform: ${{ steps.setup.outputs.platform }}

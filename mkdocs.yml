@@ -11,6 +11,14 @@ repo_name: smash64-online
 repo_url: https://github.com/smash64-dev/smash64-online
 edit_uri: edit/main/docs/
 
+strict: true
+watch:
+  - data
+  - docs
+  - macros
+  - overrides
+  - RomPatcher.js
+
 extra:
   analytics:
     provider: google

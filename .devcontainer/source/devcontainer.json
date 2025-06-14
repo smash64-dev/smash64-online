@@ -1,0 +1,136 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+    "name": "smash64-dev/smash64-online (source)",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "containerEnv": {
+        "MKDOCS_SERVE_ARGS": "${localEnv:MKDOCS_SERVE_ARGS:-of mkdocs.yml}",
+        "PYTHON_PATH": "/usr/local/bin/python"
+    },
+    "features": {
+        "./mkdocs-serve": {
+            "package": "mkdocs-material",
+            "version": "9.*",
+            "extras": "recommended,imaging",
+            "plugins": "mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-macros-plugin mkdocs-minify-plugin mkdocs-redirects"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "EditorConfig.EditorConfig@0.17.1",
+                "ms-python.debugpy",
+                "ms-python.pylint",
+                "ms-python.python",
+                "shd101wyy.markdown-preview-enhanced",
+                "timonwong.shellcheck",
+                "yzhang.markdown-all-in-one"
+            ],
+            "settings": {
+                "python.analysis.extraPaths": [
+                    "macros"
+                ],
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.pycodestyleEnabled": false,
+                "terminal.integrated.profiles.linux": {
+                    "JavaScript Debug Terminal": null,
+                    "supervisorctl": {
+                        "overrideName": true,
+                        "icon": "terminal",
+                        "env": {
+                            "PYTHONWARNINGS": "ignore::UserWarning"
+                        },
+                        "path": "supervisorctl"
+                    }
+                },
+                "tasks": {
+                    "version": "2.0.0",
+                    "group": {
+                        "kind": "none"
+                    },
+                    "isBackground": false,
+                    "options": {
+                        "env": {
+                            "PYTHONWARNINGS": "ignore::UserWarning"
+                        }
+                    },
+                    "presentation": {
+                        "echo": false,
+                        "showReuseMessage": false,
+                        "panel": "shared",
+                        "clear": true,
+                        "close": true
+                    },
+                    "problemMatcher": [],
+                    "type": "shell",
+                    "tasks": [
+                        {
+                            "label": "MkDocs: Logs",
+                            "command": "supervisorctl",
+                            "args": [
+                                "tail",
+                                "-f",
+                                "mkdocs"
+                            ],
+                            "icon": {
+                                "id": "warn-circle"
+                            },
+                            "isBackground": true,
+                            "presentation": {
+                                "group": "mkdocs"
+                            },
+                            "runOptions": {
+                                "runOn": "folderOpen"
+                            }
+                        },
+                        {
+                            "label": "MkDocs: Restart",
+                            "command": "supervisorctl",
+                            "args": [
+                                "restart",
+                                "mkdocs"
+                            ],
+                            "icon": {
+                                "id": "warn-circle"
+                            },
+                            "presentation": {
+                                "group": "mkdocs"
+                            }
+                        },
+                        {
+                            "label": "MkDocs: Start",
+                            "command": "supervisorctl",
+                            "args": [
+                                "start",
+                                "mkdocs"
+                            ],
+                            "icon": {
+                                "id": "warn-circle"
+                            },
+                            "presentation": {
+                                "group": "mkdocs"
+                            }
+                        },
+                        {
+                            "label": "MkDocs: Stop",
+                            "command": "supervisorctl",
+                            "args": [
+                                "stop",
+                                "mkdocs"
+                            ],
+                            "icon": {
+                                "id": "warn-circle"
+                            },
+                            "presentation": {
+                                "group": "mkdocs"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

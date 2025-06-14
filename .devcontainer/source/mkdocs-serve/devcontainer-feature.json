@@ -1,0 +1,90 @@
+{
+    "id": "mkdocs-serve",
+    "version": "0.1.0",
+    "name": "MkDocs Serve",
+    "description": "Install MkDocs and run a local server.",
+    "documentationURL": "https://github.com/smash64-dev/smash64-online/tree/main/.devcontainer/source/mkdocs-serve",
+    "options": {
+        "package": {
+            "type": "string",
+            "proposals": [
+                "mkdocs",
+                "mkdocs-material"
+            ],
+            "default": "mkdocs",
+            "description": "Primary MkDocs python package to install."
+        },
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "1.6.0",
+                "9.*",
+                "<1.5"
+            ],
+            "default": "latest",
+            "description": "Package version of MkDocs to install."
+        },
+        "extras": {
+            "type": "string",
+            "proposals": [
+                "i18n,min-versions",
+                "recommended,imaging",
+                "imaging"
+            ],
+            "default": "",
+            "description": "Comma-separated list of optional package dependencies to install."
+        },
+        "plugins": {
+            "type": "string",
+            "proposals": [
+                "mkdocs-foo-plugin",
+                "mkdocs-redirects",
+                "mkdocs-minify-plugin mkdocs-macros-plugin"
+            ],
+            "default": "",
+            "description": "Space-separated list of MkDocs plugins (and optional versions) to install."
+        },
+        "autoServe": {
+            "type": "boolean",
+            "proposals": [
+                "true",
+                "false"
+            ],
+            "default": true,
+            "description": "Run the MkDocs dev-server automatically when true."
+        },
+        "python": {
+            "type": "string",
+            "proposals": [
+                "/usr/local/bin/python3",
+                "/usr/local/bin/python",
+                "python3",
+                "python"
+            ],
+            "default": "",
+            "description": "Python interpreter to use over the system default."
+        },
+        "installUser": {
+            "type": "string",
+            "proposals": [
+                "vscode",
+                "root"
+            ],
+            "default": "vscode",
+            "description": "Container user to install the python package as."
+        }
+    },
+    "containerEnv": {
+        "MKDOCS_SERVE_ARGS": "--open"
+    },
+    "entrypoint": "CWR=${containerWorkspaceFolder} /usr/local/share/mkdocs-serve-entrypoint.sh",
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/common-utils:1": {},
+        "ghcr.io/devcontainers/features/python:1": {}
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils:1",
+        "ghcr.io/devcontainers/features/python:1"
+    ]
+}

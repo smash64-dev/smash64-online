@@ -1,0 +1,33 @@
+# supervisord.conf
+
+[unix_http_server]
+file=/tmp/supervisord.sock
+chmod=0755
+chown=%(ENV_CONTAINER_USER)s:%(ENV_CONTAINER_USER)s
+
+[supervisord]
+loglevel=${LOGLEVEL}
+nodaemon=true
+environment=
+  AUTOSTART="${AUTOSTART}",
+  CONTAINER_USER="${MANAGE_USER}",
+  CONTAINER_WORKSPACE_FOLDER="%(ENV_CONTAINER_WORKSPACE_FOLDER)s",
+  MKDOCS_SERVE_ARGS="%(ENV_MKDOCS_SERVE_ARGS)s",
+  PYTHON_BIN="${PYTHON_BIN}",
+  PYTHONPATH="${PYTHON_PATH}"
+
+[supervisorctl]
+serverurl=unix:///tmp/supervisord.sock
+
+[program:mkdocs]
+command=%(ENV_PYTHON_BIN)s -m %(program_name)s serve %(ENV_MKDOCS_SERVE_ARGS)s
+directory=%(ENV_CONTAINER_WORKSPACE_FOLDER)s
+autostart=%(ENV_AUTOSTART)s
+user=%(ENV_CONTAINER_USER)s
+redirect_stderr=true
+stdout_logfile=%(here)s/%(program_name)s.log
+environment=
+  FORCE_COLOR="1"
+
+[rpcinterface:supervisor]
+supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface
