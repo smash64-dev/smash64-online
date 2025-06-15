@@ -1,10 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-    "name": "smash64-dev/smash64-online (source)",
+    "name": "smash64-dev/smash64-online",
     "build": {
         "dockerfile": "Dockerfile",
-        "context": "."
+        "context": ".",
+        "cacheFrom": "ghcr.io/smash64-dev/smash64-online/devcontainer:latest"
     },
     "containerEnv": {
         "MKDOCS_SERVE_ARGS": "${localEnv:MKDOCS_SERVE_ARGS:-of mkdocs.yml}",

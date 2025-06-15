@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "name": "MkDocs Serve",
     "description": "Install MkDocs and run a local server.",
-    "documentationURL": "https://github.com/smash64-dev/smash64-online/tree/main/.devcontainer/source/mkdocs-serve",
+    "documentationURL": "https://github.com/smash64-dev/smash64-online/tree/main/.devcontainer/mkdocs-serve",
     "options": {
         "package": {
             "type": "string",
