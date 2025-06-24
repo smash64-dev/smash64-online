@@ -7,6 +7,11 @@ hide:
   - search
   - tabs
 latest: v1.5.2
+official_site:
+  color: red
+  display: false
+  text: 'Not the latest?'
+  url: https://git.io/smashremix
 patcher_errors:
   mismatch: Mismatch. Use the vanilla ROM.
 patches:
@@ -361,6 +366,11 @@ patches:
 [Patch ROM ({{ latest_patch }}) :fontawesome-solid-spinner:{ .fa-spin style="display: none;" }](#){ .md-button .md-button--primary data-patch-id="{{ page.meta.latest }}" data-modal="{{ modalId(patcher().id) }}" onclick="loadPatcher(this)" #patcher-modal }
 [Patch Notes :fontawesome-solid-arrow-up-right-from-square:]({{ page.meta.patches[latest_patch].site }}){ .md-button target='_blank' }
 [Credits](#){ .md-button data-micromodal-trigger="{{ modalId('credits') }}" #credits }
+{%- if 'official_site' in page.meta %}
+{%- if page.meta.official_site.display %}
+[{{ page.meta.official_site.text }} :fontawesome-solid-arrow-up-right-from-square:]({{ page.meta.official_site.url }}){ .md-button .md-button--primary data-md-color-primary="{{ page.meta.official_site.color }}" data-md-color-accent="{{ page.meta.official_site.color }}" target='_blank' }
+{%- endif %}
+{%- endif %}
 
 Smash Remix is a massive content mod for Super Smash Bros. 64, adding over a dozen new characters, along with new stages, songs, gamemodes, and training features.
 
