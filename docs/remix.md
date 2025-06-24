@@ -15,6 +15,18 @@ official_site:
 patcher_errors:
   mismatch: Mismatch. Use the vanilla ROM.
 patches:
+  v2.0.0:
+    name: Smash Remix 2.0.0
+    file: https://github.com/JSsixtyfour/smashremix/releases/download/2.0.0/smashremix2.0.0.zip
+    site: https://github.com/JSsixtyfour/smashremix/releases/tag/2.0.0
+    size: 16777216
+    patches:
+      - name: 'Smash Remix 2.0.0'
+        file: smashremix2.0.0/patches/smashremix2.0.0.xdelta
+        crc: 0xeb97929e
+      - name: 'Smash Remix 2.0.0 - PAL60'
+        file: smashremix2.0.0/patches/smashremix2.0.0-pal60.xdelta
+        crc: 0xeb97929e
   v1.5.2:
     name: Smash Remix 1.5.2
     file: https://github.com/JSsixtyfour/smashremix/releases/download/1.5.2/smashremix1.5.2.zip
@@ -405,11 +417,13 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 {{ modalOk(id_='credits', title='Credits', scrollable=true, body="
 ### Remix Team: { #hidden data-toc-label='' }
 - Project Leader: The_Smashfather
+- Project Manager: Pringles
 - Designer and Gameplay Developer: Fray
 - Developer: MarioReincarnate
 - Developer: Cyjorg
 - Developer: halofactory
-- Lead Artist: Sope!
+- Developer: Shino
+- Lead Artist: Sope
 - Lead Musician: Pringles
 - Animation and Model Import Specialist: Subdrag
 - Moveset Designer: Honey
@@ -419,7 +433,7 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 
 ### Modelers: { #hidden data-toc-label='' }
 - Retro64
-- Sope!
+- Sope
 - Likiji123
 - Fray
 - Pik
@@ -428,12 +442,15 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - Adrian Garcia
 - M-1
 - TheQuickSlash
+- halofactory
 - Jay6T4
 - HeronNobody
-- halofactory
+- OniFox
+- PrufStudent
+- Pringles
 
 ### Artists: { #hidden data-toc-label='' }
-- Sope!
+- Sope
 - Retro64
 - Connor Rentz
 - Colonel Birdstrong
@@ -442,11 +459,13 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - Pik
 - Gael Romo
 - TheQuickSlash
+- halofactory
 - Pringles
 - 1upShyguy
+- OniFox
 
 ### Animators: { #hidden data-toc-label='' }
-- Sope!
+- Sope
 - Fray
 - Coolguy
 - Super4ng
@@ -454,20 +473,22 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - Retro64
 - MrLuigi001
 - SushiiZ
+- Meekal
 - BlazingFireOmega
 - PrufStudent
 - Zeozen
 - M-1
-- Meekal
 - halofactory
 - TheQuickSlash
 - Pringles
+- OniFox
+- UltIMa647
 
 ### Musicians: { #hidden data-toc-label='' }
 - TT
 - MyNewSoundtrack
 - PablosCorner
-- Sope!
+- Sope
 - Retro64
 - DSC
 - Coffee
@@ -477,12 +498,12 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - Pun
 - Fray
 - TheQuickSlash
+- supa
 - Pringles
 - TheMrIron2
-- UnforseenUplink
-- supa
-- halofactory
+- copperthejackal
 - 1upShyGuy
+- halofactory
 
 ### Stage Designers: { #hidden data-toc-label='' }
 - BridGurrr
@@ -490,7 +511,7 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - Plaehni
 - farcry15
 - smb123w64gb
-- Sope!
+- Sope
 - Fray
 - Snooplax
 - Sixty Four
@@ -501,12 +522,14 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - halofactory
 - Pringles
 - HeronNobody
+- Sam the Salmon
 
 ### Voice Artists: { #hidden data-toc-label='' }
 - Zarkpudd
 - Puma Pet
 - Pringles
 - TheMrIron2
+- Jeff Manning
 
 ### Modders: { #hidden data-toc-label='' }
 - Qapples
@@ -515,16 +538,6 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - goombapatrol
 - VetriTheRetri
 
-### Video Design Team: { #hidden data-toc-label='' }
-- Darkhorse
-- dshaynie
-- Fray
-- Sope!
-- TheQuickSlash
-- Retro64
-- Pringles
-- HeronNobody
-
 ### Consultants: { #hidden data-toc-label='' }
 - Madao
 - DannySsB
@@ -532,13 +545,20 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - Carnivorous
 - CrookedPoe/Clockwise
 - CrashOveride
+- M-1
 - Kaki
 - Katakiri
 - Aqua MIDI
 - Uncle Punch
 - Cjag
+- Anonymous
 - SilverJake
 - Ploaj
+- Gent
+- Nokaubure
+- ALM5252
+- LMG
+- TheNewJGG
 
 ### Playtesters: { #hidden data-toc-label='' }
 - Abnormal Adept
@@ -561,12 +581,11 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - Pluto
 - The Yid
 - Wololo
-- wookiee-alex
+- Wookiee
 - thelordoflight
 - JODO
 - farcry15
 - Mimimax
-- Pluto
 - kyleglor
 - Revan
 - Big Red
@@ -584,7 +603,7 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - DannySsB
 - Vidya James
 - SuperSqank
-- supa
+- Goon
 - JeyKeyAr
 - Razz
 - PADB
@@ -596,20 +615,20 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - MissingN0pe
 - Shalaka
 - foca64
-- HAMMERHEART
-- Kix
 - Lowww
+- Kix
+- HAMMERHEART
 - beta
 - halofactory
 - LOC
 - Maciaga
 - pecosix
 - PKStickThing
-- SyluxX1V
+- SyluxV1V
 - Weedwack
 - KeroKeroppi
 - 1upShyguy
-- epona
+- Terra
 - Stew
 - thetaiter
 - LesbianChemicalPlant
@@ -624,14 +643,14 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - Indefa
 - MultiVolt
 - Policombo
-- Raihem
+- Raihem/MayRai
 - Roman
 - ShyGuyGH
 - The Ranger
 - Tylan 64
-- חלקלקToad
-- MissingNo.
+- Toad
 - Wiseacre
+- MissingNo.
 - Pringles
 - EG
 - Gooby
@@ -640,13 +659,23 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - swooce
 - microwaved hotdogs
 - G-Rabbit
-- luigit0ilet
+- MUGEN
+- Bobakanoosh
+- TyloRen_
+- SPLORCH
+- Mrmariobros222
+- bizzozeron
+- Cagt
+- Herb
+- Imakuni
+- Mist
+- KYOP
 
 ### Original Sequencing Musical Credits: { #hidden data-toc-label='' }
 - Golen
 - King Meteor
 - Sirius
-- Joo \\*Johnnyz\\* Buaes
+- Joao \\*Johnnyz\\* Buaes
 - Sonic SBL
 - ChocolateJake
 - jrlepage
@@ -661,28 +690,28 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - Chibi Vegito
 - Leu
 - Mantato
+- mittens
 - Anikom15
-- Zenkusa
 - Dentelle (D. Stphanie)
 - David Alberto
 - Dr. Fruitcake
 - JexuBandicoot527
 - Ethan Williams
 - Kirby of Doom
+- Kiopineapple
 - Susan Carriere, A. R. C. T.
 - erik@vbe.com
 - Josh \"Dicaeopolis\" Porter
 - Paper_Luigi
 - Mark Jansen
-- WaVeOf_DaRKnEsS
 - matthewcollinson
 - anthony bouchereau
 - ZERMa
-- mittens
+- Gigasoft
 - Joe Cortez
 - Teck
-- Kiopineapple
-- Gigasoft
+- WaVeOf_DaRKnEsS
+- Monster lestyn
 - William Borges
 - Blue Warrior
 - isabellechiming
@@ -691,4 +720,16 @@ The Smash Remix Team has made available a variety of cut content for fans to exp
 - dY Shock
 - thatoneinternetuser
 - Sebastian Kingsley
+- Video Team
+- Fray
+- Darkhorse
+- Sope
+- dshaynie
+- TheQuickSlash
+- Retro64
+- Pringles
+- HeronNobody
+- OniFox
+- Maafia
+- Matthew McCleskey
 ") }}
