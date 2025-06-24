@@ -130,6 +130,13 @@ extra:
           location: Sao Paulo, BR
           owner: Unknown
           version: ESF90.0
+          
+        - name: Fortaleza
+          host: 5.252.24.227
+          location: Fortaleza, BR
+          owner: Justase
+          member: true
+          version: EmuLinker-K
 
       NA-E:
         - name: Galaxy
@@ -139,13 +146,6 @@ extra:
           member: false
           version: ESF92.9
           
-        - name: Mortal Kombat War Room
-          host: 108.160.147.80
-          location: Atlanta, GA
-          owner: Unknown
-          member: false
-          version: ESF92.9
-
         - name: Emuparadise USA
           host: kaillera-us.emuparadise.org
           location: Ashburn, VA
@@ -202,6 +202,13 @@ extra:
           member: true
           version: ESF92.4
 
+        - name: SSBL Georgia Netplay
+          host: 45.61.60.96
+          location: Atlanta, GA
+          owner: Justase
+          member: true
+          version: EmuLinker-K
+
       NA-S:
         - name: LA (thesouth)
           host: 71.15.37.153
@@ -209,6 +216,13 @@ extra:
           owner: Fancy247
           member: false
           version: EMX2.0.2
+
+        - name: MUGENs Playground Dallas
+          host: 23.95.73.76
+          location: Dallas, TX
+          owner: Justase
+          member: true
+          version: EmuLinker-K
 
         - name: Smash Tampax
           host: 199.167.29.54
@@ -227,6 +241,7 @@ extra:
           host: 185.144.159.190
           location: Miami, FL
           owner: Justase
+          member: true
           version: EmuLinker-K
 
       NA-W:
@@ -263,6 +278,20 @@ extra:
           owner: Sure4Thing
           member: true
           version: ESF92.4
+          
+        - name: Denver Securedragon
+          host: 198.57.46.213
+          location: Denver, CO
+          owner: Justase
+          member: true
+          version: EmuLinker-K
+
+        - name: Mortal Kombat War Room Denver
+          host: 108.160.147.80
+          location: Denver, CO
+          owner: Unknown
+          member: false
+          version: ESF93.2
 
     regions:
       AUS: Australia
