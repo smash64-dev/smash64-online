@@ -6,7 +6,7 @@ hide:
   - prev
   - search
   - tabs
-latest: v1.5.2
+latest: v2.0.0
 official_site:
   color: red
   display: false
