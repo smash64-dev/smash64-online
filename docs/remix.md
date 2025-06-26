@@ -25,7 +25,7 @@ patches:
         file: smashremix2.0.0/patches/smashremix2.0.0.xdelta
         crc: 0xeb97929e
       - name: 'Smash Remix 2.0.0 - PAL60'
-        file: smashremix2.0.0/patches/smashremix2.0.0-pal60.xdelta
+        file: smashremix2.0.0/patches/smashremix2.0.0-PAL60.xdelta
         crc: 0xeb97929e
   v1.5.2:
     name: Smash Remix 1.5.2
