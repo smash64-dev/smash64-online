@@ -1,15 +1,15 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-    "name": "smash64-dev/smash64-online",
+    "name": "smash64-dev/smash64-online (source)",
     "build": {
         "dockerfile": "Dockerfile",
-        "context": ".",
-        "cacheFrom": "ghcr.io/smash64-dev/smash64-online/devcontainer:latest"
+        "context": "."
     },
     "containerEnv": {
         "MKDOCS_SERVE_ARGS": "${localEnv:MKDOCS_SERVE_ARGS:-of mkdocs.yml}",
-        "PYTHON_PATH": "/usr/local/bin/python"
+        "PYTHON_PATH": "/usr/local/bin/python",
+        "SMASH64_DEV_CONTAINER": "true"
     },
     "features": {
         "./mkdocs-serve": {
@@ -19,6 +19,7 @@
             "plugins": "mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-macros-plugin mkdocs-minify-plugin mkdocs-redirects"
         }
     },
+    "postStartCommand": "supervisorctl tail -f mkdocs",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -46,90 +47,6 @@
                         },
                         "path": "supervisorctl"
                     }
-                },
-                "tasks": {
-                    "version": "2.0.0",
-                    "group": {
-                        "kind": "none"
-                    },
-                    "isBackground": false,
-                    "options": {
-                        "env": {
-                            "PYTHONWARNINGS": "ignore::UserWarning"
-                        }
-                    },
-                    "presentation": {
-                        "echo": false,
-                        "showReuseMessage": false,
-                        "panel": "shared",
-                        "clear": true,
-                        "close": true
-                    },
-                    "problemMatcher": [],
-                    "type": "shell",
-                    "tasks": [
-                        {
-                            "label": "MkDocs: Logs",
-                            "command": "supervisorctl",
-                            "args": [
-                                "tail",
-                                "-f",
-                                "mkdocs"
-                            ],
-                            "icon": {
-                                "id": "warn-circle"
-                            },
-                            "isBackground": true,
-                            "presentation": {
-                                "group": "mkdocs"
-                            },
-                            "runOptions": {
-                                "runOn": "folderOpen"
-                            }
-                        },
-                        {
-                            "label": "MkDocs: Restart",
-                            "command": "supervisorctl",
-                            "args": [
-                                "restart",
-                                "mkdocs"
-                            ],
-                            "icon": {
-                                "id": "warn-circle"
-                            },
-                            "presentation": {
-                                "group": "mkdocs"
-                            }
-                        },
-                        {
-                            "label": "MkDocs: Start",
-                            "command": "supervisorctl",
-                            "args": [
-                                "start",
-                                "mkdocs"
-                            ],
-                            "icon": {
-                                "id": "warn-circle"
-                            },
-                            "presentation": {
-                                "group": "mkdocs"
-                            }
-                        },
-                        {
-                            "label": "MkDocs: Stop",
-                            "command": "supervisorctl",
-                            "args": [
-                                "stop",
-                                "mkdocs"
-                            ],
-                            "icon": {
-                                "id": "warn-circle"
-                            },
-                            "presentation": {
-                                "group": "mkdocs"
-                            }
-                        }
-                    ]
                 }
             }
         }

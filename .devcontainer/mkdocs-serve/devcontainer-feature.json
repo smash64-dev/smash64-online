@@ -47,10 +47,6 @@
         },
         "autoServe": {
             "type": "boolean",
-            "proposals": [
-                "true",
-                "false"
-            ],
             "default": true,
             "description": "Run the MkDocs dev-server automatically when true."
         },

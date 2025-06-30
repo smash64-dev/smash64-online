@@ -1,0 +1,6 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// source at: .devcontainer/source/devcontainer.json
+{
+    "name": "smash64-dev/smash64-online (prebuild)",
+    "image": "ghcr.io/smash64-dev/smash64-online/devcontainer:latest"
+}

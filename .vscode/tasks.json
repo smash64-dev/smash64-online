@@ -1,0 +1,115 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "group": {
+        "kind": "none"
+    },
+    "isBackground": false,
+    "options": {
+        "env": {
+            "PYTHONWARNINGS": "ignore::UserWarning"
+        }
+    },
+    "presentation": {
+        "echo": false,
+        "showReuseMessage": false,
+        "panel": "shared",
+        "clear": true,
+        "close": true
+    },
+    "problemMatcher": [],
+    "type": "shell",
+    "tasks": [
+        {
+            "label": "MkDocs: Logs",
+            "command": "supervisorctl",
+            "args": [
+                "tail",
+                "-f",
+                "mkdocs"
+            ],
+            "icon": {
+                "id": "warn-circle"
+            },
+            "isBackground": true,
+            "presentation": {
+                "group": "mkdocs"
+            },
+            "dependsOn": [
+                "Dev Containers Only"
+            ]
+        },
+        {
+            "label": "MkDocs: Restart",
+            "command": "supervisorctl",
+            "args": [
+                "restart",
+                "mkdocs"
+            ],
+            "icon": {
+                "id": "warn-circle"
+            },
+            "presentation": {
+                "group": "mkdocs"
+            },
+            "dependsOn": [
+                "Dev Containers Only"
+            ]
+        },
+        {
+            "label": "MkDocs: Start",
+            "command": "supervisorctl",
+            "args": [
+                "start",
+                "mkdocs"
+            ],
+            "icon": {
+                "id": "warn-circle"
+            },
+            "presentation": {
+                "group": "mkdocs"
+            },
+            "dependsOn": [
+                "Dev Containers Only"
+            ]
+        },
+        {
+            "label": "MkDocs: Stop",
+            "command": "supervisorctl",
+            "args": [
+                "stop",
+                "mkdocs"
+            ],
+            "icon": {
+                "id": "warn-circle"
+            },
+            "presentation": {
+                "group": "mkdocs"
+            },
+            "dependsOn": [
+                "Dev Containers Only"
+            ]
+        },
+        {
+            "label": "Dev Containers Only",
+            "command": "echo \"$FATAL\" && exit 1",
+            "linux": {
+                "command": "[ \"$SMASH64_DEV_CONTAINER\" = 'true' ] && exit 0 || echo \"$FATAL\" && exit 1"
+            },
+            "options": {
+                "env": {
+                    "FATAL": "Sorry, this task is only supported in the dev container."
+                }
+            },
+            "icon": {
+                "id": "console"
+            },
+            "hide": true,
+            "presentation": {
+                "group": "mkdocs",
+                "reveal": "never"
+            }
+        }
+    ]
+}

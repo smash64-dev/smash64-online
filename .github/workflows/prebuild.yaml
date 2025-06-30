@@ -3,7 +3,6 @@ name: Prebuild and Publish Dev Container
 on:
   push:
     branches:
-      - develop
       - main
 
 env:
@@ -39,14 +38,12 @@ jobs:
         env:
           PUSH: ${{ env.PUSH }}
           REGISTRY: ${{ env.REGISTRY }}
-          REPOSITORY: ${{ env.REPOSITORY }} 
+          REPOSITORY: ${{ env.REPOSITORY }}
         with:
           imageName: ${{ env.REGISTRY }}/${{ env.REPOSITORY }}/devcontainer
           imageTag: latest
           push: ${{ env.PUSH }}
           refFilterForPush: |
-            refs/heads/develop
             refs/heads/main
           eventFilterForPush: push
           platform: ${{ steps.setup.outputs.platforms }}
-
