@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - .devcontainer/**
+      - .github/workflows/prebuild.yaml
 
 env:
   PASSWORD: ${{ secrets.PREBUILD_PASSWORD || secrets.GITHUB_TOKEN }}
