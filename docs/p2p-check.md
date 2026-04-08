@@ -56,7 +56,7 @@ modals:
 
 ## P2P Checker
 
-This tool helps to validate that your port forwarding is configured correctly. To use it, launch Project64KSE and host a p2p game, then make sure your IP address and port are correct below and hit Check P2P.
+This tool helps to validate that your port forwarding is configured correctly. To use it, launch RMG-K and host a p2p game, then make sure your IP address and port are correct below and hit Check P2P.
 
 Note that this feature **does not** currently support Autopunch P2P, only port forwarding (manual or UPnP).
 
