@@ -79,8 +79,10 @@ Native adapters often have issues when being used by multiple processes at once.
 If it doesn't support native input:
 Make sure your Controller Type is set to USB, and the adapter is set as the device in input config. You may need to calibrate the controller through Windows.
 
-### Legacy Emulators & Guides
+### Legacy Emulator Guides & Tools
 
+- [Kaillera Server Status Checker](server-status.md)
+- [P2P Setup Help](p2p-check.md)
 - [Project64 KSE (Emulator)](https://github.com/smash64-dev/project64k-legacy/releases/latest/download/project64k-legacy.zip)
 - [Project64k-legacy (GitHub)](https://github.com/smash64-dev/project64k-legacy)
 - [Radiant Netplay Guide](https://docs.google.com/document/d/1jUqmsLqonkoCR_z7VBxyj6uCtpTnU6bL6oVfGEpKyZ8/view)
