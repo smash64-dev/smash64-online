@@ -13,16 +13,25 @@ hide:
     padding-left: 25px;
     padding-right: 25px;
   }
+  .md-typeset .download-note {
+    margin-bottom: 0;
+  }
+  .md-typeset .download-note + h2 {
+    margin-top: .6em;
+  }
 </style>
 
-# Smash 64 Rollback Online Guide 
+# Smash 64 Netplay Guide
 
-To play Smash 64 online, follow the steps below. To use an N64 controller, you'll need a [Raphnet V3 USB adapter](https://www.raphnet-tech.com/products/n64_usb_adapter_gen3/index.php); you can also use any USB controller or a keyboard.
+To play Smash 64 online with rollback, follow the steps below. To use an N64 controller, you'll want a [Raphnet V3 USB adapter](https://www.raphnet-tech.com/products/n64_usb_adapter_gen3/index.php); you can also use a Gamecube controller, any USB controller, or a keyboard.
 
 ## 1. Download the RMG-K Emulator
 
 [Download](https://github.com/Jay-Day/RMG-K/releases/latest){ .md-button .md-button--primary data-md-color-primary="green" data-md-color-accent="green" }
 [GitHub](https://github.com/Jay-Day/RMG-K){ .md-button data-md-color-primary="green" data-md-color-accent="green" }
+
+<small style="color: var(--md-default-fg-color--light);">(Scroll to the bottom, download files are under Assets)</small>
+{: .download-note }
 
 ## 2. Obtain the Smash Bros. ROM
 
