@@ -1,5 +1,5 @@
 ---
-title: Smash 64 Netplay Guide
+title: Smash 64 Rollback Online Guide
 section: legacy
 hide:
   - next
@@ -15,7 +15,7 @@ hide:
   }
 </style>
 
-# Smash 64 Netplay Guide
+# Smash 64 Rollback Online Guide 
 
 To play Smash 64 online, follow the steps below. To use an N64 controller, you'll need a [Raphnet V3 USB adapter](https://www.raphnet-tech.com/products/n64_usb_adapter_gen3/index.php); you can also use any USB controller or a keyboard.
 
@@ -37,61 +37,38 @@ Open `RMG-K.exe` and click Select ROM Directory, then pick the folder where you 
 
 ## 4. Configure your Controller
 
-Press the Plugins menu, and select your input plugin.
-
-![plugins](assets/images/plugins.png){ width=50% }
-![plugins2](assets/images/plugins2.png){ width=50% }
-
-Select your plugin depending on your controller:
-
-| Controller      | Plugin |
-| ----------- | ----------- |
-| N64 with Raphnet Adapter  | `Raphnetraw N64 Adapter`       |
-| Gamecube with Native Adapter   | `Gamecube Adapter`        |
-| Any other Controller or keyboard   | `Generic USB Input` |
-
-If using the Gamecube or Generic USB plugins, then click the **Input** button and set your controls.
+Press the **Input** button to configure your controller. Select your controller type, USB, Gamecube, or N64.
 
 ![plugins](assets/images/plugins3.png){ width=50% }
 
-!!! Note "Gamecube Controllers"
-    To use the Gamecube plugin, you must have a native-compatible adapter. Examples include Lossless, Nintendo, and Mayflash. If your adapter has multiple modes, **make sure it's set to Switch/Wii U/Native mode**, otherwise the input plugin won't detect it.
-
-    If your adapter isn't supported, use the `Generic USB Input` plugin.
-
+- If you're using a Gamecube controller, make sure your adapter is in **Native** mode. If your adapter doesn't support Native mode, choose USB Controller as the controller type.
+- If you're using an N64 controller with a Raphnet adapter, your controls will automatically be configured to match console, so there's no need to adjust settings.
 
 ## 5. Start Netplay
 
 !!! danger "Ethernet Highly Recommended"
     Use a wired Ethernet connection when playing netplay. WiFi connections are inherently unreliable and will frustrate you and your opponents.
 
-Launch online play with the `Netplay` button. Use the `Change Mode` selector to choose between `Server` or `P2P` (Peer to Peer). Peer to peer connections are more stable, but only support up to two players. 
-
-The regional Discords linked in the sidebar are a great way to find opponents for P2P matches.
-
-=== "Connecting via Server"
-
-    1. Start Netplay. Server mode is the default.
-    2. Select the server to join. A full list of servers can be found by clicking `Master Servers List`.
-    3. Host or join lobbies to play
-    4. Host starts game
-
-    Up to 4 players can play in server matches.
-
-=== "Connecting via P2P"
-
-    1. Start Netplay. Click the `Change Mode` dropdown and select `1. P2P`.
-    2. Host must have ports forwarded and provide external IP to other player
-    3. Host selects the game and clicks `Host`.
-    4. Client chooses the Connect tab, enters the Host's IP in the `Peer IP` box, and connects.
-    5. Both players tick `Ready` to start the game
-
-    Only 2 players can play P2P.
----
-
-The higher your ping to the server or your opponent, the more frames of delay you'll have. Most players play on 3 frames or less. After playing online, you **must** restart the emulator before playing a different player or if a new player joins the lobby. Servers may sometimes go down and active servers may be found on the master server list.
+Launch online play with the `Netplay` button. There you can create a room or join an opponent to play.
 
 If you're having problems setting up netplay, ask in `#help` in the [Smash 64 Discord](https://discord.gg/ssb64).
+
+## FAQ
+
+### My Gamecube controller isn't working!
+
+If your Gamecube adapter supports native input:
+
+1. Make sure the Controller Type is set to Gamecube
+2. Make sure the adapter is set to native mode
+3. Make sure you don't have any other programs (Dolphin, etc) using the adapter
+4. Try unplugging and replugging the adapter and restarting RMG-K
+5. Try restarting the PC
+
+Native adapters often have issues when being used by multiple processes at once.
+
+If it doesn't support native input:
+Make sure your Controller Type is set to USB, and the adapter is set as the device in input config. You may need to calibrate the controller through Windows.
 
 ### Legacy Emulators & Guides
 

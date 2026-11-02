@@ -5,9 +5,9 @@ nav:
     - ROM Patches:
       - Smash Remix: remix.md
       - 19XX: 19XX.md
-    - Kaillera Tools:
-      - Server Status: server-status.md
-      - P2P Setup: p2p-check.md
+    # - Kaillera Tools:
+    #   - Server Status: server-status.md
+    #   - P2P Setup: p2p-check.md
     - Discords:
       - North America: https://discord.gg/ssb64
       - Europe: https://discord.gg/YvbVHD7
