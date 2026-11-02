@@ -1,5 +1,5 @@
 ---
-title: Smash 64 Rollback Online Guide
+title: Smash 64 Netplay Guide
 section: legacy
 hide:
   - next
